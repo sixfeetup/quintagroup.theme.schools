@@ -1,3 +1,0 @@
-include distwriters.py
-recursive-include quintagroup *
-global-exclude *pyc
