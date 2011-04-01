@@ -51,15 +51,15 @@
         layer=".interfaces.IThemeSchools"
         permission="zope2.View"
         />
-    <browser:viewlet                                                                                                                        
-        name="schools.path_bar"                                                                                                               
-        manager="plone.app.layout.viewlets.interfaces.IPortalTop"                                                                                                 
-        class="plone.app.layout.viewlets.common.PathBarViewlet"
-        layer=".interfaces.IThemeSchools"                                                                                                      
-        permission="zope2.View"                                                                                                             
-        />  
     <browser:viewlet
-        name="schools.global_sections"
+        name="schools.path_bar"
+        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+        class="plone.app.layout.viewlets.common.PathBarViewlet"
+        layer=".interfaces.IThemeSchools"
+        permission="zope2.View"
+        />
+    <browser:viewlet
+        name="plone.global_sections"
         manager="plone.app.layout.viewlets.interfaces.IAboveContent"
         class="plone.app.layout.viewlets.common.GlobalSectionsViewlet"
         layer=".interfaces.IThemeSchools"

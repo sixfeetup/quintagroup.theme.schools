@@ -2,7 +2,7 @@
 <object>
  <order manager="plone.abovecontent" skinname="Schools Theme">
   <viewlet name="plone.path_bar"/>
-  <viewlet name="schools.global_sections"/>
+  <viewlet name="plone.global_sections"/>
   <viewlet name="Products.Carousel.viewlet"/>
  </order>
  <order manager="plone.portalfooter" skinname="Schools Theme">
