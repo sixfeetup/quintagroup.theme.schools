@@ -241,7 +241,6 @@ input.searchButton {
 
 /*---------- Portal Global Nav ----------*/
 #portal-globalnav {
-  overflow:hidden;
   padding:0;
   }
 #portal-globalnav li {
@@ -269,7 +268,7 @@ input.searchButton {
   border:0;
   color:#000;
   }
-	
+
 /*---------- Portal Columns ----------*/
 #portal-column-one .visualPadding {
   padding:2px 2px 0 2px;
@@ -281,8 +280,11 @@ input.searchButton {
   border:1px solid #ccc;
   margin:2px 0 0;
   }
-	
+
 /*---------- General Portlet Options ----------*/
+dl.portlet .hiddenStructure {
+  padding:0;
+  }
 dl.portlet {
   border-bottom:0;
   margin:0 0 2px;
