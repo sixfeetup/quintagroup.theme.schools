@@ -58,6 +58,16 @@
         layer=".interfaces.IThemeSchools"
         permission="zope2.View"
         />
+    <configure zcml:condition="installed quintagroup.dropdownmenu">
+    <browser:viewlet
+        name="plone.global_sections"
+        manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+        class="quintagroup.dropdownmenu.browser.viewlets.GlobalSectionsViewlet"
+        layer=".interfaces.IThemeSchools"
+        permission="zope2.View"
+        />
+    </configure>
+    <configure zcml:condition="not-installed quintagroup.dropdownmenu">
     <browser:viewlet
         name="plone.global_sections"
         manager="plone.app.layout.viewlets.interfaces.IAboveContent"
@@ -65,6 +75,7 @@
         layer=".interfaces.IThemeSchools"
         permission="zope2.View"
         />
+    </configure>
     <browser:viewlet
         name="schools.footer"
         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
@@ -82,15 +93,15 @@
         />
 
     <configure zcml:condition="installed Products.Carousel">
-    <carousel:banner                                                                                                                                           
-        name="banner-default"                                                                                                                                  
-        template="templates/banner-default.pt"                                                                                                                 
-        title="Default"                                                                                                                                          
+    <carousel:banner
+        name="banner-default"
+        template="templates/banner-default.pt"
+        title="Default"
         layer=".interfaces.IThemeSchools"
-        />   
-    <browser:resource                                                                                                                                          
-        name="carousel.css"                                                                                                                                      
-        file="resources/carousel.css"                                                                                                                                      
+        />
+    <browser:resource
+        name="carousel.css"
+        file="resources/carousel.css"
         layer=".interfaces.IThemeSchools"
         />    
     </configure>
