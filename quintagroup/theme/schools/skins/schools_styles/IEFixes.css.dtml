@@ -226,6 +226,7 @@ input.searchButton {
   padding:0 !important;
   }
 #livesearchLegend {
+  display:none;
   margin-top:-1.9em;
   margin-left:-8px;
   }
