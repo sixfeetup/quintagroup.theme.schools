@@ -14,6 +14,9 @@
 #portal-top {
   padding:2.55em 0 0;
   }
+#portal-header {
+  position:relative;
+  }
 
 /*---------- CONTENT STYLES ----------*/
 .documentFirstHeading {
@@ -202,7 +205,7 @@ input.searchButton {
   }
 .topPortlets .visualPadding {
   border:1px solid &dtml-globalBorderColor;;
-  min-height:<dtml-var "logoWrapperMinHeight-4">px;
+  height:<dtml-var "logoWrapperMinHeight-4">px;
   padding:2px 2px 0;
   }
 .manageFooterPortletsLink {
@@ -222,12 +225,17 @@ input.searchButton {
 
 /*---------- PORTAL LANGUAGE SELECTOR ----------*/
 #portal-languageselector {
-  clear:both;
+  bottom:0;
   margin:0;
   padding:5px 7px 0;
+  position:absolute;
+  }
+#portal-languageselector li {
+  background-color: #E8ECF0;
+  margin-right:5px;
   }
 #portal-languageselector a {
-  color:#000;
+  color:#73A20F;
   text-decoration:none;
   }
 .currentItem {
@@ -255,7 +263,7 @@ input.searchButton {
   position:absolute;
   text-align:left;
   text-transform:none;
-  top:3em;
+  top:1em;
   }
 #portal-personaltools li {
   margin:0;
