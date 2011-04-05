@@ -114,6 +114,7 @@ table.listing ul li, .stx table ul li {
   right:2px;
   top:2px;
   width:<dtml-var "columnTwoWidthInt-2">px;
+  z-index:3;
   }
 .LSBox {
   float:none;
@@ -162,6 +163,32 @@ input.searchButton {
   }
 .LSTable {
   margin-left:0;
+  }
+
+.portletSearch .LSResult {
+  left:-8px;
+  padding:0;
+  text-align:left;
+  top:0.4em;
+  }
+.portletSearch .livesearchContainer {
+  border:1px solid #BBBBBB;
+  left:0;
+  }
+#portal-column-one .portletSearch .livesearchContainer {
+  top:0 !important;
+  width:<dtml-var "columnOneWidthInteger-2">px;
+  }
+#portal-column-two .portletSearch .livesearchContainer {
+  width:<dtml-var "columnTwoWidthInteger-2">px;
+  }
+.portletSearch li.LSRow a {
+  white-space:normal;
+  }
+#portal-column-one #livesearchLegend,
+#portal-column-two #livesearchLegend {
+  position:absolute;
+  left:-9999px;
   }
 
 /*---------- Top Portlets ----------*/
@@ -371,6 +398,8 @@ dd.portletItem .navTreeItem a:hover {
 dd.portletItem .navTreeLevel2 .navTreeItem  {
   border-top:0;
   }
+
+/*---------- PORTAL-SITEMAP ----------*/
 #portal-sitemap {
   line-height:1.5em;
   }
@@ -383,14 +412,14 @@ dd.portletItem .navTreeLevel2 .navTreeItem  {
   border-left:0;
   }
 #portal-sitemap li a {
+  border:1px solid #fff;
   text-decoration:none;
   }
 #portal-sitemap a:hover {
-  background-color:transparent;
   border-color:#fff;
   }
 	
-/*---------- Portlet Links ----------*/
+/*---------- PORTLET LINKS ----------*/
 #schools-links a {
   font-weight: bold;
   }
@@ -482,5 +511,7 @@ body.kupu-fulleditor-zoomed #portal-columns {
 .actionMenu .actionMenuContent ul {
   margin: -2px 0 0 2px;
   }
-  
+.discreet {
+  margin:0 !important;
+  }
 /* </dtml-with> */
