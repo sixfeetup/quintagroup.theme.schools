@@ -177,10 +177,10 @@ input.searchButton {
   }
 #portal-column-one .portletSearch .livesearchContainer {
   top:0 !important;
-  width:<dtml-var "columnOneWidthInteger-2">px;
+  width:<dtml-var "columnOneWidthInt-2">px;
   }
 #portal-column-two .portletSearch .livesearchContainer {
-  width:<dtml-var "columnTwoWidthInteger-2">px;
+  width:<dtml-var "columnTwoWidthInt-2">px;
   }
 .portletSearch li.LSRow a {
   white-space:normal;
