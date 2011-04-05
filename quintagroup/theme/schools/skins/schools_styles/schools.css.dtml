@@ -51,6 +51,8 @@ table.listing ul li, .stx table ul li {
   padding:1px 3px;
   }
 .contentViews {
+  clear:both;
+  padding-top:1em;
   position: relative;
   }
 .tileHeadline a {
