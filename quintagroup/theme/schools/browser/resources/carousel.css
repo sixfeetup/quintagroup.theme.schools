@@ -2,6 +2,7 @@
 .carousel {
   background: url("sprite.png") repeat-x scroll 0 -150px #D2DEEB;
   border: 1px solid #CCCCCC;
+  clear:both;
   height: 333px;
   margin-bottom: 1em;
   overflow: hidden;
