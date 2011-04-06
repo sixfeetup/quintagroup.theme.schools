@@ -525,4 +525,9 @@ dl.portletLogin {
 .discreet {
   margin:0 !important;
   }
+
+/*---------- DOCUMENT ACTIONS ----------*/
+.documentActions ul {
+  margin:-0.9em 0 0!important;
+  }
 /* </dtml-with> */
