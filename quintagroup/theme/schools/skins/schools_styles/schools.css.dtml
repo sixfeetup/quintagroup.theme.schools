@@ -290,22 +290,25 @@ input.searchButton {
   float:left;
   margin:0 1px 0 0;
   }
-#portal-globalnav li a {
+ul#portal-globalnav li a { /* hack for dropdown menu, ul */
   background:url(&dtml-portal_url;/sprite.png) no-repeat 0 -1134px;
   border:0;
   color:#565656;
   display:block;
-  line-height:1.6em;
+  line-height:1.6em !important;
   margin-right:0;
   padding:4px 20px 3px;
   text-transform:uppercase;
   white-space:nowrap;
   }
-#portal-globalnav li.selected a,
-#portal-globalnav li a:hover {
-  background-color:transparent;
+ul#portal-globalnav li.selected a, /* hack for dropdown menu, ul */
+ul#portal-globalnav li a:hover { /* hack for dropdown menu, ul */
+  background-color:transparent; 
+  border:0 1px 0 0;
+  color:#000; 
+  }
+ul#portal-globalnav li.selected a { /* hack for dropdown menu, ul */
   border:0;
-  color:#000;
   }
 
 /*---------- PORTAL COLUMNS ----------*/
@@ -388,7 +391,8 @@ dd.portletFooter  {
   }
 dd.portletItem .navTreeItem a {
   background: url(&dtml-portal_url;/sprite.png) no-repeat 0 -676px;
-  padding:4px 4px 4px 20px;
+  line-height:1.6em !important; /* !important added for when the option show icons */
+  padding:4px 4px 4px 20px !important; /* !important added for when the option show icons */
   border:0;
   color:#56616b;
   }
@@ -503,12 +507,15 @@ dl.portletLogin {
   }
 
 /*---------- FIXES FOR QUINTAGROUP.DROPDOWNMENU----------*/
-#portal-globalnav:hover li:hover > a {
+ul#portal-globalnav:hover li:hover > a {
   background-color:transparent;
-  color:#000000;
+  color:#000000 !important;
   }
-#portal-globalnav ul li a.hasChildrens:hover {
+ul#portal-globalnav ul li a.hasChildrens:hover {
   background-color:transparent;
+  }
+ul#portal-globalnav ul li a {
+  border-top:1px solid #DADADA;
   }
 
 /*---------- FIXES ----------*/
@@ -524,6 +531,15 @@ dl.portletLogin {
   }
 .discreet {
   margin:0 !important;
+  }
+
+/*---------- CONTENT ACTIONS ----------*/
+#plone-contentmenu-factories .actionMenuContent li a:hover {
+  background-color:#74AE0B !important;
+  }
+.icons-on #plone-contentmenu-factories .contenttype-file,
+.icons-on #plone-contentmenu-factories .contenttype-image {
+  display: block;
   }
 
 /*---------- DOCUMENT ACTIONS ----------*/
