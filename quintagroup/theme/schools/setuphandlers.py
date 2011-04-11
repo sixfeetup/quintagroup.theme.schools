@@ -23,13 +23,3 @@ def uninstallVarious(context):
     # Add additional uninstall code here
 
 ## -*- extra stuff goes here -*-
-from quintagroup.theme.schools.utils import checkIfImport, performImportToPortal
-
-def importZEXPs(context):
-
-    if context.readDataFile("quintagroup.theme.schools_various.txt") is None:
-        return
-
-    site = context.getSite()
-    if checkIfImport():
-        performImportToPortal(site)

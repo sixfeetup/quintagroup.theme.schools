@@ -58,24 +58,13 @@
         layer=".interfaces.IThemeSchools"
         permission="zope2.View"
         />
-    <configure zcml:condition="installed quintagroup.dropdownmenu">
     <browser:viewlet
-        name="plone.global_sections"
+        name="schools.global_sections"
         manager="plone.app.layout.viewlets.interfaces.IAboveContent"
-        class="quintagroup.dropdownmenu.browser.viewlets.GlobalSectionsViewlet"
+        class=".viewlets.SchoolsGlobalSections"
         layer=".interfaces.IThemeSchools"
         permission="zope2.View"
         />
-    </configure>
-    <configure zcml:condition="not-installed quintagroup.dropdownmenu">
-    <browser:viewlet
-        name="plone.global_sections"
-        manager="plone.app.layout.viewlets.interfaces.IAboveContent"
-        class="plone.app.layout.viewlets.common.GlobalSectionsViewlet"
-        layer=".interfaces.IThemeSchools"
-        permission="zope2.View"
-        />
-    </configure>
     <browser:viewlet
         name="schools.footer"
         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"

@@ -5,6 +5,7 @@ borderStyle:string=solid
 borderStyleAnnotations:string=solid
 borderWidth:string=1px
 columnOneWidth:string=162px
+columnOneWidthInt:int=162
 columnTwoWidth:string=224px
 columnTwoWidthInt:int=224
 contentViewBackgroundColor:string=#cde2a7

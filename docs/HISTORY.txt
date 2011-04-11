@@ -1,6 +1,13 @@
 Change Log
 ==========
 
+4.2 - Apr 11, 2011
+
+- work with quintagroup.dropdownmenu fixed
+- Styles for sitemap, document editable and live search fixed
+- columnOneWidthInt value added to base_properties
+- Products.LinguaPlone compatibility fixed
+
 4.1 - Jan 24, 2011
 
 - theme updated to Plone 4
