@@ -36,8 +36,9 @@ Features
 
   Site width can be set by defining pageWidth property value in base_properties (Schools Plone Theme is optimized for 1024px screen width).
 
-* Configurable second column width, defined by 'columnTwoWidth' value in base_properties. If you change this field value don't forget to 
-  update 'columnTwoWidthInt' value: values in those two cells must be identical for proper theme look.
+* Configurable columns width, defined by 'columnOneWidth' and 'columnTwoWidth' values in base_properties. If you change these fields value
+  don't forget to update the corresponding 'columnOneWidthInt' and 'columnTwoWidthInt' values: values in those two cells must be identical
+  for proper theme look.
   
 Recommended
 -----------
@@ -47,7 +48,7 @@ This version of Schools Theme was developed and tested on Plone 4 (python-2.6.4,
 Dependency
 ----------
 
-* Products.Carousel (quintagroup.theme.schools 4.1 was tested with Products.Carousel 2.1b2) 
+* Products.Carousel (quintagroup.theme.schools 4.2 was tested with Products.Carousel 2.1b3). 
 
 Home Directory
 --------------
