@@ -15,7 +15,8 @@ tests_require=['zope.testing']
 setup(name='quintagroup.theme.schools',
       version=version,
       description="Free theme from Quintagroup for Plone 4",
-      long_description=open("README.txt").read() + "\n" +
+      long_description=open("README.txt").read() + "\n\n" +
+                       open(os.path.join("docs", "INSTALL.txt")).read() + "\n\n"+
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
@@ -41,4 +42,9 @@ setup(name='quintagroup.theme.schools',
       extras_require=dict(tests=tests_require),
       test_suite = 'quintagroup.theme.schools.tests',
       setup_requires = ["setuptools",],
+      entry_points="""
+      # -*- Entry points: -*-
+      [z3c.autoinclude.plugin]
+      target = plone
+      """,
       )

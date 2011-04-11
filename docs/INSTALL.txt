@@ -1,5 +1,5 @@
-Schools Plone Theme Installation
-================================
+Installation
+============
 
 To install quintagroup.theme.schools to your Plone 4 buildout-based project - in the 
 buildout.cfg file of your buildout:
@@ -18,14 +18,6 @@ buildout.cfg file of your buildout:
     ...
     eggs =
         ...
-        quintagroup.theme.schools
-
-* Tell the plone.recipe.zope2instance recipe to install a ZCML slug::
-
-    [instance]
-    recipe = plone.recipe.zope2instance
-    ...
-    zcml =
         quintagroup.theme.schools
 
 * Re-run buildout, e.g. with::
