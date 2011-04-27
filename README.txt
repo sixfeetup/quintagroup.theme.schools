@@ -1,10 +1,5 @@
-Schools Plone Theme
-===================
-
-Schools Plone Theme is a free Theme for Plone 4.
-
-Features
---------
+Theme Features
+--------------
 
 * Carousel Banner
  
@@ -58,10 +53,11 @@ http://skins.quintagroup.com/schools
 Authors
 -------
 
-* Volodymyr Rudnytskyi
+* Volodymyr Rudnytskyy
 * Serhiy Valchuk  
 * Taras Peretiatko 
 
-&copy; "Quintagroup":http://quintagroup.com, 2006-2011
+© Quintagroup_, 2006-2011
 
+.. _Quintagroup: http://quintagroup.com/
 
