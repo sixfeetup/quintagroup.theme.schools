@@ -1,5 +1,5 @@
-Change Log
-==========
+ChangeLog
+---------
 
 4.2 - Apr 11, 2011
 

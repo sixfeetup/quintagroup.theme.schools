@@ -36,22 +36,22 @@ Theme Features
   for proper theme look.
   
 Recommended
------------
+===========
 
 This version of Schools Theme was developed and tested on Plone 4 (python-2.6.4, Zope-2.12.10).
 
 Dependency
-----------
+==========
 
 * Products.Carousel (quintagroup.theme.schools 4.2 was tested with Products.Carousel 2.1b3). 
 
 Home Directory
---------------
+==============
 
 http://skins.quintagroup.com/schools
 
 Authors
--------
+=======
 
 * Volodymyr Rudnytskyy
 * Serhiy Valchuk  

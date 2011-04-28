@@ -1,5 +1,5 @@
 Installation
-============
+------------
 
 To install quintagroup.theme.schools to your Plone 4 buildout-based project - in the 
 buildout.cfg file of your buildout:
@@ -28,7 +28,7 @@ buildout.cfg file of your buildout:
 
    $ ./bin/instance restart
    
-* Install Schools Theme with Quickinstaller in Plone (Site Setup -> Add/Remove Products)     
+* Install Schools Theme with Quickinstaller in Plone (Site Setup -> Add-ons).     
 
 
 
