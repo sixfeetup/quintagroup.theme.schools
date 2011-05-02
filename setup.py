@@ -36,6 +36,7 @@ setup(name='quintagroup.theme.schools',
       zip_safe=False,
       install_requires=['setuptools',
                         'Products.Carousel',
+                        'plonetheme.classic',
                         # -*- Extra requirements: -*-
                         ],
       tests_require=tests_require,
