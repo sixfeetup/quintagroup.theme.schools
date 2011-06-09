@@ -1,0 +1,7 @@
+<layers>
+    <layer
+        name="quintagroup.theme.schools"
+        interface="quintagroup.theme.schools.browser.interfaces.IThemeSchools"
+        />
+    </layers>
+

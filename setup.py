@@ -8,7 +8,7 @@ from setuptools import setup, find_packages
 def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
 
-version = '4.2'
+version = '4.3 devDiazo'
 
 tests_require=['zope.testing']
 
@@ -37,6 +37,7 @@ setup(name='quintagroup.theme.schools',
       install_requires=['setuptools',
                         'Products.Carousel',
                         'plonetheme.classic',
+                        'plone.app.theming',
                         # -*- Extra requirements: -*-
                         ],
       tests_require=tests_require,
