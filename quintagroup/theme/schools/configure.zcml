@@ -11,13 +11,10 @@
    <include package="Products.CMFCore" />              
    <include package="Products.Carousel" />              
    <include package=".browser" />
-   <include package=".portlets" />
 
    <include file="skins.zcml" />
    <include file="profiles.zcml" />
 
    <plone:static directory="static" type="theme" />
-
-   <!-- -*- extra stuff goes here -*- -->
 
 </configure>
