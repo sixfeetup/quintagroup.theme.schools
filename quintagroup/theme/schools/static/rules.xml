@@ -21,7 +21,14 @@
     <replace theme="/html/head/title" content="/html/head/title"/>
     <replace theme="/html/head/base" content="/html/head/base" />
 
-    <before content='/html/head' theme='/html/head' />
+    <before content="/html/head/style | /html/head/script | /html/head/link" theme-children="/html/head" />
+
+
+
+
+
+
+
 
     <rules css:if-content="body.template-search,body.template-search_form,body.template-overview-controlpanel">
     </rules>
@@ -41,6 +48,11 @@
 
 
     <after css:theme="#portal-top" css:content="#portal-columns" />
+
+
+    <replace css:content-children="div.carousel-banner">
+        <xsl:copy-of select="node()"/><div id="carousel-over"></div>
+    </replace>
 
 
     <copy theme='//*[@id="portal-footer"]' content='//*[@id="portal-footer"]/*' />

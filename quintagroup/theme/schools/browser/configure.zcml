@@ -44,13 +44,13 @@
         layer=".interfaces.IThemeSchools"
         permission="zope2.View" 
         />
-    <browser:viewlet
+    <!-- browser:viewlet
         name="schools.visual"
         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
         template="templates/visual.pt"
         layer=".interfaces.IThemeSchools"
         permission="zope2.View"
-        />
+        / -->
     <browser:viewlet
         name="schools.path_bar"
         manager="plone.app.layout.viewlets.interfaces.IPortalTop"
@@ -80,22 +80,6 @@
         template="templates/managetopportlets.pt"
         permission="plone.app.portlets.ManagePortlets"
         />
-
-    <configure zcml:condition="installed Products.Carousel">
-    <carousel:banner
-        name="banner-default"
-        template="templates/banner-default.pt"
-        title="Default"
-        layer=".interfaces.IThemeSchools"
-        />
-    <browser:resource
-        name="carousel.css"
-        file="resources/carousel.css"
-        layer=".interfaces.IThemeSchools"
-        />    
-    </configure>
-
-  
     <browser:resourceDirectory
         name="quintagroup.theme.schools.templates"
         directory="templates"
