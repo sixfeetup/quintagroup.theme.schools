@@ -30,16 +30,29 @@
 
     <copy attributes="href title" css:content='#portal-logo' css:theme="#portal-logo" />
 
+
+<copy attributes="class" content='/html/body' theme='/html/body' />
+
+
+<copy attributes="class" content='//*[@id="portal-top"]' theme='//*[@id="portal-top"]' />
+
     <after css:theme="#portal-logo" css:content="#portal-personaltools-wrapper" />
     <after css:theme="#portal-header" css:content="#portal-breadcrumbs" />
     <after css:theme="#portal-header" css:content="#portal-searchbox" />
     <after css:theme="#portal-header" css:content="#portal-siteactions" />
 
-    <after css:theme="#visual-column-wrapper" css:content="#portal-column-two" />
+
+
+<copy attributes="class" content='//*[@id="portal-column-content"]' theme='//*[@id="portal-column-content"]' />
+
+
+    <after css:theme="#portal-column-content" css:content="#portal-column-two" />
     <after css:theme="#portal-column-content" css:content="#portal-column-one" />
 
     <before theme='//*[@class="dContent"]' content='//*[@id="portal-globalnav"]' />
     <before theme='//*[@class="dContent"]' content='//*[@id="viewlet-above-content"]' />
+
+<copy attributes="class" content='//*[@id="portal-columns"]' theme='//*[@id="portal-columns"]' />
 
     <drop css:content="div#viewlet-above-content div#portal-breadcrumbs" />
 
@@ -47,8 +60,13 @@
         <xsl:copy-of select="node()"/><div id="carousel-over"></div>
     </replace>
 
-    <replace theme='//*[@class="dContent"]' content='//*[@id="content-wrapper"]/div[2]' />
+    <replace theme='//*[@class="dContent"]' content='//*[@id="portal-column-content"]/div[2]' />
     <after theme='//*[@class="dContent"]' content='//*[@id="viewlet-below-content"]' />
+
+        <!-- replace css:content='.documentEditable' css:theme='#content' css:if-content=".documentEditable" /-->
+
+
+<copy attributes="class" content='//*[@id="portal-footer"]' theme='//*[@id="portal-footer"]' />
 
     <copy theme='//*[@id="portal-footer"]' content='//*[@id="portal-footer"]/*' />
     <copy theme='//*[@id="portal-colophon"]' content='//*[@id="portal-colophon"]/*' />

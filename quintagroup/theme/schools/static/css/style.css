@@ -475,6 +475,7 @@ dl.portletLogin {
   border-style:solid;
   border-color:#ccc;
   color:#dbe6f0;
+  clear:both;
   }
 #portal-footer acronym {
   color: #dbe6f0;

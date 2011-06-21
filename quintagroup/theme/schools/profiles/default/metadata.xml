@@ -2,7 +2,6 @@
 <metadata>
   <version>4.2</version>
   <dependencies>
-    <dependency>profile-plonetheme.classic:default</dependency>
     <dependency>profile-Products.Carousel:default</dependency>
     <dependency>profile-plone.app.theming:default</dependency>
   </dependencies>

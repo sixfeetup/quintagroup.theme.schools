@@ -1,37 +1,29 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
-    xmlns:carousel="http://namespaces.plone.org/carousel"  
     xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="quintagroup.theme.schools">
-
-    <!-- 'Schools Theme' Zope 3 browser layer -->
-    <interface
-        interface=".interfaces.IThemeSchools"
-        type="zope.publisher.interfaces.browser.IBrowserSkinType"
-        name="Schools Theme"
-        />
 
     <!-- Zope 3 browser resources -->
     <browser:viewlet
         name="plone.path_bar"
         manager="plone.app.layout.viewlets.interfaces.IPortalTop"
         class="plone.app.layout.viewlets.common.PathBarViewlet"
-        layer=".interfaces.IThemeSchools"
+        layer="plonetheme.sunburst.browser.interfaces.IThemeSpecific"
         permission="zope2.View"
         />
     <browser:viewlet
         name="plone.footer"
         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
         template="templates/footer.pt"
-        layer=".interfaces.IThemeSchools"
+        layer="plonetheme.sunburst.browser.interfaces.IThemeSpecific"
         permission="zope.Public"
         />
     <browser:viewlet
         name="schools.top_portlets"
         manager="plone.app.layout.viewlets.interfaces.IPortalTop"
         class=".viewlets.TopPortletsViewlet"
-        layer=".interfaces.IThemeSchools"
+        layer="plonetheme.sunburst.browser.interfaces.IThemeSpecific"
         permission="zope2.View"
         />
     <include package="plone.app.portlets" />
@@ -45,7 +37,7 @@
     <browser:resourceDirectory
         name="quintagroup.theme.schools.templates"
         directory="templates"
-        layer=".interfaces.IThemeSchools"
+        layer="plonetheme.sunburst.browser.interfaces.IThemeSpecific"
         />
 
     <!-- -*- extra stuff goes here -*- -->

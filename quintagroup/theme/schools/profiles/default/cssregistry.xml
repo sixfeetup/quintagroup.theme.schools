@@ -5,4 +5,12 @@
     enabled="on" expression="not: request/HTTP_X_THEME_ENABLED | nothing"
     id="++resource++carousel.css" media="screen" rel="stylesheet"
     rendering="import"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    cacheable="True" compression="safe" conditionalcomment="" cookable="True"
+    enabled="on" expression="not: request/HTTP_X_THEME_ENABLED | nothing"
+    id="public.css" media="screen" rel="stylesheet" rendering="link"/>
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    cacheable="True" compression="safe" conditionalcomment="" cookable="True"
+    enabled="on" expression="not: request/HTTP_X_THEME_ENABLED | nothing"
+    id="columns.css" media="screen" rel="stylesheet" rendering="link"/>
 </object>
