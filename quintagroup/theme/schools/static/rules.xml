@@ -41,6 +41,8 @@
     <before theme='//*[@class="dContent"]' content='//*[@id="portal-globalnav"]' />
     <before theme='//*[@class="dContent"]' content='//*[@id="viewlet-above-content"]' />
 
+    <drop css:content="div#viewlet-above-content div#portal-breadcrumbs" />
+
     <replace css:content-children="div.carousel-banner">
         <xsl:copy-of select="node()"/><div id="carousel-over"></div>
     </replace>

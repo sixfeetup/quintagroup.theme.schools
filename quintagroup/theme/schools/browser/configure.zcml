@@ -13,48 +13,26 @@
         />
 
     <!-- Zope 3 browser resources -->
-
     <browser:viewlet
-        name="schools.top_portlets"
-        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
-        class=".viewlets.TopPortletsViewlet"
-        layer=".interfaces.IThemeSchools"
-        permission="zope2.View"
-        />
-    <browser:viewlet
-        name="schools.searchbox"
-        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
-        class="plone.app.layout.viewlets.common.SearchBoxViewlet"
-        layer=".interfaces.IThemeSchools"
-        permission="zope2.View" 
-        />
-    <browser:viewlet
-        name="schools.site_actions"
-        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
-        class="plone.app.layout.viewlets.common.SiteActionsViewlet"
-        layer=".interfaces.IThemeSchools"
-        permission="zope2.View" 
-        />
-    <!-- browser:viewlet
-        name="schools.visual"
-        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-        template="templates/visual.pt"
-        layer=".interfaces.IThemeSchools"
-        permission="zope2.View"
-        / -->
-    <browser:viewlet
-        name="schools.path_bar"
+        name="plone.path_bar"
         manager="plone.app.layout.viewlets.interfaces.IPortalTop"
         class="plone.app.layout.viewlets.common.PathBarViewlet"
         layer=".interfaces.IThemeSchools"
         permission="zope2.View"
         />
     <browser:viewlet
-        name="schools.footer"
+        name="plone.footer"
         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
         template="templates/footer.pt"
         layer=".interfaces.IThemeSchools"
         permission="zope.Public"
+        />
+    <browser:viewlet
+        name="schools.top_portlets"
+        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+        class=".viewlets.TopPortletsViewlet"
+        layer=".interfaces.IThemeSchools"
+        permission="zope2.View"
         />
     <include package="plone.app.portlets" />
     <browser:page
