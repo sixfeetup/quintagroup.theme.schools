@@ -21,15 +21,6 @@
         layer=".interfaces.IThemeSchools"
         permission="zope2.View"
         />
-    <!--browser:viewlet
-        name="schools.top_portlets"
-        view="plone.app.portlets.browser.interfaces.IManageContextualPortletsView"
-        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
-        template="templates/top_portlets.pt"
-        class=".viewlets.ManageContextualPortletsViewlet"
-        layer=".interfaces.IThemeSchools"
-        permission="zope2.View"
-        /-->
     <browser:viewlet
         name="schools.searchbox"
         manager="plone.app.layout.viewlets.interfaces.IPortalTop"
@@ -55,13 +46,6 @@
         name="schools.path_bar"
         manager="plone.app.layout.viewlets.interfaces.IPortalTop"
         class="plone.app.layout.viewlets.common.PathBarViewlet"
-        layer=".interfaces.IThemeSchools"
-        permission="zope2.View"
-        />
-    <browser:viewlet
-        name="schools.global_sections"
-        manager="plone.app.layout.viewlets.interfaces.IAboveContent"
-        class=".viewlets.SchoolsGlobalSections"
         layer=".interfaces.IThemeSchools"
         permission="zope2.View"
         />

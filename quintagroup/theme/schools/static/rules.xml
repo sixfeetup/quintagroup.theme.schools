@@ -23,22 +23,11 @@
 
     <before content="/html/head/style | /html/head/script | /html/head/link" theme-children="/html/head" />
 
-
-
-
-
-
-
-
     <rules css:if-content="body.template-search,body.template-search_form,body.template-overview-controlpanel">
     </rules>
 
-    <!-- copy theme='//*[@class="topPortlets"]' content='//*[@class="topPortlets"]/*' /-->
-
     <before theme='//*[@id="portal-header"]' content='//*[@class="topPortlets"]' />
 
-    <!-- Logo -->
-    <!--copy theme='//*[@id="portal-logo"]' content='//*[@id="portal-logo"]/*' / -->
     <copy attributes="href title" css:content='#portal-logo' css:theme="#portal-logo" />
 
     <after css:theme="#portal-logo" css:content="#portal-personaltools-wrapper" />
@@ -46,14 +35,18 @@
     <after css:theme="#portal-header" css:content="#portal-searchbox" />
     <after css:theme="#portal-header" css:content="#portal-siteactions" />
 
+    <after css:theme="#visual-column-wrapper" css:content="#portal-column-two" />
+    <after css:theme="#portal-column-content" css:content="#portal-column-one" />
 
-    <after css:theme="#portal-top" css:content="#portal-columns" />
-
+    <before theme='//*[@class="dContent"]' content='//*[@id="portal-globalnav"]' />
+    <before theme='//*[@class="dContent"]' content='//*[@id="viewlet-above-content"]' />
 
     <replace css:content-children="div.carousel-banner">
         <xsl:copy-of select="node()"/><div id="carousel-over"></div>
     </replace>
 
+    <replace theme='//*[@class="dContent"]' content='//*[@id="content-wrapper"]/div[2]' />
+    <after theme='//*[@class="dContent"]' content='//*[@id="viewlet-below-content"]' />
 
     <copy theme='//*[@id="portal-footer"]' content='//*[@id="portal-footer"]/*' />
     <copy theme='//*[@id="portal-colophon"]' content='//*[@id="portal-colophon"]/*' />
