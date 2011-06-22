@@ -76,9 +76,9 @@ table.listing ul li, .stx table ul li {
   border-style:solid;
   border-width:1px 1px 1px 0;
   height:2em;
-  left:2px;
-  margin:0;
-  padding:0;
+  left:0;
+/*  margin:0;
+  padding:0;*/
   position:absolute;
   top:2px;
   width:766px;
@@ -107,14 +107,11 @@ table.listing ul li, .stx table ul li {
 
 /*---------- PORTAL SEARCH BOX ----------*/
 #portal-searchbox {
-  background:url(../images/sprite.png) no-repeat 167px -1084px;
   border:1px solid #ccc;
   height:2em;
-  margin:0;
-  overflow:visible !important;
-  padding:0;
+/*  overflow:visible !important;*/
   position:absolute;
-  right:2px;
+  right:0;
   top:2px;
   width:222px;
   z-index:3;
@@ -127,54 +124,77 @@ table.listing ul li, .stx table ul li {
   background:none;
   border:0;
   font-size:110%;
-  margin:4px 0 0 6px;
-  padding:0;
-  width:136px;
+  padding:3px 6px;
+  width:142px;
+
+position: relative;
+z-index: 1;
+
   }
 input.searchButton {
   background:none;
   border:0;
   font-size:100%;
   margin:0 !important;
+position:relative;
+z-index:1;
   padding:0;  
   text-transform:none;
   }
 #portal-searchbox input.searchButton {
+  border-left:1px solid #ccc;
   color:#b4b5b5;
+  cursor:pointer;
   font-size:110%;
-  position:absolute;
-  right:2px;
+  padding:3px 6px;
   text-align:center;
-  top:3px;
+  width:68px;
   }
-.searchSection {
+/*.searchSection {
   display:none;
-  }
+  }*/
 .LSResult {
-  left:2px;
-  padding:0;
-  top:7px;
+right:-1px;
+/*  left:2px;*/
+/*  padding:0;*/
+  top:12px;
   }
-.livesearchContainer {
+/*.livesearchContainer {
   width:308px;
-  }
-#livesearchLegend {
+  }*/
+/*#livesearchLegend {
   margin-top:-26px;
   margin-left:-1px;
   padding:8px 9px 8px 8px;
-  }
-.LSTable {
+  }*/
+/*.LSTable {
   margin-left:0;
   }
-
+*/
 .portletSearch .LSResult {
   left:-8px;
   padding:0;
   text-align:left;
   top:0.4em;
   }
+#LSResult fieldset {
+    padding: 1em 0 0;
+    background: White;
+    border:1px solid #bbb;
+}
+#livesearchLegend {
+    background-color:#ccc;
+    background: White;
+    border-color:#bbb;
+    border-style:solid;
+    border-width:1px 1px 0;
+
+    margin-left: -1px;
+        margin-top:-24px;
+            padding:3px 16px 8px;
+
+}
 .portletSearch .livesearchContainer {
-  border:1px solid #BBBBBB;
   left:0;
   }
 #portal-column-one .portletSearch .livesearchContainer {
@@ -184,7 +204,8 @@ input.searchButton {
 #portal-column-two .portletSearch .livesearchContainer {
   width:160px;
   }
-.portletSearch li.LSRow a {
+.LSRow a {
+  font-weight:bold;
   white-space:normal;
   }
 #portal-column-one #livesearchLegend,
