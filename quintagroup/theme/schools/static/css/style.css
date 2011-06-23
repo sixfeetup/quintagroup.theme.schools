@@ -9,6 +9,7 @@
   width:993px;
   }
 #portal-top {
+  margin-bottom:2px;
   padding:2.55em 0 0;
   }
 #portal-header {
@@ -16,6 +17,14 @@
   }
 
 /*---------- CONTENT STYLES ----------*/
+
+.dContent {
+border: 1px solid #CCCCCC;
+clear: both;
+font-size:110%;
+padding: 0 10px 20px;
+}
+
 .documentFirstHeading {
   border-bottom:0;
   color:#627a8f;
@@ -269,20 +278,26 @@ right:-1px;
   border-width:0 1px 1px;
   margin:2px 0 0;
   padding:2px 12px;
+        line-height: 1.6em;
   text-transform:none;
   }
+
+
 
 /*---------- PORTAL PERSONAL TOOLS ----------*/	
 #portal-personaltools {
   background-color:#e8ecf0;
-  border-bottom:0;
-  border-top:0;
-  left:5px;
-  padding:0;
+  border:0;
+/*  border-top:0;*/
+left:2px;
+padding:3px;
   position:absolute;
   text-align:left;
   text-transform:none;
-  top:1em;
+  top:5px;
+  }
+dl#portal-personaltools.actionMenu {
+  margin:0;
   }
 #portal-personaltools li {
   margin:0;
@@ -296,9 +311,10 @@ right:-1px;
   }
 
 /*---------- PORTAL GLOBAL NAV ----------*/
-#portal-globalnav {
+/*#portal-globalnav {
   padding:0;
-  }
+  }*/
+
 #portal-globalnav li {
   background:url(../images/sprite.png) repeat-x 0 0;
   border-color:#ccc;
@@ -312,7 +328,7 @@ ul#portal-globalnav li a { /* hack for dropdown menu, ul */
   border:0;
   color:#565656;
   display:block;
-  line-height:1.6em !important;
+  line-height:1.6em;
   margin-right:0;
   padding:4px 20px 3px;
   text-transform:uppercase;
@@ -332,12 +348,12 @@ ul#portal-globalnav li.selected a { /* hack for dropdown menu, ul */
 #portal-column-one .visualPadding {
   padding:2px 2px 0 2px;
   border:1px solid #ccc;
-  margin:2px 0 0;
+  margin:0 2px 0 0;
   }
 #portal-column-two .visualPadding {
   padding:2px 2px 0 2px;
   border:1px solid #ccc;
-  margin:2px 0 0;
+  margin:0 0 0 2px;
   }
 
 /*---------- GENERAL PORTLET OPTIONS ----------*/
@@ -496,7 +512,8 @@ dl.portletLogin {
   border-style:solid;
   border-color:#ccc;
   color:#dbe6f0;
-  clear:both;
+ clear:both;
+ text-align: center;
   }
 #portal-footer acronym {
   color: #dbe6f0;
@@ -571,7 +588,7 @@ ul#portal-globalnav ul li a {
   border: 1px solid #CCCCCC;
   clear:both;
   height: 333px;
-  margin-bottom: 1em;
+  margin-bottom:2px;
   overflow: hidden;
   position: relative;
   }

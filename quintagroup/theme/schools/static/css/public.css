@@ -36,25 +36,28 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Helvetica Neue", Arial, FreeSans, sans-serif;
+    font-family:font:69% Verdana, Geneva, sans-serif;
     font-weight: bold;
     color: Black;
-    line-height: 1.5em;
+    margin: 0.75em 0 0.25em;
+   line-height: 1.25em;
 }
 h1, h2 {
-    letter-spacing: -0.05em;
+font-weight:normal;
+border-bottom:1px solid #CCCCCC;
+/*    letter-spacing: -0.05em;*/
 }
 h1 {
-    font-size: 2em;
+    font-size:160%;
 }
 h2 {
-    font-size: 1.75em;
+    font-size:150%;
 }
 h3 {
-    font-size: 1.25em;
+    font-size:1.25em;
 }
 h4 {
-    font-size: 1.25em;
+    font-size:1.25em;
 }
 h5 {
     font-size: 1em;
@@ -62,14 +65,16 @@ h5 {
 h6 {
     font-size: 0.8em;
 }
-h2, h3, h4, h5, h6 {
+/*h2, h3, h4, h5, h6 {
     color: #444;
 }
 h2 a, h3 a, h4 a {
     border-bottom: none !important;
 }
+*/
 
 p {
+margin-bottom: 0.75em;
 }
 
 a:link, a:visited {
@@ -104,22 +109,23 @@ q {
     margin: 1.375em 0;
 }
 */
+/* 
 #portal-globalnav {
     clear: both;
     background: #ddd;
-    /* ensure top navigation dont touches portlets, content etc.. #10491 */
     margin: 0 0 1em 0;
 }
 #portal-globalnav li {
 }
+*/
+/*
 #portal-globalnav li a {
     display: inline-block;
     padding: 0.5em 1em 2em 1em;
     background: #ddd;
     min-width: 6em;
     white-space: normal;
-    /*TODO: Once we have removed the whitespace from the nav template, this can be put back*/
-    /*border-bottom: 0.1em solid White;*/
+    border-bottom: 0.1em solid White;
     border-right: 0.1em solid white;
 }
 
@@ -132,7 +138,7 @@ q {
     background: #ddd;
     color: #205c90;
 }
-
+*/
 #portal-personaltools {
 /*    float: right;*/
     background: #e3e3e3;
@@ -140,13 +146,14 @@ q {
     z-index: 3; /* personaltools should be above #portal-header (with z-index: 2) */
 /*    top: 0;
     right: 0;*/
-    padding: 0.25em 0.5em;
-    border-bottom-right-radius: 0.5em;
+/*    padding: 0.25em 0.5em;*/
+/*    border-bottom-right-radius: 0.5em;
     border-bottom-left-radius: 0.5em;
     -webkit-border-bottom-right-radius: 0.5em;
     -webkit-border-bottom-left-radius: 0.5em;
     -moz-border-radius-bottomleft: 0.5em;
     -moz-border-radius-bottomright: 0.5em;
+    */
 }
 #portal-personaltools #anon-personalbar a {
     float: left;
@@ -257,7 +264,7 @@ input.searchField {
 
 /* @group Path indicator (breadcrumbs) */
 
-#portal-breadcrumbs {
+/*#portal-breadcrumbs {
     margin-bottom: 1em;
     margin-left: 0.25em;
 }
@@ -265,7 +272,7 @@ input.searchField {
     border-bottom: none;
     display: inline-block;
 }
-
+*/
 /* @end */
 
 
@@ -450,10 +457,10 @@ body#content {
     margin-top: 0;
 }
 
-#content p,
+/*#content p,
+dl.portlet p,*/
 #content table,
 #content dl,
-dl.portlet p,
 dl.portlet {
     margin-bottom: 1em;
 }
@@ -466,17 +473,22 @@ dl.portlet {
 #content a:link,
 dl.portlet a:link {
     color: #205c90;
-    border-bottom: 0.1em solid #ccc;
+    text-decoration:underline;
+/*    border-bottom: 0.1em solid #ccc;*/
 }
 
+/*
 #content a:visited,
 dl.portlet a:visited {
     color: #427597;
     border-bottom: 0.1em solid #ccc;
 }
+*/
+
+
 #content a:hover,
 dl.portlet a:hover {
-    color: #75ad0a !important; /* This one gets an !important because it should always activate in the content area, even when state coloring is active */
+    color: #75ad0a !important;
 }
 #content a:target {
     background-color: #ffb;
@@ -596,9 +608,12 @@ dl.portlet li {
 
 #content .documentDescription,
 #content #description {
-    color: #666;
+/*    color: #666;
     margin-left: 0;
-    font: bold 1.25em "Helvetica Neue", Arial, FreeSans, sans-serif;
+    font: bold 1.25em "Helvetica Neue", Arial, FreeSans, sans-serif;*/
+font-weight: bold;
+line-height: 1.5em;
+margin: 0 0 0.5em;
 }
 
 #content img.tileImage,
@@ -1627,12 +1642,13 @@ dl.toc dd ol {
 
 /* @group Footer */
 
-#portal-footer {
+/*#portal-footer {
     background: #ddd;
     padding: 1em;
     margin: 1em 0;
     line-height: 2em;
 }
+*/
 
 #portal-colophon {
     text-align: center;
@@ -1789,7 +1805,7 @@ div.overlay-iframe {
 /* default close button positioned on upper-left corner */
 div.overlaybg div.close,
 div.overlay div.close {
-    background-image: url(pb_close.png);
+    background-image: url(../../pb_close.png);
     position: absolute;
     left: -14px;
     top: -14px;

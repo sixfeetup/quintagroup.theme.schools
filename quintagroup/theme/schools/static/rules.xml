@@ -5,7 +5,11 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
     <theme href="index.html" />
-    <notheme if-path="aq_parent" />
+
+
+    <!-- notheme if-path="aq_parent" / -->
+    <notheme if="$ajax_load" />
+
     <notheme if-path="emptypage/" />
     <notheme if-path="error_log" />
     <notheme if-path="image_view_fullscreen/" />
@@ -44,10 +48,13 @@
 
 
 <copy attributes="class" content='//*[@id="portal-column-content"]' theme='//*[@id="portal-column-content"]' />
+<copy attributes="class" content='//*[@id="portal-column-one"]' theme='//*[@id="portal-column-one"]' />
+<copy attributes="class" content='//*[@id="portal-column-two"]' theme='//*[@id="portal-column-two"]' />
 
 
-    <after css:theme="#portal-column-content" css:content="#portal-column-two" />
-    <after css:theme="#portal-column-content" css:content="#portal-column-one" />
+    <copy css:theme="#portal-column-two .visualPadding" css:content-children="#portal-column-two" />
+    <copy css:theme="#portal-column-one .visualPadding" css:content-children="#portal-column-one" />
+
 
     <before theme='//*[@class="dContent"]' content='//*[@id="portal-globalnav"]' />
     <before theme='//*[@class="dContent"]' content='//*[@id="viewlet-above-content"]' />
@@ -55,20 +62,26 @@
 <copy attributes="class" content='//*[@id="portal-columns"]' theme='//*[@id="portal-columns"]' />
 
     <drop css:content="div#viewlet-above-content div#portal-breadcrumbs" />
+    <drop css:content="div#portal-searchbox .searchSection" />
 
     <replace css:content-children="div.carousel-banner">
         <xsl:copy-of select="node()"/><div id="carousel-over"></div>
     </replace>
 
-    <replace theme='//*[@class="dContent"]' content='//*[@id="portal-column-content"]/div[2]' />
+    <copy theme='//*[@class="dContent"]' content-children='//*[@id="portal-column-content"]/div[2]' />
     <after theme='//*[@class="dContent"]' content='//*[@id="viewlet-below-content"]' />
 
         <!-- replace css:content='.documentEditable' css:theme='#content' css:if-content=".documentEditable" /-->
 
+<!-- replace css:content='.documentEditable' css:theme='dContent' css:if-content=".documentEditable" / -->
+
+
+<merge attributes="class" css:content=".documentEditable" css:theme=".dContent" />  
 
 <copy attributes="class" content='//*[@id="portal-footer"]' theme='//*[@id="portal-footer"]' />
 
     <copy theme='//*[@id="portal-footer"]' content='//*[@id="portal-footer"]/*' />
     <copy theme='//*[@id="portal-colophon"]' content='//*[@id="portal-colophon"]/*' />
+
 
 </rules>
