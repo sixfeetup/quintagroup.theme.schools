@@ -4,31 +4,16 @@
     xmlns:css="http://namespaces.plone.org/diazo/css"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-    <theme href="index.html" />
-
-
-    <!-- notheme if-path="aq_parent" / -->
+    <!-- The default theme, used for standard Plone web pages -->
+    <theme href="index.html" css:if-content="#visual-portal-wrapper" />
     <notheme if="$ajax_load" />
 
-    <notheme if-path="emptypage/" />
-    <notheme if-path="error_log" />
-    <notheme if-path="image_view_fullscreen/" />
-    <notheme if-path="manage/" />
-    <notheme css:if-content="#personaltools-plone_setup" />
-    <notheme if-content="not(//*[@id='portal-columns'])" />
-    <notheme if-path="presentation_view"/>
-    <notheme if-path="source_editor.htm"/>
-    <notheme if-path="ploneimage.htm"/>
-    <notheme if-path="anchor.htm"/>
-    <notheme if-path="table.htm"/><notheme if-path="attributes.htm"/>
-
+    <!-- Add meta tags -->
     <replace theme="/html/head/title" content="/html/head/title"/>
     <replace theme="/html/head/base" content="/html/head/base" />
 
     <before content="/html/head/style | /html/head/script | /html/head/link" theme-children="/html/head" />
 
-    <rules css:if-content="body.template-search,body.template-search_form,body.template-overview-controlpanel">
-    </rules>
 
     <before theme='//*[@id="portal-header"]' content='//*[@class="topPortlets"]' />
 
@@ -82,6 +67,5 @@
 
     <copy theme='//*[@id="portal-footer"]' content='//*[@id="portal-footer"]/*' />
     <copy theme='//*[@id="portal-colophon"]' content='//*[@id="portal-colophon"]/*' />
-
 
 </rules>
