@@ -129,19 +129,20 @@ table.listing ul li, .stx table ul li {
   float:none;
   text-align:left;
   }
-.portlet-search-gadget {
-border:1px solid #ccc;
-}
+.portletSearch .LSBox {
+position:relative;
+}  
 #portal-searchbox #searchGadget {
   background:none;
   border:0;
   font-size:110%;
   padding:3px 6px;
-  width:142px;
+  width:181px;
 position: relative;
 z-index: 1;
 
   }
+/*
 input.searchButton {
   background:none;
   border:0;
@@ -155,16 +156,35 @@ z-index:1;
 #portal-searchbox input.searchButton {
   border-left:1px solid #ccc;
   color:#b4b5b5;
-  cursor:pointer;
   font-size:110%;
   padding:3px 6px;
   text-align:center;
   width:68px;
   }
+
+*/
+
+input.searchButton {
+background:url(../images/sprite.png) no-repeat 0 -1305px;
+border:0;
+cursor:pointer;
+font-size:0;
+height:21px;
+vertical-align:top;
+width:28px;
+}
+
+
+
+
+
+
+
 /*.searchSection {
   display:none;
   }*/
 .LSResult {
+position:absolute;
 right:-1px;
 /*  left:2px;*/
 /*  padding:0;*/
@@ -182,13 +202,14 @@ right:-1px;
   margin-left:0;
   }
 */
-.portletSearch .LSResult {
+/*.portletSearch .LSResult {
   left:-8px;
   padding:0;
   text-align:left;
   top:0.4em;
   }
-#LSResult fieldset {
+*/
+.LSResult fieldset {
     padding: 1em 0 0;
     background: White;
     border:1px solid #bbb;
@@ -199,31 +220,36 @@ right:-1px;
     border-color:#bbb;
     border-style:solid;
     border-width:1px 1px 0;
-
     margin-left: -1px;
-        margin-top:-24px;
-            padding:3px 16px 8px;
-
+    margin-top:-24px;
+    padding:3px 16px 8px;
 }
-.portletSearch .livesearchContainer {
+/*.portletSearch .livesearchContainer {
   left:0;
   }
-#portal-column-one .portletSearch .livesearchContainer {
-  top:0 !important;
+  */
+.portletSearch .livesearchContainer {
+  /*top:0 !important;*/
+  width:207px;
+  }
+/*#portal-column-two .portletSearch .livesearchContainer {
   width:160px;
   }
-#portal-column-two .portletSearch .livesearchContainer {
-  width:160px;
-  }
+ */
+.portletSearch #LSNothingFound,
+.portletSearch .LSRow {
+width:auto;
+}
+
 .LSRow a {
   font-weight:bold;
   white-space:normal;
   }
 #portal-column-one #livesearchLegend,
 #portal-column-two #livesearchLegend {
-  position:absolute;
-  left:-9999px;
+  display:none;
   }
+
 
 /*---------- TOP PORTLETS ----------*/
 .topPortlets {
@@ -362,9 +388,10 @@ ul#portal-globalnav li.selected a { /* hack for dropdown menu, ul */
   }
 
 /*---------- GENERAL PORTLET OPTIONS ----------*/
-dl.portlet .hiddenStructure {
+/*dl.portlet .hiddenStructure {
   padding:0;
   }
+*/
 dl.portlet {
   border-bottom:0;
   margin:0 0 2px;
@@ -495,6 +522,28 @@ background-color:#B4C9DD;
   border-color:#fff;
   }
 
+/*---------- PORTLET SEARCH ----------*/
+dl.portletSearch {
+  background:url(../images/sprite.png) repeat-x 0 0 #dadada;
+  border-width:0 0 1px;
+  border-style:solid;
+  border-color:#ccc;
+  }
+.portletSearch .portlet-search-gadget {
+  border-width:1px 0 0 1px;
+  border-style:solid;
+  border-color:#c2c2c2;
+  padding:2px 7px;
+  width:165px;
+  }
+.portletSearch input.searchButton {
+  background-position:0 -1284px;
+  }
+.portletSearch .portletFooter {
+  padding-left:10px;
+  text-align:left;
+  }
+
 /*---------- PORTLET LINKS ----------*/
 #schools-links a {
   font-weight: bold;
@@ -581,9 +630,10 @@ ul#portal-globalnav ul li a {
   }
 
 /*---------- FIXES ----------*/
-.hiddenStructure {
+/*.hiddenStructure {
   position:absolute;
   }
+*/
 /*.actionMenu .actionMenuContent {
   left:-3px;
   top:1.6em;

@@ -231,7 +231,7 @@ input.searchField {
 /* @group LiveSearch */
 
 #LSResult {
-    position: absolute;
+/*    position: absolute;*/
 /*    right: 0;
     background: White;
     margin: -1.5em 0 0 -7em;*/
@@ -254,7 +254,7 @@ input.searchField {
 .LSRow,
 #LSNothingFound {
     display: block;
-    padding: 0.5em 1em;
+    padding:0 1em;
     white-space: normal;
     width:28em;
 }
@@ -1566,7 +1566,8 @@ div.error.warning input {
 }
 
 input.inputLabelActive {
-    color: #76797c;
+    /*color: #76797c;*/
+    color:#dedede;
 }
 textarea#form\.description {
     height: 6em;
@@ -1764,15 +1765,16 @@ dl.toc dd ol {
 /* @group Invisibles */
 
 .hiddenStructure {
-    display: block;
+display:none;
+/*    display: block;
     background: transparent;
-    background-image: none; /* safari bug */
-    border: none;
+    background-image: none;*/ /* safari bug */
+/*    border: none;
     height: 0.1em;
     overflow: hidden;
     padding: 0;
     margin: -0.1em 0 0 -0.1em;
-    width: 1px;
+    width: 1px;*/
 }
 
 #content .visualNoMarker {

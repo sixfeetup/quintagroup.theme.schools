@@ -49,6 +49,11 @@
     <drop css:content="div#viewlet-above-content div#portal-breadcrumbs" />
     <drop css:content="div#portal-searchbox .searchSection" />
 
+    <replace css:content=".portletSearch dt.portletHeader">
+        <dt class="portletHeader hiddenStructure">Search</dt>
+    </replace>
+
+
     <replace css:content-children="div.carousel-banner">
         <xsl:copy-of select="node()"/><div id="carousel-over"></div>
     </replace>
