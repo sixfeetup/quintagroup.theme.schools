@@ -129,13 +129,15 @@ table.listing ul li, .stx table ul li {
   float:none;
   text-align:left;
   }
+.portlet-search-gadget {
+border:1px solid #ccc;
+}
 #portal-searchbox #searchGadget {
   background:none;
   border:0;
   font-size:110%;
   padding:3px 6px;
   width:142px;
-
 position: relative;
 z-index: 1;
 
@@ -426,14 +428,14 @@ dl.portletItem {
   } */
 
 .navTreeItem {
-  padding:0 0 0 7px;
+/*padding:0 0 0 7px;*/
   border-top:1px solid #e7e7e7;
   margin:0;
   }
 dd.portletItem .navTreeItem a {
-  background: url(../images/sprite.png) no-repeat 0 -676px;
+  background: url(../images/sprite.png) no-repeat 10px -675px;
   line-height:1.6em; /* !important added for when the option show icons */
-  padding:4px 4px 4px 20px !important; /* !important added for when the option show icons */
+  padding:4px 4px 4px 27px !important; /* !important added for when the option show icons */
 /*  border:0;*/
   color:#56616b;
   }
@@ -453,9 +455,25 @@ dd.portletItem .navTreeItem a:hover {
 /*  border:0;*/
   color:#56616b;
   }
+dd.portletItem a.navTreeCurrentItem,
+dd.portletItem .navTreeItem a:hover {
+background-color:#c9ddf1;
+}
+/*
+dd.portletItem .navTreeItemInPath:hover,
+dd.portletItem .navTreeItemInPath {
+background-color:#B4C9DD;
+}*/
+
 dd.portletItem .navTreeLevel1 .navTreeItem  {
   border-top:0;
+  padding:0 0 0 7px;
   }
+/*  
+dd.portletItem .navTreeLevel1 {
+background-color:#B4C9DD;
+}
+*/
 
 /*---------- PORTAL-SITEMAP ----------*/
 #portal-sitemap {
