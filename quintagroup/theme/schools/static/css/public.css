@@ -1,220 +1,3 @@
-/* @override
-    http://localhost:8080/4/portal_css/Sunburst%20Theme/public.css
-    http://localhost:8080/sprites/portal_css/Sunburst%20Theme/public.css
-*/
-
-/* @group CSS Reset */
-
-/* Remove implicit browser styles to have a neutral starting point:
-   - No elements should have implicit margin/padding
-   - No underline by default on links (we add it explicitly in the body text)
-   - When we want markers on lists, we will be explicit about it, and they render inline by default
-   - Browsers are inconsistent about hX/pre/code, reset
-   - Linked images should not have borders
-   */
-
-* { margin: 0; padding: 0; }
-* ul,ol { list-style:none; }
-* li {margin-bottom:0.5em; }
-* h1,h2,h3,h4,h5,h6,pre,code { font-size:1em; }
-* a img,:visited img { border:none }
-a { outline: none; }
-table { border-spacing: 0; }
-img { vertical-align: text-bottom; }
-iframe { border-width: 0; border-style:none; }
-/* @end */
-
-/* @group Basics */
-
-body {
-    font:69% Verdana, Geneva, sans-serif;
-    background: White;
-    color: Black;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family:Verdana, Geneva, sans-serif;
-    font-weight: bold;
-    color: Black;
-    margin: 0.75em 0 0.25em;
-   line-height: 1.25em;
-}
-h1, h2 {
-font-weight:normal;
-border-bottom:1px solid #CCCCCC;
-/*    letter-spacing: -0.05em;*/
-}
-h1 {
-    font-size:160%;
-}
-h2 {
-    font-size:150%;
-}
-h3 {
-    font-size:1.25em;
-}
-h4 {
-    font-size:1.25em;
-}
-h5 {
-    font-size: 1em;
-}
-h6 {
-    font-size: 0.8em;
-}
-/*h2, h3, h4, h5, h6 {
-    color: #444;
-}
-h2 a, h3 a, h4 a {
-    border-bottom: none !important;
-}
-*/
-
-p {
-margin-bottom: 0.75em;
-}
-
-a {
-    color:#73a20f;
-    text-decoration:none
-}
-a:visited {
-    color:#a4b089;
-}
-a:focus img {
-    outline: thin dotted;
-}
-/*
-dt {
-    font-weight: bold;
-}
-*/
-
-input {
-    /*font-family: "Lucida Grande", Arial, FreeSans;*/
-    font-family:Verdana, Geneva, sans-serif;
-}
-
-q {
-    quotes: "“" "”" "‘" "’";
-}
-
-/* @end */
-
-/* @group Navigation/search */
-
-#portal-header {
-    position: relative;
-    z-index: 2;
-}
-
-/*#portal-logo {
-    display: inline-block;
-    margin: 1.375em 0;
-}
-*/
-/* 
-#portal-globalnav {
-    clear: both;
-    background: #ddd;
-    margin: 0 0 1em 0;
-}
-#portal-globalnav li {
-}
-*/
-/*
-#portal-globalnav li a {
-    display: inline-block;
-    padding: 0.5em 1em 2em 1em;
-    background: #ddd;
-    min-width: 6em;
-    white-space: normal;
-    border-bottom: 0.1em solid White;
-    border-right: 0.1em solid white;
-}
-
-#portal-globalnav .selected a,
-#portal-globalnav a:hover {
-    background: #205c90;
-    color: White;
-}
-#portal-globalnav .selected a:hover {
-    background: #ddd;
-    color: #205c90;
-}
-*/
-#portal-personaltools {
-/*    float: right;*/
-    background: #e3e3e3;
-    position: relative;
-    z-index: 3; /* personaltools should be above #portal-header (with z-index: 2) */
-/*    top: 0;
-    right: 0;*/
-/*    padding: 0.25em 0.5em;*/
-/*    border-bottom-right-radius: 0.5em;
-    border-bottom-left-radius: 0.5em;
-    -webkit-border-bottom-right-radius: 0.5em;
-    -webkit-border-bottom-left-radius: 0.5em;
-    -moz-border-radius-bottomleft: 0.5em;
-    -moz-border-radius-bottomright: 0.5em;
-    */
-}
-#portal-personaltools #anon-personalbar a {
-    float: left;
-    margin-right: 0.5em;
-}
-
-#portal-languageselector {
-    float: right;
-    background: #e3e3e3;
-    position: relative;
-    top: 0;
-    right: 1px;
-    z-index: 3; /* portal-header has 2 and we need to be above to be clickable */
-    padding: 0.25em 0.5em;
-    border-bottom-right-radius: 0.5em;
-    border-bottom-left-radius: 0.5em;
-    -webkit-border-bottom-right-radius: 0.5em;
-    -webkit-border-bottom-left-radius: 0.5em;
-    -moz-border-radius-bottomleft: 0.5em;
-    -moz-border-radius-bottomright: 0.5em;
-    max-width: 50%;
-}
-
-/*#portal-searchbox {
-    float: right;
-    text-align: left;
-    clear: right;
-    margin: 1.2em 0;
-}*/
-
-#portal-searchbox form {
-    white-space: nowrap;
-}
-
-#portal-searchbox label {
-    font-weight: normal;
-}
-
-#searchGadget {
-    width: 13em;
-}
-#searchGadget,
-.LSBox input.searchButton {
-}
-
-.LSBox .searchSection {
-}
-
-#content input.searchField {
-    margin-bottom: 1em;
-}
-
-input.searchField {
-/*  -webkit-appearance: searchfield;*/
-    -moz-appearance: searchfield;
-}
-
 /* Collapsible elements in search_form */
 
 .collapsible .collapser.collapsed {
@@ -228,123 +11,23 @@ input.searchField {
 }
 /* @end */
 
-/* @group LiveSearch */
 
-#LSResult {
-/*    position: absolute;*/
-/*    right: 0;
-    background: White;
-    margin: -1.5em 0 0 -7em;*/
-}
-
-/*#LSResult fieldset {
-    padding: 1em 0 0;
-    border: 0.1em solid #ccc;
-}*/
-
-/*#livesearchLegend {
-    background-color:#ccc;
-    padding:0.3em;
-}*/
-
-#LSResult .LSDescr {
-    color: #666;
-}
-
-.LSRow,
-#LSNothingFound {
-    display: block;
-    padding:0 1em;
-    white-space: normal;
-    width:28em;
-}
-
-.LSHighlight {
-    background: #ddd;
-}
-
-/* @end */
-
-
-/* @group Path indicator (breadcrumbs) */
-
-/*#portal-breadcrumbs {
-    margin-bottom: 1em;
-    margin-left: 0.25em;
-}
-#portal-breadcrumbs a {
-    border-bottom: none;
-    display: inline-block;
-}
-*/
-/* @end */
-
-
-
-
-
-/* @group Site actions */
-
-#portal-siteactions {
-/*    padding-bottom: 2em;*/
-    text-align: center;
-}
-#portal-siteactions li {
-    margin-right: 0.5em;
-}
-#portal-siteactions li a:hover {
-    color: #75ad0a
-}
-
-/* @end */
-
-/* @group Listings */
-
-a.link-parent {
-}
-
-a.link-anchor {
-    border: none !important;
-    color: Black !important;
-    cursor: default !important;
-}
-#content a.link-overlay {
-    border-bottom: 1px dotted #205c90 !important;
-}
 
 dl dt .documentByLine {
-    font-weight: normal;
-}
+  font-weight:normal;
+  }
 
 dl dt span.summary a {
-    border: none !important;
-}
+  border:0 !important;
+  }
 
 /* @end */
 
 /* @group Portlets */
-/*
-dl.portlet {
-    margin: 0 0 1em;
-}
-*/
 
 dl.portletError {
     background-color: #FFA500;
 }
-
-/*dl.portlet dt,
-div.portletAssignments div.portletHeader {
-    padding: 0.42em 1em;
-    background: #ddd;
-    line-height: normal;
-}
-
-
-dl.portlet dt.hiddenStructure {
-    padding: 0;
-}
-*/
 
 div.portletAssignments {
     line-height: 2em;
@@ -362,20 +45,6 @@ dl.portlet dt a {
 display: block;
 }
 
-/*dl.portlet dt a:link,
-dl.portlet dt a:visited,
-dl.portlet dt a:hover {
-    color: black;
-    display: block;
-    border: none;
-}*/
-
-/*dl.portlet dd.portletItem,
-dl.portlet dd.portletFooter,
-dl.portletError dd {
-    padding: 1em;
-}
-*/
 
 
 div.managePortletsLink,
@@ -401,11 +70,6 @@ a.managePortletsFallback {
     line-height: 2em;
 }
 
-/*
- #visual-portal-wrapper dl.portletCalendar dd {
-    padding: 0;
-}
-*/
 
 #dashboard-portlets1,
 #dashboard-portlets2,
@@ -419,41 +83,19 @@ a.managePortletsFallback {
 /* @group Navigation portlet */
 
 dl.portlet ul.navTree li a {
-/*    border: none;*/
     display: block;
     zoom: 1;
 }
 
-/*dl.portlet ul.navTree li a:hover {
-
-}*/
 
 dl.portletNavigationTree dd.portletItem {
     padding: 0;
 }
 
-/*
-dl.portlet ul.navTreeLevel0 > .navTreeItem {
-    padding: 0.25em 1em;
-    border-bottom: 0.1em dotted #ddd;
-    line-height: 2em;
-}
-*/
 dl.portlet ul.navTreeLevel1 .navTreeItem {
-/*    padding-left: 0.5em;*/
     line-height: 2em;
 }
 
-/*
- dl.portlet ul.navTree .navTreeCurrentItem {
-    background-color: #ddd;
-    border-left: 1em solid #ddd;
-    margin-left: -1em;
-    margin-right: -1em;
-}
-*/
-
-/* @end */
 
 /* @group Content Area */
 
@@ -476,36 +118,14 @@ body#content {
     margin-top: 0;
 }
 
-/*#content p,
-dl.portlet p,*/
 #content table,
 #content dl {
     margin-bottom: 1em;
 }
 
-#content ul,
-#content ol {
-
-}
-
 #content a:link {
 text-decoration:underline;
 }
-/*
-#content a:link,
-dl.portlet a:link {
-    color: #205c90;
-    text-decoration:underline;
-    border-bottom: 0.1em solid #ccc;
-}
-*/
-/*
-#content a:visited,
-dl.portlet a:visited {
-    color: #427597;
-    border-bottom: 0.1em solid #ccc;
-}
-*/
 
 
 #content a:hover,
@@ -553,14 +173,6 @@ dl.portlet ol {
     list-style-type: decimal;
     margin-left: 2em;
 }
-
-/*#content li,
-dl.portlet li {
-    margin-bottom: 0.25em;
-    line-height: 1.5em;
-    display: list-item;
-}*/
-
 
 #content dt {
     font-weight: bold;
@@ -631,9 +243,6 @@ dl.portlet li {
 
 #content .documentDescription,
 #content #description {
-/*    color: #666;
-    margin-left: 0;
-    font: bold 1.25em "Helvetica Neue", Arial, FreeSans, sans-serif;*/
 font-weight: bold;
 line-height: 1.5em;
 margin: 0 0 0.5em;
@@ -747,8 +356,6 @@ table.listing td.draggable {
     padding: 0.4em 0.4em 0 0.5em;
 }
 /* Vertical table data listings */
-table.vertical {
-}
 table.vertical th {
     text-align: right;
 }
@@ -807,11 +414,6 @@ dl.portalMessage {
     clear:both;
     font-size:0.9em;
 }
-/*dl.portalMessage a,
-#content dl.portalMessage a {
-    color: black;
-    border-bottom: 1px solid #888;
-}*/
 dl.portalMessage dt {
     background-color: #996;
     font-weight: bold;
@@ -852,8 +454,6 @@ dl.error dd {
 }
 
 /* Additional specificity for when status is shown inside #content */
-#content dl.portalMessage {
-}
 #content dl.portalMessage dt {
     margin: 0 0.5em 0 0;
     padding: 0.5em 0.75em;
@@ -959,35 +559,6 @@ display:inline;
 
 /* @end */
 
-/* @group Pulldown menus */
-
-/* @group Personal tools pulldown */
-#portal-personaltools dl {
-}
-#portal-personaltools dt {
-    font-weight: normal;
-}
-#portal-personaltools dt.actionMenuHeader a:after {
-    content: " ▼";
-}
-#portal-personaltools dd {
-    left:0;
-    right:auto;
-    padding-top: 0.5em;
-    background:#E8ECF0;
-    padding-bottom: 0.5em;
-}
-#portal-personaltools dd a {
-    line-height: 2em;
-    padding: 0 0.75em;
-}
-#portal-personaltools dd a:hover {
-    background: #205c90;
-/*    color: White;*/
-}
-
-/* @end */
-
 /* @group Content pulldowns */
 
 #contentActionMenus dl.actionMenu a,
@@ -998,7 +569,6 @@ display:inline;
 }
 #contentActionMenus dl.actionMenu.activated dd {
     border-bottom: 0.5em solid #75ad0a;
-/*        right: -3px;*/
 }
 #contentActionMenus dl.actionMenu.activated dd a:hover,
 #contentActionMenus dl.actionMenu.activated dd .actionMenuSelected {
@@ -1059,12 +629,6 @@ dl.actionMenu.activated dd {
     width: auto;
     min-width: 100%;
     right:-3px;
-/*    border-bottom-right-radius: 0.5em;
-    border-bottom-left-radius: 0.5em;
-    -webkit-border-bottom-right-radius: 0.5em;
-    -webkit-border-bottom-left-radius: 0.5em;
-    -moz-border-radius-bottomleft: 0.5em;
-    -moz-border-radius-bottomright: 0.5em;*/
 }
 dl.actionMenu.activated dt a,
 dl.actionMenu.activated dd a,
@@ -1075,9 +639,6 @@ dl.actionMenu.activated dd div {
 /* @end */
 
 /* @group Control panel */
-
-#setup-link {
-}
 
 #content ul.configlets {
     margin: 1em 0;
@@ -1979,28 +1540,6 @@ div.overlay .formControls a {
 /* @end */
 
 /* @group Core content type sprites */
-
-/* Generated using http://spritegen.website-performance.org, with the following
-   parameters:
-   - Build direction: Vertical
-   - Horizontal offset: (doesn't matter, but can't be 0)
-   - Vertical offset: 200px
-   - Compress image with OptiPNG: yes
-   - Class prefix: contenttype-
-   - Display width and height: no
-  Then, add 4 px to the background-position to line up the icons to text.
-
-.contenttype-document_icon { background-position: 0 0;  }
-.contenttype-event_icon { background-position: 0 -216px;  }
-.contenttype-file_icon { background-position: 0 -432px;  }
-.contenttype-folder_icon { background-position: 0 -648px;  }
-.contenttype-image_icon { background-position: 0 -864px;  }
-.contenttype-link_icon { background-position: 0 -1080px;  }
-.contenttype-newsitem_icon { background-position: 0 -1296px;  }
-.contenttype-site_icon { background-position: 0 -1512px;  }
-.contenttype-topic_icon { background-position: 0 -1728px;  }
-
-*/
 
 .icons-on .contenttype-document {
     background: no-repeat transparent 0px 4px url(../../contenttypes-sprite.png);
