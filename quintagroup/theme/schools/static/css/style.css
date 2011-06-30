@@ -48,6 +48,7 @@ table.listing ul li, .stx table ul li {
   background-image:none;
   padding-left:0;
   }
+/*  
 .context,
 .formControls .actionButtons .button,
 .documentEditable * .context,
@@ -59,7 +60,7 @@ table.listing ul li, .stx table ul li {
   font-size:100%;
   padding:1px 3px;
   }
-/*.contentViews {
+.contentViews {
   clear:both;
   padding-top:1em;
   position: relative;
@@ -503,6 +504,7 @@ background-color:#B4C9DD;
 */
 
 /*---------- PORTAL-SITEMAP ----------*/
+/*
 #portal-sitemap {
   line-height:1.5em;
   }
@@ -521,6 +523,7 @@ background-color:#B4C9DD;
 #portal-sitemap a:hover {
   border-color:#fff;
   }
+*/
 
 /*---------- PORTLET SEARCH ----------*/
 dl.portletSearch {
@@ -551,18 +554,38 @@ dl.portletSearch {
 
 /*---------- PORTLET LOGIN ----------*/
 dl.portletLogin {
-  margin-bottom: 0.5em;
+  margin-bottom:10px;
   }
+.portletLogin .field {
+  margin:0 0 4px;
+  }
+.portletLogin .field input[type="text"][size],
+.portletLogin .field input {
+  border-width:1px;
+  border-style:solid;
+  border-color:#808080 #d4d0c8 #d4d0c8 #808080;
+  padding:1px 2px;
+  width:120px;
+  }
+.portletLogin .formControls {
+  margin:12px 0 0;
+  }
+.portletLogin .formControls input {
+  font-size:100%;
+  padding:1px 15px;
+  }
+
 /*#login_form { 
   margin-top: em;
   text-align: right;
   }*/
-#login-form .formControls {
+/*#login-form .formControls {
   text-align: center;
   }
 #login-form input.context {
   padding: 1px 10px;
   }
+*/
 
 /*---------- PLONE CALENDAR ----------*/
 .ploneCalendar .weekdays th {
@@ -696,6 +719,7 @@ ul#portal-globalnav ul li a {
 .carousel-text {
   background-color: transparent;
   bottom: 0;
+  display:none;
   left: auto;
   margin-left: 150px;
   padding: 0 1em;
@@ -703,10 +727,12 @@ ul#portal-globalnav ul li a {
   right: 0;
   text-align: right;
   width: auto;
-  }
-.carousel-banner-active .carousel-text {
   z-index:1;
   }
+.carousel-banner-active .carousel-text {
+  display:block;
+  }
+a.carousel-title,
 .carousel-title {
   font-size: 1.36em;
   font-weight:bold;
@@ -720,14 +746,15 @@ ul#portal-globalnav ul li a {
 .carousel-pager {
   bottom: 0;
   left: 0;
-  margin: 0.75em 0;
+  margin: 0.75em 0.5em;
   position: absolute;
   }
 .carousel-pager-item,
 .carousel-pager-button-prev,
 .carousel-pager-button-next {
   background-color: #DDDDDD;
-  padding: 0.25em 0.5em;
+  margin-right:1px;
+  padding:1px 4px;
   }
 .carousel-pager-item-active {
   background-color: #75AD0A;
