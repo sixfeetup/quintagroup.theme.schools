@@ -413,6 +413,7 @@ ul#portal-globalnav li a { /* hack for dropdown menu, ul */
   white-space:nowrap;
   }
 ul#portal-globalnav li.selected a, /* hack for dropdown menu, ul */
+ul#portal-globalnav li.selected a:hover,
 ul#portal-globalnav li a:hover { /* hack for dropdown menu, ul */
   background:transparent url(../images/sprite.png) no-repeat 0 -1134px;
   border:0 1px 0 0;
@@ -673,6 +674,9 @@ ul#portal-globalnav ul li a {
 .discreet {
   margin:0 !important;
   }
+div.overlay {
+  font-size:100%;
+  }  
 
 /*---------- CONTENT ACTIONS ----------*/
 #plone-contentmenu-factories .actionMenuContent li a:hover {
