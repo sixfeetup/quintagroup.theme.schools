@@ -102,6 +102,16 @@ q {
   font-size:110%;
   padding: 0 10px 20px;
   }
+#content ul {
+  list-style-image:none;
+  list-style-type:none;
+  }
+#content ul li {
+  background-image:url(../images/sprite.png);
+  background-position:0 -877px;
+  background-repeat:no-repeat;
+  padding-left:14px;
+  }
 #edit-bar {
 /*  border:2px solid #75ad0a;*/
   font-size:0.95em;
@@ -238,6 +248,7 @@ input.searchButton {
   position:absolute;
   right:-1px;
   top:12px;
+  z-index:2;
   }
 #LSResult fieldset,  
 .LSResult fieldset {
@@ -530,6 +541,10 @@ dd.portletItem ul.navTreeLevel1 .navTreeItem  {
   }
 
 /*---------- PORTAL-SITEMAP ----------*/
+#content ul#portal-sitemap li {
+  background:none;
+  padding-left:0.25em;
+  }
 
 /*---------- PORTLET SEARCH ----------*/
 dl.portletSearch {
@@ -653,9 +668,10 @@ dl.portlet.portletCalendar dt.portletHeader a {
   margin:0 -3px;
   padding:0.5em 0;
   position:relative;
+  z-index:1;
   }
 #portal-colophon ul {
-  margin: 0;
+  margin:0;
   }
 
 /*---------- FIXES FOR QUINTAGROUP.DROPDOWNMENU----------*/
