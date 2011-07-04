@@ -22,6 +22,9 @@ body {
   color:#000;
   font:69% Verdana, Geneva, sans-serif;
   }
+body.smallText {
+  font-size:55%;
+  }
 a:link {
   color:#73a20f;
   outline:none;
@@ -93,6 +96,9 @@ q {
 #portal-top {
   margin-bottom:2px;
   padding:2.55em 0 0;
+  }
+#portal-columns {
+  margin-bottom:2px;
   }
 
 /*---------- CONTENT STYLES ----------*/
@@ -238,6 +244,20 @@ input.searchButton {
   }
 #content input.searchField {
   margin-bottom:1em;
+  }
+input.searchPage {
+  border-color:#808080 #d4d0c8 #d4d0c8 #808080;
+  border-style:solid;
+  border-width:1px;
+  padding-top:1px;
+  }
+input.searchButton.searchPage {
+  background:url(../images/sprite.png) no-repeat 0 -1326px;
+  border:0;
+  font-size:0 !important; 
+  height:32px;
+  margin-left:2px;
+  width:35px;
   }
 
 /* LiveSearch */
