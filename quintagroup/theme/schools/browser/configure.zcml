@@ -79,6 +79,7 @@
         name="manage-topportlets"
         template="templates/managetopportlets.pt"
         permission="plone.app.portlets.ManagePortlets"
+        layer=".interfaces.IThemeSchools"
         />
 
     <configure zcml:condition="installed Products.Carousel">
