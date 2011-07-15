@@ -202,7 +202,10 @@ input.searchButton {
   background-color: white;
   float:right;
   margin:0 0 0 2px;
+  overflow:hidden;
+  position:relative;
   width:&dtml-columnTwoWidth;;
+  z-index:1;
   }
 .topPortlets .visualPadding {
   border:1px solid &dtml-globalBorderColor;;
