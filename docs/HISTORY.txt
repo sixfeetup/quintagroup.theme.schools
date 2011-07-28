@@ -1,6 +1,11 @@
 ChangeLog
 ---------
 
+4.2.2 - July 28, 2011
+
+- fixed styles for top portlets 
+- theme deinstallation fixed
+
 4.2 - Apr 11, 2011
 
 - work with quintagroup.dropdownmenu fixed
