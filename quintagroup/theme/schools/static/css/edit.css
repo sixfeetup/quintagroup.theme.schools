@@ -1,0 +1,135 @@
+/*----- Edit Bar -----*/
+#edit-bar {
+/*  border:2px solid #75ad0a;*/
+  font-size:0.95em;
+  margin:5px 0 1em;
+  }
+#edit-bar {
+  background-color:#75ad0a;
+  min-height:3.5em;
+  margin:0 0 1em;
+  padding:3px;
+  }
+#content-views {
+  background-color: #75ad0a;
+  float: left;
+  }
+#content-views li {
+  display:inline;
+  }
+#content-views a {
+  color:#fff;
+  display:inline-block;
+  line-height:1.73em;
+  padding:0 0.75em;
+  text-decoration:none;
+  }
+#content-views li.selected a,
+#content-views li a:hover {
+  background:#fff;
+  color:#000;
+  }
+#content-views li.selected a {
+  font-weight:bold;
+  }
+
+
+/*----- Editing -----*/
+.formPanel {
+  padding:1em 2px;
+  }
+.field {
+  clear:both;
+  margin-bottom:1em;
+  }
+.formPanel textarea {
+  width:100%;
+  }
+#title {
+  font-size:2em;
+  width:100%;
+  }
+#description {
+  font-family:Arial, Helvetica, sans-serif;
+  }
+.suppressVisualEditor {
+  margin:0 !important;
+  }
+.fieldUploadFile {
+  display:none;
+  }
+ul.configlets,
+#content ul.configlets {
+  list-style:none;
+  margin:1em 0;
+  }
+ul.configlets li {
+  margin-bottom:1em;
+  }
+ul.configlets li a {
+  text-decoration:none;
+  }
+
+/*----- Content pulldowns -----*/
+#contentActionMenus {
+  background-color:#75ad0a;
+  float:right;
+  }
+#contentActionMenus > li {
+  display:inline;
+  }
+.actionMenu { 
+  float:right;
+  margin:0 0 0 0.5em;
+  position:relative;
+  white-space:nowrap;
+  }
+.actionMenu dt {
+  font-weight:normal;
+  }
+.actionMenu a {
+  color:#fff;
+  display:block;
+  line-height:1.73em;
+  text-decoration:none;
+  }
+.actionMenu dt a {
+  padding:0 3px;  
+  }
+.arrowDownAlternative {
+  font-size:80%;
+  }
+.actionMenu dd {
+  background-color:#75ad0a;
+  left:-3px;
+  margin:0;
+  min-width:100%;
+  padding:0 3px 3px;
+  position:absolute;
+  width:auto;
+  z-index:5;
+  }
+.actionMenu.deactivated dd {
+  display:none;
+  }
+.actionMenu dd a:hover,
+.actionMenu dd .actionMenuSelected {
+  background-color:#fff;
+  color:#666;
+  }
+.subMenuTitle {
+  display:block;
+  line-height:2em;
+  padding:0 3px;
+  }
+
+/*----- Manage Portlets Link -----*/
+.managePortletsLink {
+  padding:0 0 5px;
+  }
+.managePortletsFallback { 
+  font-size:85%;
+  }
+.manageFooterPortletsLink {
+  text-align:center;
+  }
