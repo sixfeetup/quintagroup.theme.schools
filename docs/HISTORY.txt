@@ -1,10 +1,11 @@
 ChangeLog
 ---------
 
-4.2.2 - July 28, 2011
+4.2.2 - August 17, 2011
 
 - fixed styles for top portlets 
 - theme deinstallation fixed
+- theme tested with Plone 4.1
 
 4.2 - Apr 11, 2011
 
