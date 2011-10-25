@@ -1,3 +1,5 @@
+@media screen {
+
 /*----- Reset -----*/
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
   margin:0;
@@ -26,6 +28,78 @@ q:before,q:after {
 abbr,acronym {
   border:0;
   }
+
+/*----- Layout -----*/
+div.row {
+  float: left;
+  width: 100%;
+  display: block;
+  position: relative;
+  }
+div.cell {
+  position: relative;
+  float: left;
+  left: 100%;
+  }
+
+/*---------- Styles Sunburst  ----------*/
+/* Width classes. 
+   For a given cell width, the calculation is: width: (6.25*n - 2.25)% */
+div.width-1  { width:  4%    }
+div.width-2  { width: 10.25% }
+div.width-3  { width: 16.5%  }
+div.width-4  { width: 22.75% }
+div.width-5  { width: 29%    }
+div.width-6  { width: 35.25% }
+div.width-7  { width: 41.5%  }
+div.width-8  { width: 47.75% }
+div.width-9  { width: 54%    }
+div.width-10 { width: 60.25% }
+div.width-11 { width: 66.5%  }
+div.width-12 { width: 72.75% }
+div.width-13 { width: 79%    }
+div.width-14 { width: 85.25% }
+div.width-15 { width: 91.5%  }
+div.width-16 { width: 97.75% }
+
+
+/* Positioning classes, these are subtracting from a rightmost 
+   position, which is why they seem the wrong way around */
+/* For a given position, the calculation is margin-left: -100 + (6.25*n) + 1.125 */
+div.position-0  { margin-left: -100% }
+div.position-1  { margin-left: -92.625% }
+div.position-2  { margin-left: -86.375% }
+div.position-3  { margin-left: -80.125% }
+div.position-4  { margin-left: -73.875% }
+div.position-5  { margin-left: -67.625% }
+div.position-6  { margin-left: -61.375% }
+div.position-7  { margin-left: -55.125% }
+div.position-8  { margin-left: -48.875% }
+div.position-9  { margin-left: -42.625% }
+div.position-10 { margin-left: -36.375% }
+div.position-11 { margin-left: -30.125% }
+div.position-12 { margin-left: -23.875% }
+div.position-13 { margin-left: -17.625% }
+div.position-14 { margin-left: -11.375% }
+div.position-15 { margin-left:  -5.125% }
+
+/* End of the core Deco Grid System */
+/* Convenience classes — ¼, ½, ¾ widths and ¼, ½, ¾ positions. 
+   Not strictly necessary. */
+div.width-1\3a 2 { width:    541px; } /* .width-1:2 */
+div.width-1\3a 4 { width:    226px; } /* .width-1:4 */
+div.width-3\3a 4 { width:    767px; } /* .width-3:4 */
+div.width-full   { width:    100%  } 
+div.position-1\3a 4 {margin-left:    -767px;} /* .position-1:4 */
+div.position-1\3a 2 {margin-left:    -541px;} /* .position-1:2 */
+div.position-3\3a 4 {margin-left:    -226px;} /* .position-3:4 */
+
+/* Special classes for ⅓, ⅔ widths and ⅓, ⅔ positions. 
+These do not strictly conform to the grid, but are useful for certain layouts. */
+div.width-1\3a 3 { width: 31.08%; } /* .width-1:3 */
+div.width-2\3a 3 { width: 64.42%; } /* .width-2:3 */
+div.position-1\3a 3 {margin-left: -65.545%;} /* .position-1:3 */
+div.position-2\3a 3 {margin-left: -32.205%;} /* .position-2:3 */
 
 /*----- General Styles -----*/
 body {
@@ -88,10 +162,6 @@ p {
 ol {
   list-style-type:decimal;
   margin:0 0 18px 27px;
-  }
-#content ul {
-  list-style-type:disc;
-  margin:6px 0 1em 22px;
   }
 img {
   vertical-align:text-bottom;
@@ -191,6 +261,12 @@ fieldset {
   clear:both;
   margin:0 0 1em;
   }
+div.field.error {
+  background-color:#fdc;
+  border:1px solid red;
+  margin:1em 0;
+  padding:0.5em;
+  }
 .formControls {
   margin:1em 0;
   }
@@ -274,6 +350,7 @@ fieldset {
 #content ul {
   list-style-image:none;
   list-style-type:none;
+  margin-left:22px;
   }
 #content ul li {
   background-image:url(../images/sprite.png);
@@ -315,10 +392,10 @@ fieldset {
 
 /*---------- DOCUMENT ACTIONS ----------*/
 #content .documentActions ul {
-  font-size:0.9em;
+  font-size:0.92em;
   list-style-image:none;
   list-style-type:none;
-  margin:1em 0 0;
+  margin:2em 0 0;
   text-align:right;
   }
 #content .documentActions ul li {
@@ -334,7 +411,7 @@ fieldset {
   }
 #content .documentActions a:hover {
   background: #73A20F;
-  color: White;
+  color:#fff;
   border-color: #205c90;
   }
 
@@ -434,7 +511,7 @@ input.searchButton.searchPage {
 .LSResult fieldset {
   background:#fff;
   border:1px solid #bbb;
-  padding:1em 0 0;
+  padding:1.2em 0 0;
   }
 #livesearchLegend {
   background:#fff;
@@ -445,13 +522,10 @@ input.searchButton.searchPage {
   margin-top:-24px;
   padding:3px 16px 8px;
   }
-#LSResult .LSDescr {
-  font-size:1em;
-  }
 .LSRow,
 #LSNothingFound {
   display:block;
-  padding:0 1em;
+  padding:0 1em 1em;
   white-space:normal;
   width:28em;
   }
@@ -461,6 +535,11 @@ input.searchButton.searchPage {
 .LSRow a {
   font-weight:bold;
   white-space:normal;
+  }
+.LSDescr {
+  color:#777;
+  font-size:1em;
+  margin-left:7px;
   }
 
 /*---------- PORTAL LOGO ----------*/
@@ -517,7 +596,6 @@ ul#portal-globalnav li.selected a, /* hack for dropdown menu, ul */
 ul#portal-globalnav li.selected a:hover,
 ul#portal-globalnav li a:hover { /* hack for dropdown menu, ul */
   background:transparent url(../images/sprite.png) no-repeat 0 -1134px;
-  border:0 1px 0 0;
   color:#000; 
   }
 ul#portal-globalnav li.selected a { /* hack for dropdown menu, ul */
@@ -632,9 +710,33 @@ a.carousel-title,
   top:5px;
   }
 #portal-personaltools #anon-personalbar a {
-  float:left;
-  margin-right:0.5em;
+  font-weight:bold;
+  }
+#portal-personaltools dt a {
+  color:#73A20F;
   padding:0 0.25em;
+  }
+#portal-personaltools dt a:hover {
+  color:#000;
+  }
+#portal-personaltools dd {
+  background-color:#e8ecf0;
+  left:0;
+  padding:0 0 5px;
+  right:auto;
+  top:100%;
+  }
+#portal-personaltools.activated .actionMenuContent {
+  display:block;
+  }
+#portal-personaltools li a {
+  color:#73A20F;
+  padding:2px 7px;
+  }
+#portal-personaltools li a:hover {
+  background-color:transparent;
+  color:#000;
+  text-decoration:underline;
   }
 
 /*---------- PORTAL LANGUAGE SELECTOR ----------*/
@@ -648,6 +750,7 @@ a.carousel-title,
   }
 #portal-languageselector li {
   background-color: #E8ECF0;
+  display:inline;
   margin-right:5px;
   }
 #portal-languageselector a {
@@ -932,12 +1035,18 @@ div.portletStaticText {
   background-color:red;
   color:#fff;
   }
-#content li.formTab a.required span {
+/*#content li.formTab a.required span {
   background:url(../images/required.png) no-repeat 100% 5px;
   padding-right:1em;
-  }
+  }*/
+
+#content li.formTab a.required span:after {
+color:#f00;
+content:" ■";
+}
+
 #content fieldset.formPanel {
-  border:none;
+  border:0;
   }
 #content fieldset.formPanel.hidden {
   display:none;
@@ -975,7 +1084,6 @@ dl.portalMessage dt {
   }
 dl.portalMessage dd {
   line-height:1.25em;
-  margin:0;
   padding:0.5em 0.5em;
   }
 dl.warning {
@@ -984,30 +1092,17 @@ dl.warning {
 dl.warning dt {
   background-color:#d80;
   }
+dl.warning dd {
+  background-color:#fd7;
+  }
 dl.error {
   border-color:#d00;
   }
 dl.error dt {
   background-color:#d00;
   }
-dl.warning {
-  border-color:#d80;
-  }
-dl.warning dd {
-  background-color:#fd7;
-  }
-dl.error {
-  border-color:red;
-  }
 dl.error dd {
   background-color:#fdc;
-  }
-#content dl.portalMessage dt {
-  margin:0 0.5em 0 0;
-  padding:0.5em 0.75em;
-  }
-#content dl.portalMessage dd {
-  margin:0;
   }
 
 /*----- Overlays -----*/
@@ -1028,7 +1123,7 @@ dl.error dd {
   }
 .overlaybg div.close,
 .overlay div.close {
-  background:url(../images/sprite.png) no-repeat 0 0;
+  background:url(../images/pb_close.png) no-repeat 0 0;
   cursor:pointer;
   height:30px;
   left:-14px;
@@ -1088,11 +1183,11 @@ div.overlay div.close span {
   font-weight: bold;
   }
 .overlay .formTab.lastFormTab {
-  margin-right:0em;
+  margin-right:0;
   }
 .overlay .formControls a {
-  display: block;
-  margin: 0.75em;
+  display:block;
+  margin:0.75em;
   }
 
 /*----- Login form -----*/
@@ -1162,12 +1257,193 @@ body.template-new-user #content input {
   top:-0.75em;
   }
 
-/*----- Data tables -----*/
-table.listing,
-table.plain {
-  border-spacing:0;
-  border-collapse:collapse;
+/*----- Editing -----*/
+.fieldRequired {
+  color:#fff;
   }
+.fieldRequired:before {
+  color:#f00;
+  content:"■ ";
+  }
+/*.formPanel {
+  padding:1em 2px;
+  }*/
+.formPanel textarea {
+  width:100%;
+  }
+#title {
+  font-size:2em;
+  width:100%;
+  }
+/*.documentByLine {
+  margin:0 7px 1em;
+  }*/
+.suppressVisualEditor {
+  margin:0 !important;
+  }
+.fieldUploadFile {
+  display:none;
+  }
+ul.configlets,
+#content ul.configlets {
+  list-style:none;
+  margin:1em 0;
+  }
+ul.configlets li {
+  margin-bottom:1em;
+  }
+ul.configlets li a {
+  text-decoration:none;
+  }
+#content ul.configletDetails {
+  margin:0 1em 1em 4em;
+  list-style:none;
+  }
+#content ul.configletDetails li {
+  margin-bottom:1em;
+  display:inline;
+  }
+#content ul.configletDetails li.configletDescription {
+  display:block;
+  color:#76797c;
+  margin:0;
+  }
+#kss-spinner {
+  background-position:50% 50%;
+  display:none;
+  height:20px;
+  left:50%;
+  margin:-10px 0 0 -10px;
+  position:fixed;
+  top:50%;
+  width:20px;
+  }
+.formlibInlineEditable,
+.inlineEditable {
+  display:block;
+  padding:1px;
+  }
+body.kssActive .inlineEditable:hover,
+body.kssActive .formlibInlineEditable:hover {
+  border:1px solid #ddd;
+  border-color:#666 #ddd #ddd #666;
+  cursor:text;
+  padding:0;
+  }
+body.kssActive .inlineEditable a:hover,
+body.kssActive .formlibInlineEditable a:hover {
+  cursor:pointer;
+  }
+body.kssActive .formlibInlineForm:hover,
+body.kssActive .formlibInlineForm a:hover {
+  border:0;
+  cursor:default;
+  padding:1px;
+  }
+.inlineForm .formHelp,
+.inlineForm .fieldRequired,
+.inlineForm label {
+  display:none;
+  }
+/* In inline selection widgets the label *must* be displayed, as
+   otherwise you only see identical radio buttons without text. */
+.inlineForm .ArchetypesSelectionWidget label {
+  display: inline;
+  }
+.inlineForm #archetypes-fieldname-title input,
+.inlineForm #archetypes-fieldname-title {
+  font-size: 100%;
+  }
+/* Workaround for abnormally large buttons in the h1 tag */
+h1 div.formControls input {
+  font-size:55% !important;
+  }
+
+/*----- Edit Bar -----*/
+#edit-bar {
+  background-color:#75ad0a;
+  min-height:1.73em;
+  margin:1em 0 2em;
+  padding:3px;
+  }
+#content-views {
+  background-color:#75ad0a;
+  float:left;
+  }
+#content-views li {
+  display:inline;
+  }
+#content-views a {
+  color:#fff;
+  display:inline-block;
+  line-height:1.73em;
+  padding:0 0.75em;
+  text-decoration:none;
+  }
+#content-views li.selected a,
+#content-views li a:hover {
+  background:#fff;
+  color:#000;
+  }
+#content-views li.selected a {
+  font-weight:bold;
+  }
+
+/*----- Content pulldowns -----*/
+#contentActionMenus {
+  background-color:#75ad0a;
+  float:right;
+  margin-right:-3px;
+  padding-right:3px;
+  }
+#contentActionMenus > li {
+  display:inline;
+  }
+.actionMenu {
+  float:right;
+  margin:0 0 0 0.5em;
+  position:relative;
+  white-space:nowrap;
+  }
+.actionMenu dt {
+  font-weight:normal;
+  }
+.actionMenu a {
+  color:#fff;
+  display:block;
+  line-height:1.73em;
+  text-decoration:none;
+  }
+.actionMenu dt a {
+  padding:0 3px;  
+  }
+.arrowDownAlternative {
+  font-size:80%;
+  }
+.actionMenu dd {
+  background-color:#75ad0a;
+  right:-3px;
+  margin:0;
+  min-width:100%;
+  padding:0 3px 3px;
+  position:absolute;
+  width:auto;
+  z-index:5;
+  }
+.actionMenu.deactivated dd {
+  display:none;
+  }
+.actionMenu dd a:hover,
+.actionMenu dd .actionMenuSelected {
+  background-color:#fff;
+  color:#666;
+  }
+.subMenuTitle {
+  display:block;
+  padding:0 3px;
+  }
+
+/*----- Data tables -----*/
 table.invisible td,
 table.invisible th,
 table.plain td,
@@ -1195,11 +1471,10 @@ table.listing .top {
   border-right:1px solid #ddd;
   }
 table.listing th {
-  background:#ddd;
-  border:0.1em solid #e7e7e7;
-  border-style:solid solid none;
+  background:#f0f0f0;
+  border:1px solid #e7e7e7;
+  border-style:solid;
   color:#666;
-  text-align:left;
   }
 table.listing tr.odd th {
   border:0.1em solid #fff;
@@ -1222,11 +1497,6 @@ table.listing tbody tr.odd td {
   }
 table.listing td {
   border-right:1px solid #ddd;
-  }
-table.listing a {
-  border:0;
-  border-bottom:0 !important;
-  display:inline-block;
   }
 table.listing td.draggable {
   text-shadow:#fff 1px 1px 1px;
@@ -1256,6 +1526,8 @@ table.grid th {
 #foldercontents-order-column {
   padding:0;
   }
+
+/* Listing Bar */
 div.listingBar {
   font-size:80%;
   margin:1em 0;
@@ -1268,12 +1540,243 @@ div.listingBar .previous {
   display:inline-block;
   }
 div.listingBar a {
-  border:0.1em solid #ccc;
+  border:0.1em solid #ccc; /*-*/
   display:inline-block;
   padding:0.25em 0.5em;
   }
-div.listingBar a:hover {
+div.listingBar a:hover { /*-*/
   background-color:#329fd7;
   border-color:#329fd7;
   color:#fff;
   }
+
+/*---------- DASHBOARD ----------*/
+#dashboard-portlets1,
+#dashboard-portlets2,
+#dashboard-portlets3,
+#dashboard-portlets4 {
+  float:left;
+  margin-right:1.3%;
+  width:24%;
+  }
+#dashboard-portlets4 {
+  margin-right:0;
+  }
+
+/*---------- ALBUM ----------*/
+.photoAlbumEntry {
+  background:url(../images/album.png) no-repeat;
+  float:left;
+  font-size:0.92em;
+  height:162px;
+  line-height:1.36em;
+  margin:0 6px 6px;
+  padding:8px 7px 8px 6px;
+  width:132px;
+  }
+.photoAlbumFolder {
+  background-position:0 -178px;
+  }
+.photoAlbumEntry a {
+  display:block;
+  height:162px;
+  overflow:hidden;
+  position:relative;
+  text-decoration:none;
+  }
+.photoAlbumEntry a:after {
+  background-color:rgba(241, 241, 241, 0.4);
+  bottom:0;
+  content:"";
+  height:8px;
+  position:absolute;
+  width:100%;
+  }
+.photoAlbumEntryWrapper {
+  display:block;
+  text-align:center;
+  }
+.photoAlbumEntry img {
+  border:2px solid #fff;
+  }
+.photoAlbumEntryTitle {
+  color:#757373;
+  display:block;
+  padding:4px 3px 0;
+  width:126px;
+  }
+.photoAlbumEntry a:hover {
+  overflow:visible;
+  }
+.photoAlbumEntry a:hover .photoAlbumEntryTitle  {
+  background-color:rgb(241,241,241);
+  background-color:rgba(241,241,241,0.8);
+  bottom:0;
+  min-height:50%;
+  position:absolute;
+  }
+
+/*---------- COMMENTING ----------*/
+.discussion .hide {
+  display:none;
+  }
+.discussion {
+  clear:both;
+  font-size:1.09em;
+  }
+.comment {
+  padding:0 0 9px;
+  }
+.commentImage {
+  float:left;
+  padding:5px 7px;
+  }
+.discussion .documentByLine {
+  background-color:#f1f1f1;
+  margin:0;
+  padding:5px;
+  }
+.commentBody {
+  border-color:#d9d9d9 #f1f1f1 #f1f1f1;
+  border-style:solid;
+  border-width:1px;
+  clear:both;
+  margin:0 0 5px;
+  padding:5px;
+  overflow:auto;
+  }
+.commentActions {
+  text-align:right;
+  }
+.reply-to-comment-button {
+  margin-left:11px;
+  }
+.reply {
+  background-color:#f1f1f1;
+  clear:both;
+  font-size:1.09em;
+  margin:35px 0 0;
+  padding:5px 7px;
+  position:relative;
+  }
+.reply fieldset {
+  margin:0;
+  }
+.reply legend {
+  font-weight:bold;
+  position:absolute;
+  top:-28px;
+  }
+.reply p {
+  color:#76797c;
+  font-size:0.92em;
+  }
+.reply textarea {
+  min-height:50px;
+  width:100%;
+  }
+
+/*---------- CONTENT TYPE ICONS ----------*/
+.icons-on .contenttype-folder {
+  background:url(../images/icons-sprite.png) no-repeat 0 -1598px;
+  display:inline-block;
+  padding-left:19px;
+  }
+.icons-on .contenttype-document {
+  background:url(../images/icons-sprite.png) no-repeat 0 -1799px;
+  display:inline-block;
+  padding-left:19px;
+  }
+.icons-on .contenttype-news-item{
+  background:url(../images/icons-sprite.png) no-repeat 0 -1999px;
+  display:inline-block;
+  padding-left:19px;
+  }
+.icons-on .contenttype-event {
+  background:url(../images/icons-sprite.png) no-repeat 0 -2199px;
+  display:inline-block;
+  padding-left:19px;
+  }
+.icons-on .contenttype-topic {
+  background:url(../images/icons-sprite.png) no-repeat 0 -2400px;
+  display:inline-block;
+  padding-left:19px;
+  }
+.icons-on .contenttype-image {
+  background:url(../images/icons-sprite.png) no-repeat 0 -2599px;
+  display:inline-block;
+  padding-left:19px;
+  }
+.icons-on .contenttype-link {
+  background:url(../images/icons-sprite.png) no-repeat 0 -2995px;
+  display:inline-block;
+  padding-left:19px;
+  }
+.icons-on img[alt='File'] {
+  margin-right:3px;
+  }
+
+/* Add new */
+#plone-contentmenu-factories li a {
+  background:url(../images/icons-sprite.png) no-repeat 1px -1199px;
+  display:block;
+  padding-left:17px;
+  }
+#plone-contentmenu-factories li a:hover {
+  background-color:#fff;
+  background-position:1px -2799px;
+  }
+#plone-contentmenu-factories li .contenttype-folder {
+  background-position:1px 2px;
+  }
+#plone-contentmenu-factories li .contenttype-folder:hover {
+  background-position:2px -1598px;
+  }
+#plone-contentmenu-factories li .contenttype-document {
+  background-position:1px -199px;
+  }
+#plone-contentmenu-factories li .contenttype-document:hover {
+  background-position:2px -1799px;
+  }
+#plone-contentmenu-factories li .contenttype-news-item {
+  background-position:1px -399px;
+  }
+#plone-contentmenu-factories li .contenttype-news-item:hover {
+  background-position:2px -1999px;
+  }
+#plone-contentmenu-factories li .contenttype-event {
+  background-position:1px -599px;
+  }
+#plone-contentmenu-factories li .contenttype-event:hover {
+  background-position:2px -2199px;
+  }
+#plone-contentmenu-factories li .contenttype-topic {
+  background-position:1px -800px;
+  }
+#plone-contentmenu-factories li .contenttype-topic:hover {
+  background-position:2px -2400px;
+  }
+#plone-contentmenu-factories li .contenttype-image {
+  background-position:1px -999px;
+  }
+#plone-contentmenu-factories li .contenttype-image:hover {
+  background-position:2px -2599px;
+  }
+#plone-contentmenu-factories li .contenttype-file {
+  background-position:1px -1199px;
+  }
+#plone-contentmenu-factories li .contenttype-file:hover {
+  background-position:2px -2799px;
+  }
+#plone-contentmenu-factories li .contenttype-link {
+  background-position:1px -1395px;
+  }
+#plone-contentmenu-factories li .contenttype-link:hover {
+  background-position:2px -2995px;
+  }
+#plone-contentmenu-factories #settings {
+  background-image:none;
+  padding:0;
+  }
+
+}
