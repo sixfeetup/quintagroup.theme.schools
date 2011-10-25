@@ -66,6 +66,7 @@
         <!-- Footer -->
         <replace css:theme='#portal-footer' css:content='#portal-footer' />
         <after css:content="#kss-spinner" css:theme-children="#visual-portal-wrapper" />
+        <replace css:theme="#plone-statistics" css:content-children="#plone-statistics" href="/@@statistics" />
 
         <!-- Colophon -->
         <copy theme='//*[@id="portal-colophon"]' content='//*[@id="portal-colophon"]/*' />
