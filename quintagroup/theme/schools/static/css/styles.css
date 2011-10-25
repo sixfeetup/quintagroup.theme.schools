@@ -257,7 +257,7 @@ fieldset {
   }
 
 /*---------- CONTENT STYLES ----------*/
-.dContent {
+.documentContent {
   border: 1px solid #CCCCCC;
   clear: both;
   font-size:1.1em;

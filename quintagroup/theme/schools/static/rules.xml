@@ -6,67 +6,69 @@
 
     <!-- The default theme, used for standard Plone web pages -->
     <theme href="index.html" css:if-content="#visual-portal-wrapper" />
+    <notheme if-path="@@manage-viewlets" /> 
     <notheme if="$ajax_load" />
 
-    <!-- Add meta tags -->
-    <replace theme="/html/head/title" content="/html/head/title"/>
-    <replace theme="/html/head/base" content="/html/head/base" />
+    <!-- Rules applying to a standard Plone web page -->
+    <rules css:if-content="#visual-portal-wrapper">
 
-    <before content="/html/head/style | /html/head/script | /html/head/link" theme-children="/html/head" />
+        <!-- Header -->
+        <drop theme="/html/head/meta" />
+        <drop css:content="link[href$='public.css']" />
+        <drop css:content="link[href$='columns.css']" />
+        <drop css:content="link[href$='portlets.css']" />
+        <drop css:content="link[href$='discussion.css']" />
+        <drop css:content="link[href$='ploneKss.css']" />
+        <drop css:content="link[href*='base-cachekey']" />
+        <drop css:content="link[href$='favicon.ico']" />
+        <after content="/html/head/meta" theme-children="/html/head" />
+        <after content="/html/head/style | /html/head/script | /html/head/link" theme-children="/html/head" />
+        <replace theme='/html/head/title' content='/html/head/title' />
 
+        <!-- Body-->
+        <copy attributes="class" content='/html/body' theme='/html/body' />
 
-    <before theme='//*[@id="portal-header"]' content='//*[@class="topPortlets"]' />
+        <!-- Top -->
+        <replace css:content="#portal-searchbox" css:theme="#portal-searchbox" />
+        <drop css:content="div#portal-searchbox .searchSection" />
+        <replace css:content="#portal-siteactions" css:theme="#portal-siteactions" />
+        <replace css:content="#portal-logo" css:theme="#portal-logo" />
+        <replace css:content="#portal-personaltools" css:theme="#portal-personaltools" />
+        <replace css:content="#portal-breadcrumbs" css:theme="#portal-breadcrumbs" method="raw"/>
+        <drop css:content="#portal-breadcrumbs" />    
+        <before theme='//*[@id="portal-header"]' content='//*[@class="topPortlets"]' />
 
-    <copy attributes="href title" css:content='#portal-logo' css:theme="#portal-logo" />
+        <!-- Content -->
+        <replace css:content="#portal-globalnav" css:theme="#portal-globalnav" />
+        <replace css:content="#viewlet-above-content" css:theme="#viewlet-above-content" />
+        <replace css:theme-children=".documentContent" content-children='//*[@id="portal-column-content"]/div[2]' />
+        <merge attributes="class" css:content=".documentEditable" css:theme=".documentContent" />  
+        <replace css:content="#viewlet-below-content" css:theme="#viewlet-below-content" />
 
+        <!-- Culumns -->
+        <copy attributes="class" content='//*[@id="portal-column-content"]' theme='//*[@id="portal-column-content"]' />
+        <copy attributes="class" content='//*[@id="portal-column-one"]' theme='//*[@id="portal-column-one"]' />
+        <copy attributes="class" content='//*[@id="portal-column-two"]' theme='//*[@id="portal-column-two"]' />
+        <drop css:theme="#portal-column-one" if-content="not(//*[@id='portal-column-one'])" />
+        <drop css:theme="#portal-column-two" if-content="not(//*[@id='portal-column-two'])" />
+        <copy css:theme="#portal-column-two .visualPadding" css:content-children="#portal-column-two" />
+        <copy css:theme="#portal-column-one .visualPadding" css:content-children="#portal-column-one" />
 
-<copy attributes="class" content='/html/body' theme='/html/body' />
+        <replace css:content=".portletSearch dt.portletHeader">
+            <dt class="portletHeader hiddenStructure">Search</dt>
+        </replace>
 
+        <!-- Carousel -->
+        <replace css:content-children="div.carousel-banner">
+            <xsl:copy-of select="node()"/><div id="carousel-over"></div>
+        </replace>
 
-<copy attributes="class" content='//*[@id="portal-top"]' theme='//*[@id="portal-top"]' />
+        <!-- Footer -->
+        <replace css:theme='#portal-footer' css:content='#portal-footer' />
+        <after css:content="#kss-spinner" css:theme-children="#visual-portal-wrapper" />
 
-    <after css:theme="#portal-logo" css:content="#portal-personaltools-wrapper" />
-    <after css:theme="#portal-header" css:content="#portal-breadcrumbs" />
-    <after css:theme="#portal-header" css:content="#portal-searchbox" />
-    <after css:theme="#portal-header" css:content="#portal-siteactions" />
+        <!-- Colophon -->
+        <copy theme='//*[@id="portal-colophon"]' content='//*[@id="portal-colophon"]/*' />
 
-    <!-- Culumns -->
-    <copy attributes="class" content='//*[@id="portal-columns"]' theme='//*[@id="portal-columns"]' />
-    <drop css:theme="#portal-column-one" if-content="not(//*[@id='portal-column-one'])" />
-    <drop css:theme="#portal-column-two" if-content="not(//*[@id='portal-column-two'])" />
-    <copy attributes="class" content='//*[@id="portal-column-content"]' theme='//*[@id="portal-column-content"]' />
-    <copy attributes="class" content='//*[@id="portal-column-one"]' theme='//*[@id="portal-column-one"]' />
-    <copy attributes="class" content='//*[@id="portal-column-two"]' theme='//*[@id="portal-column-two"]' />
-    <copy css:theme="#portal-column-two .visualPadding" css:content-children="#portal-column-two" />
-    <copy css:theme="#portal-column-one .visualPadding" css:content-children="#portal-column-one" />
-
-
-    <before theme='//*[@class="dContent"]' content='//*[@id="portal-globalnav"]' />
-    <before theme='//*[@class="dContent"]' content='//*[@id="viewlet-above-content"]' />
-
-
-    <drop css:content="div#viewlet-above-content div#portal-breadcrumbs" />
-    <drop css:content="div#portal-searchbox .searchSection" />
-
-    <replace css:content=".portletSearch dt.portletHeader">
-        <dt class="portletHeader hiddenStructure">Search</dt>
-    </replace>
-
-    <!-- Content -->
-    <copy theme='//*[@class="dContent"]' content-children='//*[@id="portal-column-content"]/div[2]' />
-    <after theme='//*[@class="dContent"]' content='//*[@id="viewlet-below-content"]' />
-    <merge attributes="class" css:content=".documentEditable" css:theme=".dContent" />  
-
-    <!-- Carousel -->
-    <replace css:content-children="div.carousel-banner">
-        <xsl:copy-of select="node()"/><div id="carousel-over"></div>
-    </replace>
-
-    <!-- Footer -->
-    <copy attributes="class" content='//*[@id="portal-footer"]' theme='//*[@id="portal-footer"]' />
-    <copy theme='//*[@id="portal-footer"]' content='//*[@id="portal-footer"]/*' />
-
-    <!-- Colophon -->
-    <copy theme='//*[@id="portal-colophon"]' content='//*[@id="portal-colophon"]/*' />
-
+    </rules>
 </rules>
