@@ -44,6 +44,9 @@
         <replace css:theme-children=".documentContent" content-children='//*[@id="portal-column-content"]/div[2]' />
         <merge attributes="class" css:content=".documentEditable" css:theme=".documentContent" />  
         <replace css:content="#viewlet-below-content" css:theme="#viewlet-below-content" />
+        <drop css:content="img[alt='Image'][src$='image.png']" />
+        <drop css:content="#plone-contentmenu-factories li a img" />
+        <drop css:content=".portletNavigationTree li.navTreeItem a img" />        
 
         <!-- Culumns -->
         <copy attributes="class" content='//*[@id="portal-column-content"]' theme='//*[@id="portal-column-content"]' />
