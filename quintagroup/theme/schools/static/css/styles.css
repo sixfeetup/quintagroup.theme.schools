@@ -660,7 +660,7 @@ ul#portal-globalnav ul li a {
 .carousel-banner-1 {
   display:block;
   }          
-#carousel-over {
+.carousel-over {
   background: url(../images/photo-frame.png) no-repeat scroll 50% 0 transparent;
   height: 334px;
   position: absolute;
@@ -1045,6 +1045,7 @@ div.portletStaticText {
   padding:3px 3px 0;
   }
 #content .formTab {
+  background-image:none;
   display:inline;
   margin-right:0.25em;
   }
@@ -1131,6 +1132,9 @@ dl.error dt {
   }
 dl.error dd {
   background-color:#fdc;
+  }
+#setup-link {
+  line-height:1.6em;
   }
 
 /*----- Overlays -----*/
@@ -1317,10 +1321,12 @@ ul.configlets,
   list-style:none;
   margin:1em 0;
   }
-ul.configlets li {
+#content ul.configlets li {
+  background:transparent;
   margin-bottom:1em;
+  padding-left:0;
   }
-ul.configlets li a {
+#content ul.configlets li a {
   text-decoration:none;
   }
 #content ul.configletDetails {
@@ -1669,7 +1675,7 @@ div.listingBar a:hover { /*-*/
   }
 .discussion .documentByLine {
   background-color:#f1f1f1;
-  margin:0;
+  margin:5px 0 0;
   padding:5px;
   }
 .commentBody {
