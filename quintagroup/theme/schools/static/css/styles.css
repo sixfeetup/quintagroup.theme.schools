@@ -378,6 +378,14 @@ div.field.error {
   display: block;
   color: #666;
   }
+.tileItem.visualIEFloatFix h2 {
+  border:0;
+  }
+body#content.mceContentBody {
+  border:0;
+  margin: 0;
+  padding: 10px;
+  }
 
 /* CATEGORY */
 #category {
@@ -543,6 +551,7 @@ input.searchButton.searchPage {
   }
 .LSRow a {
   font-weight:bold;
+  line-height:1.6em;
   white-space:normal;
   }
 .LSDescr {
@@ -573,6 +582,9 @@ input.searchButton.searchPage {
   margin:2px 0 0;
   padding:2px 12px;
   line-height: 1.6em;
+  }
+#portal-breadcrumbs a:visited {
+  color:#73A20F;
   }
 
 /*----- PORTAL GLOBALBNAV -----*/
@@ -661,7 +673,7 @@ ul#portal-globalnav ul li a {
   display:none;
   left: auto;
   margin-left: 150px;
-  padding: 0 1em 1em;
+  padding: 0 1em;
   position: absolute;
   right: 0;
   text-align: right;
@@ -750,24 +762,27 @@ a.carousel-title,
 
 /*---------- PORTAL LANGUAGE SELECTOR ----------*/
 #portal-languageselector {
-  bottom:0;
-  margin:0;
-  padding:5px 7px 0;
+  background-color:#E8ECF0;
+  bottom:5px;
+  left:2px;
+  margin:0 0 0 0.5em;
+  padding:2px 3px;
   position:absolute;
-  background:#e3e3e3;
-  max-width:50%;
   }
 #portal-languageselector li {
-  background-color: #E8ECF0;
+  border-bottom:2px solid #E8ECF0;
   display:inline;
   margin-right:5px;
   }
 #portal-languageselector a {
-  color:#73A20F;
-  text-decoration:none;
+  padding:1px 0 1px 0.25em;
+  line-height:1.73em;
   }
-.currentItem {
-  border:2px solid #fff;
+#portal-languageselector a:visited {
+  color:#73A20F;
+  }
+#portal-languageselector li.currentLanguage {
+  border-bottom:2px solid #fff;
   }
 
 /*---------- PORTAL FOOTER ----------*/
@@ -854,6 +869,10 @@ a.carousel-title,
 
 /*----- Manage Portlets -----*/
 .managePortletsLink {
+  clear:both;
+  text-align:left;
+  }
+.visualPadding .managePortletsLink {
   text-align:center;
   }
 .managedPortletActions {
