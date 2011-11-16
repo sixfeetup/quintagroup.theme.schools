@@ -110,7 +110,7 @@ body {
 input {
   font-family:Verdana,Geneva,sans-serif;
   }
-a:link {
+a {
   color:#73a20f;
   text-decoration:none;
   }
@@ -353,7 +353,7 @@ div.field.error {
   line-height:1.5em;
   margin:1em 0.25em 2em;
   }
-#content a:link {
+#content a {
   text-decoration:underline;
   }  
 #content ul {
@@ -1297,6 +1297,10 @@ body.template-new-user #content input {
   color:#f00;
   content:"■ ";
   }
+.formHelp { 
+  color:#555; 
+  margin:0 0 0.2em 0; 
+  } 
 /*.formPanel {
   padding:1em 2px;
   }*/
@@ -1658,6 +1662,14 @@ div.listingBar a:hover { /*-*/
   position:absolute;
   }
 
+/*----- Accessibility elements, applied by JS -----*/ 
+body.largeText { 
+  font-size:81%; 
+  }
+body.smallText { 
+  font-size:56%; 
+  }
+
 /*---------- COMMENTING ----------*/
 .discussion .hide {
   display:none;
@@ -1729,7 +1741,7 @@ div.listingBar a:hover { /*-*/
   display:inline-block;
   padding-left:19px;
   }
-.icons-on .contenttype-news-item{
+.icons-on .contenttype-news-item {
   background:url(../images/icons-sprite.png) no-repeat 0 -1999px;
   display:inline-block;
   padding-left:19px;

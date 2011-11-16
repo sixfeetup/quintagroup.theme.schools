@@ -19,9 +19,11 @@
         <drop css:content="link[href$='portlets.css']" />
         <drop css:content="link[href$='discussion.css']" />
         <drop css:content="link[href$='ploneKss.css']" />
+        <drop css:content="link[href$='print.css']" /> 
         <drop css:content="link[href*='base-cachekey']" />
         <drop css:content="link[href$='favicon.ico']" />
         <after content="/html/head/meta" theme-children="/html/head" />
+        <after content="/html/head/base" theme-children="/html/head" />
         <after content="/html/head/style | /html/head/script | /html/head/link" theme-children="/html/head" />
         <replace theme='/html/head/title' content='/html/head/title' />
 
