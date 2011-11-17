@@ -1,16 +1,7 @@
-# -*- coding: utf-8 -*-
-"""
-This module contains the tool of quintagroup.theme.schools
-"""
 import os
 from setuptools import setup, find_packages
 
-def read(*rnames):
-    return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
-
-version = '4.2.2'
-
-tests_require=['zope.testing']
+version = '4.3 devDiazo'
 
 setup(name='quintagroup.theme.schools',
       version=version,
@@ -36,13 +27,10 @@ setup(name='quintagroup.theme.schools',
       zip_safe=False,
       install_requires=['setuptools',
                         'Products.Carousel',
-                        'plonetheme.classic',
+                        'plone.app.theming',
+                        'plone.app.themingplugins',
                         # -*- Extra requirements: -*-
                         ],
-      tests_require=tests_require,
-      extras_require=dict(tests=tests_require),
-      test_suite = 'quintagroup.theme.schools.tests',
-      setup_requires = ["setuptools",],
       entry_points="""
       # -*- Entry points: -*-
       [z3c.autoinclude.plugin]
