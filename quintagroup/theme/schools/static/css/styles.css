@@ -515,18 +515,26 @@ input.searchButton.searchPage {
   }
 
 /* LiveSearch */
-#LSResult,
 .LSResult {
-  background:transparent;
+  background-color:#fff;
+  border:1px solid #bbb;
+  display:none;
   margin:0;
   position:absolute;
   right:-1px;
-  top:12px;
+  top:23px;
   z-index:2;
   }
-#LSResult fieldset,  
+#LSResult {
+  background:transparent;
+  border:0;
+  top:12px;
+  }
 .LSResult fieldset {
   background:#fff;
+  padding:0.5em 0 0;
+  }
+#LSResult fieldset {
   border:1px solid #bbb;
   padding:1.2em 0 0;
   }
@@ -957,6 +965,7 @@ a.carousel-title,
   position:relative;
   }  
 .portletSearch .livesearchContainer {
+  border-top:0;
   width:207px;
   }
 .portletSearch #LSNothingFound,

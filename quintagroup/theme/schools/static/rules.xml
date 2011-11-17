@@ -19,6 +19,13 @@
         <drop css:content="link[href$='portlets.css']" />
         <drop css:content="link[href$='discussion.css']" />
         <drop css:content="link[href$='ploneKss.css']" />
+        <drop css:content="link[href$='base.css']" />
+        <drop css:content="link[href$='authoring.css']" />
+        <drop css:content="link[href$='controlpanel.css']" />
+        <drop css:content="link[href$='deprecated.css']" />
+        <drop css:content="link[href$='navtree.css']" />
+        <drop css:content="link[href$='invisibles.css']" />
+        <drop css:content="link[href$='forms.css']" />
         <drop css:content="link[href$='print.css']" /> 
         <drop css:content="link[href*='base-cachekey']" />
         <drop css:content="link[href$='favicon.ico']" />
