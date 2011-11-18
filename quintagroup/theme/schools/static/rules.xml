@@ -66,23 +66,29 @@
         <drop css:content=".portletNavigationTree li.navTreeItem a img" />        
 
         <!-- Culumns -->
-        <copy attributes="class" href="/++theme++quintagroup.theme.schools/extra.html" css:content='#no-column-two' css:theme="#portal-column-content" css:if-not-content="#portal-column-two"/>
+
         <copy attributes="class" href="/++theme++quintagroup.theme.schools/extra.html" css:content='#no-column-one' css:theme="#portal-column-content" css:if-not-content="#portal-column-one"/> 
+
         <rules css:if-content='#portal-column-two div.managePortletsLink'>
                 <drop theme='//*[@id="portal-column-two"]' if-not-content='//*[@id="portal-column-two"]/div[3]'/>
+                <copy attributes="class" href="/++theme++quintagroup.theme.schools/extra.html" css:content='#no-column-two' css:theme="#portal-column-content" if-not-content='//*[@id="portal-column-two"]/div[3]'/>
                 <rules css:if-not-content='#portal-column-one'>
                         <copy attributes="class" href="/++theme++quintagroup.theme.schools/extra.html" css:content="#no-column" css:theme="#portal-column-content" if-not-content='//*[@id="portal-column-two"]/div[3]' />
                         <after css:content="#portal-column-two div.managePortletsLink" css:theme="#portal-column-content" if-not-content='//*[@id="portal-column-two"]/div[3]' />
                 </rules>                 
         </rules>
+
         <rules if-not="contains($path,'@@manage-portlets')">
                 <rules css:if-not-content='#portal-column-two div.managePortletsLink'>
                         <drop theme='//*[@id="portal-column-two"]' if-not-content='//*[@id="portal-column-two"]/div[2]'/>
+                        <copy attributes="class" href="/++theme++quintagroup.theme.schools/extra.html" css:content='#no-column-two' css:theme="#portal-column-content" if-not-content='//*[@id="portal-column-two"]/div[2]'/>
                         <rules css:if-not-content='#portal-column-one'>
                                 <copy attributes="class" href="/++theme++quintagroup.theme.schools/extra.html" css:content="#no-column" css:theme="#portal-column-content" if-not-content='//*[@id="portal-column-two"]/div[2]' />
                         </rules> 
                 </rules>
         </rules>
+
+
         <copy attributes="class" content='//*[@id="portal-column-one"]' theme='//*[@id="portal-column-one"]' />
         <copy attributes="class" content='//*[@id="portal-column-two"]' theme='//*[@id="portal-column-two"]' />
         <drop css:theme="#portal-column-one" if-content="not(//*[@id='portal-column-one'])" />
