@@ -766,6 +766,7 @@ a.carousel-title,
   top:5px;
   }
 #portal-personaltools #anon-personalbar a {
+  display:inline;
   font-weight:bold;
   }
 #portal-personaltools dt a {
