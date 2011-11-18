@@ -469,7 +469,7 @@ body#content.mceContentBody {
 /*---------- PORTAL SEARCH BOX ----------*/
 #portal-searchbox {
   border:1px solid #ccc;
-  position:absolute;
+  position:absolute !important;
   right:0;
   top:2px;
   width:222px;
@@ -682,12 +682,16 @@ ul#portal-globalnav ul li a {
   display:none;
   left: auto;
   margin-left: 150px;
+  margin-bottom:0.75em;
   padding: 0 1em;
   position: absolute;
   right: 0;
   text-align: right;
   width: auto;
   z-index:1;
+  }
+.carousel-text p {
+  margin:0;
   }
 .carousel-banner-active .carousel-text {
   display:block;
