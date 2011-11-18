@@ -1,16 +1,7 @@
 Installation
 ------------
 
-To install quintagroup.theme.schools to your Plone 4 project - in the 
-buildout.cfg file of your buildout:
-
-* Add the following address to the list of extends::
-   
-    [buildout]
-    ....
-    extends =
-         ...
-         http://good-py.appspot.com/release/plone.app.registry/1.0b2
+To install diazo schools theme on Plone 4.1 - in the buildout.cfg file of your instance:
 
 * Add ``quintagroup.theme.schools`` to the list of eggs to install, e.g.::
 
@@ -20,15 +11,47 @@ buildout.cfg file of your buildout:
         ...
         quintagroup.theme.schools
 
-* Re-run buildout, e.g. with::
+* Re-run buildout::
 
     $ ./bin/buildout
-    
-* Restart the Zope server, e.g with the following command in the terminal::
 
-   $ ./bin/instance restart
+* Restart the Zope server::
+
+    $ ./bin/instance restart
+
+Then activate 'Schools Theme' in Plone (Site Setup -> Add-ons).
+
+
+Installation: development mode
+==============================
+
+If you want to customize Schools theme please use the following installation instructions: 
+
+* download ``quintagroup.theme.schools-version.zip`` archive from http://pypi.python.org/pypi/quintagroup.theme.schools
+* extract theme archive to get ``quintagroup.theme.schools-version`` folder. Remove version from 
+  folder name to have ``quintagroup.theme.schools`` folder
+* put ``quintagroup.theme.schools`` folder into ``src`` directory of your buildout
+* in buildout.cfg file of your buildout add ``quintagroup.theme.schools`` to the list of eggs you are developing and  to the list of eggs to install::
+
+       [buildout]
+       ...
+       develop = src/quintagroup.theme.schools
+       ...
+       eggs =
+           ...
+           quintagroup.theme.schools
    
-* Install Schools Theme with Quickinstaller in Plone (Site Setup -> Add-ons).     
+* Re-run buildout::
 
+    $ ./bin/buildout
+
+* Start instance in development mode::
+
+    $ ./bin/instance fg
+
+* Install ``Schools Theme`` in Plone (Site Setup -> Add-ons).
+
+Now you can customize Schools Theme by modifying ``quintagroup.theme.schools`` package in ``src`` directory 
+of your buildout.
 
 

@@ -1,14 +1,14 @@
 import os
 from setuptools import setup, find_packages
 
-version = '4.3 devDiazo'
+version = '6.0'
 
 setup(name='quintagroup.theme.schools',
       version=version,
-      description="Free theme from Quintagroup for Plone 4",
-      long_description=open("README.txt").read() + "\n\n" +
+      description="Free diazo theme from Quintagroup for Plone 4.1",
+      long_description=open(os.path.join("quintagroup", "theme", "schools", "README.txt")).read() + "\n\n" +
                        open(os.path.join("docs", "INSTALL.txt")).read() + "\n\n"+
-                       open(os.path.join("docs", "HISTORY.txt")).read(),
+                       open(os.path.join("docs", "HISTORY.txt")).read(),                           
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
         'Framework :: Plone',
@@ -16,7 +16,7 @@ setup(name='quintagroup.theme.schools',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'License :: OSI Approved :: GNU General Public License (GPL)',
         ],
-      keywords='web zope plone theme quintagroup',
+      keywords='web zope plone theme diazo quintagroup',
       author='Quintagroup',
       author_email='skins@quintagroup.com',
       url='http://skins.quintagroup.com/schools',
