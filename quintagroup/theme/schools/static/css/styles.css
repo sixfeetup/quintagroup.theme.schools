@@ -467,9 +467,9 @@ body#content.mceContentBody {
   }
 
 /*---------- PORTAL SEARCH BOX ----------*/
-#portal-searchbox {
+div#portal-searchbox {
   border:1px solid #ccc;
-  position:absolute !important;
+  position:absolute;
   right:0;
   top:2px;
   width:222px;
