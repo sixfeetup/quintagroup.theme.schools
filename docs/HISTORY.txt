@@ -1,6 +1,10 @@
 ChangeLog
 ---------
 
+6.0.1 - November 28, 2011
+
+- styles for searchbox with dropdown menu fixed
+
 6.0 - November 23, 2011
 
 - theme package converted into diazo theme
