@@ -49,8 +49,8 @@
         <after css:content="#portal-languageselector" css:theme="#portal-personaltools-wrapper" /> 
 
         <!-- Top portlet -->
-        <drop theme='//*[@class="topPortlets"]' if-path="@@manage-portlets" />  
-        <rules if-not="contains($path,'@@manage-portlets')">
+        <drop theme='//*[@class="topPortlets"]' if-content='//*[@class="portlets-manager"]' />  
+        <rules if-not-content='//*[@class="portlets-manager"]'>
                 <drop theme='//*[@class="topPortlets"]' if-content="not(//*[@id='portal-column-two']/div[1])" />  
                 <replace theme='//*[@class="topPortlets"]/div/div' content='//*[@id="portal-column-two"]/div[1]' method="raw" />
                 <drop content='//*[@id="portal-column-two"]/div[1]' />
@@ -67,9 +67,10 @@
         <drop css:content=".portletNavigationTree li.navTreeItem a img" />        
 
         <!-- Culumns -->
-
+        <!-- No One Column -->
         <copy attributes="class" href="/++theme++quintagroup.theme.schools/extra.html" css:content='#no-column-one' css:theme="#portal-column-content" css:if-not-content="#portal-column-one"/> 
 
+        <!-- No Two Column -->
         <rules css:if-content='#portal-column-two div.managePortletsLink'>
                 <drop theme='//*[@id="portal-column-two"]' if-not-content='//*[@id="portal-column-two"]/div[3]'/>
                 <copy attributes="class" href="/++theme++quintagroup.theme.schools/extra.html" css:content='#no-column-two' css:theme="#portal-column-content" if-not-content='//*[@id="portal-column-two"]/div[3]'/>
@@ -78,7 +79,6 @@
                         <after css:content="#portal-column-two div.managePortletsLink" css:theme="#portal-column-content" if-not-content='//*[@id="portal-column-two"]/div[3]' />
                 </rules>                 
         </rules>
-
         <rules if-not="contains($path,'@@manage-portlets')">
                 <rules css:if-not-content='#portal-column-two div.managePortletsLink'>
                         <drop theme='//*[@id="portal-column-two"]' if-not-content='//*[@id="portal-column-two"]/div[2]'/>
@@ -89,7 +89,6 @@
                 </rules>
         </rules>
 
-
         <copy attributes="class" content='//*[@id="portal-column-one"]' theme='//*[@id="portal-column-one"]' />
         <copy attributes="class" content='//*[@id="portal-column-two"]' theme='//*[@id="portal-column-two"]' />
         <drop css:theme="#portal-column-one" if-content="not(//*[@id='portal-column-one'])" />
@@ -97,6 +96,12 @@
         <copy css:theme="#portal-column-two .visualPadding" css:content-children="#portal-column-two" />
         <copy css:theme="#portal-column-one .visualPadding" css:content-children="#portal-column-one" />
 
+        <!-- No Columns -->
+        <rules if-not-content='//*[@id="portal-column-one"]'>
+                <copy attributes="class" href="/++theme++quintagroup.theme.schools/extra.html" css:content="#no-column" css:theme='#portal-column-content' if-not-content='//*[@id="portal-column-two"]' />
+        </rules>
+
+        <!-- Portlet -->
         <replace css:content=".portletSearch dt.portletHeader">
             <dt class="portletHeader hiddenStructure">Search</dt>
         </replace>
