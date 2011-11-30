@@ -392,7 +392,7 @@ div.field.error {
   }
 #content ul li {
   background-image:url(../images/sprite.png);
-  background-position:0 -877px;
+  background-position:0 -1345px;
   background-repeat:no-repeat;
   padding-left:14px;
   }
@@ -517,7 +517,7 @@ input.inputLabelActive {
   color:#76797C;
   }  
 input.searchButton {
-  background:url(../images/sprite.png) no-repeat 0 -1305px;
+  background:url(../images/sprite.png) no-repeat 0 -1105px;
   border:0;
   cursor:pointer;
   font-size:0;
@@ -535,7 +535,7 @@ input.searchPage {
   padding-top:1px;
   }
 input.searchButton.searchPage {
-  background:url(../images/sprite.png) no-repeat 0 -1326px;
+  background:url(../images/sprite.png) no-repeat 0 -1126px;
   border:0;
   font-size:0 !important; 
   height:32px;
@@ -650,13 +650,13 @@ ul#portal-globalnav li a { /* hack for dropdown menu, ul */
   white-space:nowrap;
   }
 ul#portal-globalnav li > a {
-  background:url(../images/sprite.png) no-repeat 0 -1134px;
+  background:url(../images/sprite.png) no-repeat 0 -934px;
   }
 
 #portal-globalnav li.selected a,
 #portal-globalnav li.selected a:hover,
 #portal-globalnav li a:hover {
-  background:transparent url(../images/sprite.png) no-repeat 0 -1134px;
+  background:transparent url(../images/sprite.png) no-repeat 0 -934px;
   color:#000; 
   }
 ul#portal-globalnav li.selected a { /* hack for dropdown menu, ul */
@@ -893,7 +893,7 @@ a.carousel-title,
   color:#565656;
   }
 .portletHeader {
-  background:#dadada url(../images/sprite.png) repeat-x 100% 0;
+  background:#dadada url(../images/sprite.png) repeat-x 0 0;
   font-weight:normal;
   padding:2px 1em;
   border-width:0 0 1px;
@@ -1011,7 +1011,7 @@ a.carousel-title,
   width:165px;
   }
 .portletSearch input.searchButton {
-  background-position:0 -1284px;
+  background-position:0 -1084px;
   }
 .portletSearch .portletFooter {
   padding-left:10px;
@@ -1129,16 +1129,10 @@ div.portletStaticText {
   background-color:red;
   color:#fff;
   }
-/*#content li.formTab a.required span {
-  background:url(../images/required.png) no-repeat 100% 5px;
-  padding-right:1em;
-  }*/
-
 #content li.formTab a.required span:after {
-color:#f00;
-content:" ■";
-}
-
+  color:#f00;
+  content:" ■";
+  }
 #content fieldset.formPanel {
   border:0;
   }
