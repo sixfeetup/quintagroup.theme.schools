@@ -27,7 +27,7 @@ setup(name='quintagroup.theme.schools',
       zip_safe=False,
       install_requires=['setuptools',
                         'Products.Carousel',
-                        'plone.app.theming',
+                        'plone.app.theming >= 1.0b9',
                         'plone.app.themingplugins',
                         # -*- Extra requirements: -*-
                         ],
