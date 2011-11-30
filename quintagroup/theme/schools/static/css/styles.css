@@ -532,7 +532,8 @@ input.searchPage {
   border-color:#808080 #d4d0c8 #d4d0c8 #808080;
   border-style:solid;
   border-width:1px;
-  padding-top:1px;
+  font-size:1.6em;
+  padding:4px 6px 3px;
   }
 input.searchButton.searchPage {
   background:url(../images/sprite.png) no-repeat 0 -1126px;
