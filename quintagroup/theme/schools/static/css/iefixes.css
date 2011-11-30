@@ -1,35 +1,3 @@
-/*table.listing td.top {
-position: relative;
-left: -1px;
-top: -1px;
-}*/
-/*
-.visualOverflow {
-width: 88%;
-}
-.actionMenu .actionMenuHeader a {
-display: inline;
-}
-.actionMenu .actionMenuContent {
-top: 1.4em;
-}
-.actionMenu .actionMenuContent {
-right: auto;
-}
-#floatholder, #float {
-height: 1%;
-}*/
-/*.context, 
-.formControls .actionButtons .button, 
-.documentEditable * .context,
-.standalone, 
-.documentEditable * .standalone,
-.destructive,
-.documentEditable * .destructive {
-overflow: visible;
-background-position:6px 1px;
-}*/
-
 textarea {
   width:97%;
   }
