@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <after theme-children="/html/head/style" if="($columnonewidth != '') and ($columntwowidth != '')"> 
+      #portal-column-one { width:<xsl:value-of select="number($columnonewidth)" />px; }
+      #portal-column-two { margin-left:-<xsl:value-of select="number($columntwowidth)" />px; width:<xsl:value-of select="number($columntwowidth)" />px; }
+      #portal-column-content.width-1\3a 2 { width:<xsl:value-of select="993-number($columnonewidth)-number($columntwowidth)" />px; }
+      #portal-column-content.width-3\3a 4.position-0 { width:<xsl:value-of select="993-number($columntwowidth)" />px; }
+      #portal-column-content.width-3\3a 4 { width:<xsl:value-of select="993-number($columnonewidth)" />px; }
+      #portal-column-content.position-1\3a 4 { margin-left:-<xsl:value-of select="993-number($columnonewidth)" />px; }
+    </after>
+
+</rules>
