@@ -23,6 +23,7 @@ input {
 #portal-top {
   z-index:1;
   }
+.portletHeader,  
 #portal-header,
 .topPortlets .visualPadding,
 #portal-colophon {
