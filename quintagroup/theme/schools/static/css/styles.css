@@ -1495,6 +1495,9 @@ h1 div.formControls input {
   line-height:1.73em;
   text-decoration:none;
   }
+.actionMenu a:visited {
+  color:#fff;
+  }
 .actionMenu dt a {
   padding:0 3px;  
   }
