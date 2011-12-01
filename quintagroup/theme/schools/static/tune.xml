@@ -12,9 +12,14 @@
       #portal-column-content.width-3\3a 4 { width:<xsl:value-of select="993-number($columnonewidth)" />px; }
       #portal-column-content.position-1\3a 4 { margin-left:-<xsl:value-of select="993-number($columnonewidth)" />px; }
       #portal-column-one .portletSearch .portlet-search-gadget { width:<xsl:value-of select="number($columnonewidth)-61" />px; }
-      #portal-column-two .portletSearch .portlet-search-gadget { width:<xsl:value-of select="number($columntwowidth)-61" />px; }
+      #portal-column-two .portletSearch .portlet-search-gadget, .topPortlets .portletSearch .portlet-search-gadget { width:<xsl:value-of select="number($columntwowidth)-61" />px; }
       #portal-column-one .portletSearch .livesearchContainer { width:<xsl:value-of select="number($columnonewidth)-19" />px; }
-      #portal-column-two .portletSearch .livesearchContainer { width:<xsl:value-of select="number($columntwowidth)-19" />px; }
+      #portal-column-two .portletSearch .livesearchContainer, .topPortlets .portletSearch .livesearchContainer { width:<xsl:value-of select="number($columntwowidth)-19" />px; }
+      .topPortlets { width:<xsl:value-of select="number($columntwowidth)" />px; }
+      #portal-siteactions { width:<xsl:value-of select="990-number($columntwowidth)" />px; }
+      div#portal-searchbox { width:<xsl:value-of select="number($columntwowidth)-2" />px; }
+      #portal-searchbox .LSRow, #portal-searchbox #LSNothingFound { width:<xsl:value-of select="number($columntwowidth) + 84" />px; }
+      #portal-searchbox #searchGadget { width:<xsl:value-of select="number($columntwowidth)-43" />px; }
     </after>
     <after theme-children="/html/head/style" if="$links_color != ''"> 
       a, .ploneCalendar .event a, .ploneCalendar .todayevent a { color:<xsl:value-of select="$links_color" />; }
