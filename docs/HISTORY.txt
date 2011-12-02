@@ -1,6 +1,14 @@
 ChangeLog
 ---------
 
+6.0.2 - December 2, 2011
+
+- base styles updated
+- styles for ContentWellPortlets adapted
+- improved css for correct work with Poducts.Carousel
+- added possibility to make basic edits via diazo panel: column width, 
+  links color (link, hover, visited), logo height and top portlet block height.
+
 6.0.1 - November 28, 2011
 
 - styles for searchbox with dropdown menu fixed
