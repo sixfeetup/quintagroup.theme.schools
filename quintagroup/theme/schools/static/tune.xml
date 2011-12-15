@@ -34,6 +34,9 @@
       #portal-logo { height:<xsl:value-of select="number($logo_min_height)" />px; }
       .topPortlets .visualPadding { min-height:<xsl:value-of select="number($logo_min_height)-4" />px; }
     </after>
-
+    <after theme-children="/html/head/style" if="$top_image != ''"> 
+      #portal-header { background-image:url(<xsl:value-of select="$top_image" />); }
+      #portal-logo { background:transparent; }
+    </after>
 
 </rules>

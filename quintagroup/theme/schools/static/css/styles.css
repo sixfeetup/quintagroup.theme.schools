@@ -317,7 +317,9 @@ div.field.error {
   padding:2.55em 0 0;
   }
 #portal-header {
-  background:url(../images/bg-header.jpg) no-repeat 0 0;
+  background-image:url(../images/bg-header.jpg);
+  background-position:0 0;
+  background-repeat:no-repeat;
   position:relative;
   z-index:2;
   }
