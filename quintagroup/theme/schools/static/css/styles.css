@@ -712,6 +712,7 @@ div.carousel {
   height: 333px;
   margin-bottom:2px;
   overflow: hidden;
+  position: relative;
   }
 .carousel-banners {
   overflow: visible !important;
@@ -739,6 +740,7 @@ div.carousel-text {
   margin-left: 150px;
   margin-bottom:0.75em;
   padding: 0 1em;
+  position: absolute;
   right: 0;
   text-align: right;
   width: auto;
@@ -770,8 +772,13 @@ div.carousel-pager {
 a.carousel-pager-item,
 a.carousel-pager-button-prev,
 a.carousel-pager-button-next {
+  background-color: #DDDDDD;
   margin-right:1px;
   padding:1px 4px;
+  }
+a.carousel-pager-item-active {
+  background-color: #75AD0A;
+  color: white;
   }
 
 /*---------- PORTAL PERSONAL TOOLS ----------*/	
