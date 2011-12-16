@@ -32,6 +32,7 @@
     </after>
     <after theme-children="/html/head/style" if="$logo_min_height != '107'"> 
       #portal-logo { height:<xsl:value-of select="number($logo_min_height)" />px; }
+      #portal-logo .heightImmitator { height:<xsl:value-of select="number($logo_min_height)" />px; }
       #portal-slogan { height:<xsl:value-of select="number($logo_min_height)" />px; }
       #portal-slogan .heightImmitator { height:<xsl:value-of select="number($logo_min_height)" />px; }
       .topPortlets .visualPadding { min-height:<xsl:value-of select="number($logo_min_height)-4" />px; }

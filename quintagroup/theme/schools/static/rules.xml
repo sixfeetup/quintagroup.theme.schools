@@ -43,7 +43,9 @@
         <replace css:content="#portal-searchbox" css:theme="#portal-searchbox" />
         <drop css:content="div#portal-searchbox .searchSection" />
         <replace css:content="#portal-siteactions" css:theme="#portal-siteactions" />
-        <replace css:content="#portal-logo" css:theme="#portal-logo" />
+        <copy css:theme="#portal-logo" css:content="#portal-logo" attributes="href"/>
+        <copy css:theme="#portal-logo" css:content="#portal-logo" attributes="title"/>
+        <replace css:content="#portal-logo img" css:theme="#portal-logo img" />
         <replace css:content="#portal-personaltools" css:theme="#portal-personaltools" />
         <replace css:content="#portal-breadcrumbs" css:theme="#portal-breadcrumbs" method="raw" />
         <drop css:content="#portal-breadcrumbs" />

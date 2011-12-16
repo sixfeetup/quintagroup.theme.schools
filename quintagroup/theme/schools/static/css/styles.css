@@ -640,11 +640,18 @@ input.searchButton.searchPage {
   display:block;
   min-height:107px;
   overflow:hidden;
+  padding:0 15px 0 0;
   position:relative;
   text-align:right;
   }
+#portal-logo .heightImmitator {
+  display:inline-block;
+  height:107px;
+  vertical-align:middle;
+  }
 #portal-logo img {
-  margin:18px 15px 10px 0;
+  display:inline-block;
+  vertical-align:middle;
   }
   
 /*---------- PORTAL BREAD CRUMBS ----------*/	
@@ -763,6 +770,7 @@ div.carousel {
   }
 div.carousel-text {
   background-color: transparent;
+  bottom:0;
   display:none;
   left: auto;
   margin-left: 150px;
