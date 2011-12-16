@@ -47,7 +47,8 @@
         <replace css:content="#portal-personaltools" css:theme="#portal-personaltools" />
         <replace css:content="#portal-breadcrumbs" css:theme="#portal-breadcrumbs" method="raw" />
         <drop css:content="#portal-breadcrumbs" />
-        <after css:content="#portal-languageselector" css:theme="#portal-personaltools-wrapper" /> 
+        <after css:content="#portal-languageselector" css:theme="#portal-personaltools-wrapper" />
+        <drop css:theme="#portal-slogan" /> 
 
         <!-- Top portlet -->
         <drop theme='//*[@class="topPortlets"]' if-content='//*[@class="portlets-manager"]' />  
@@ -119,11 +120,9 @@
 
         <!-- Colophon -->
         <copy theme='//*[@id="portal-colophon"]' content='//*[@id="portal-colophon"]/*' />
-
-        <drop theme="/html/head/style" if-not="$enablecustomizations" />
     </rules>
 
-    <rules if="$enablecustomizations">
+    <rules>
         <xi:include href="tune.xml" />
     </rules>
 
