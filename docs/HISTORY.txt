@@ -3,7 +3,7 @@ ChangeLog
 
 6.0.3 - December 19, 2011
 
-- possibility to edit footer added
+- possibility to edit slogan added
 - possibility to replace header image added
 - logo replacement fixed 
 
