@@ -3,6 +3,26 @@ Schools is a free diazo theme for Plone 4.1
 Features
 --------
 
+* Replaceable header image for the whole site or site sections. To have new top image, add image with
+  ``topimage`` shortname into desirable location on site. Default image size is 993*107px. 
+
+  In case you upload higher image - it will not be completely displayed unlesss you configure ``logo_min_height`` 
+  value in 'Diazo theme' panel -> 'Parameter expressions' tab. Replace default value 107 with a new header height.
+
+* Right top area is reserved for a portlet. The first portlet from right column is displayed there. 
+
+* Basic edits via 'Diazo theme' panel (/@@theming-controlpanel)
+  
+  Open 'Advanced settings' tab in 'Diazo theme' panel. In 'Parameter expressions' field replace default values for the following 
+  parameters to modify:
+
+  - column width: update values for ``columnonewidth`` and ``columntwowidth`` (numbers only)
+  - links colors: update values for ``links_color``, ``hover_links_color``, and ``visited_links_color`` (be carefull to insert valid css colors
+    instead of default ones) 
+  - slogan: update text for ``site_description``, replace default slogan 'Free Theme for Plone' with a new one.
+
+ In case Schools theme gets broken after your modifying the above parameters - try reinstalling the theme to revert to default parameters.
+
 * Carousel Banner
  
   Schools Plone Theme can contain carousel banner(s) on the front page. Changeable set of rotating banners can be added to 
@@ -17,23 +37,8 @@ Features
   Optimum image dimensions are  397*288px. There are 4 demo images that might be used as demo banners - see 'src' folder within
   theme package (quintagroup -> theme -> schools).
 
-* Right top area is reserved for a portlet. The first portlet from right column is displayed there. 
-
-* Basic edits via 'Diazo theme' panel (/@@theming-controlpanel)
-  
-  Open 'Advanced settings' in 'Diazo theme' panel. In 'Parameter expressions' field replace 'False' for 'True' 
-  in ``enablecustomizations = python:False`` line.
-
-  Now you can fill in new values for the following parameters in 'Parameter expressions' field to modify:
-
-  - column width: update values for ``columnonewidth`` and ``columntwowidth`` (numbers only)
-  - links colors: update values for ``links_color``, ``hover_links_color``, and ``visited_links_color`` (be carefull to insert valid css colors
-    instead of default ones) 
-  - logo and top portlet block height: update ``logo_min_height`` (number only)
-
- In case Schools theme gets broken after your modifying the above parameters - try reinstalling the theme to revert to default parameters.
-
 * Replaceable logo as in default Plone: customize portal_skins -> sunburst_images -> logo.png image.
+
 * Editable footer as in default Plone: customize portal_view_customizations -> plone.footer
 
 Dependencies
@@ -56,7 +61,7 @@ SuinRain diazo theme was tested with:
 Besides, special styles were added to the theme for correct theme display with the following products activated:
 
 * quintagroup.dropdownmenu 1.2.5
-* Products.LinguaPlone 4.1
+* Products.LinguaPlone 4.1.1
 
 Home Directory
 ==============

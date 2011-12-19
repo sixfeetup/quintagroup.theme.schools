@@ -1,6 +1,12 @@
 ChangeLog
 ---------
 
+6.0.3 - December 19, 2011
+
+- possibility to edit footer added
+- possibility to replace header image added
+- logo replacement fixed 
+
 6.0.2 - December 2, 2011
 
 - base styles updated
