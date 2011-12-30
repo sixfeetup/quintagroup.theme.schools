@@ -1,11 +1,11 @@
 import os
 from setuptools import setup, find_packages
 
-version = '6.0.3'
+version = '6.0.4'
 
 setup(name='quintagroup.theme.schools',
       version=version,
-      description="Free diazo theme from Quintagroup for Plone 4.1",
+      description="Free Diazo theme for Plone 4.1",
       long_description=open(os.path.join("quintagroup", "theme", "schools", "README.txt")).read() + "\n\n" +
                        open(os.path.join("docs", "INSTALL.txt")).read() + "\n\n"+
                        open(os.path.join("docs", "HISTORY.txt")).read(),                           

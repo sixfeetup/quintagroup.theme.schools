@@ -1,6 +1,10 @@
 ChangeLog
 ---------
 
+6.0.4 - December 30, 2011
+
+- plone.app.themingplugins dependency removed
+
 6.0.3 - December 19, 2011
 
 - possibility to edit slogan added

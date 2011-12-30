@@ -45,7 +45,6 @@ Dependencies
 ============
 
 * plone.app.theming
-* plone.app.themingplugins
 * Products.Carousel
 
 Recommended
@@ -55,7 +54,6 @@ SuinRain diazo theme was tested with:
 
 * Plone 4.1
 * plone.app.theming 1.0b9 
-* plone.app.themingplugins 1.0b1
 * Products.Carousel 2.1
 
 Besides, special styles were added to the theme for correct theme display with the following products activated:

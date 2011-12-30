@@ -1,7 +1,18 @@
 Installation
 ------------
 
-To install diazo schools theme on Plone 4.1 - in the buildout.cfg file of your instance:
+quintagroup.theme.schools can be installed in any of the following ways. 
+
+Installation via diazo panel
+============================
+
+* Download zip file at http://plone.org/products/schools-plone-skin/releases/6.0.4/schools.zip
+* Import the theme at the 'Diazo theme' control panel
+
+Installation via buildout
+=========================
+
+In the buildout.cfg file of your instance:
 
 * Add ``quintagroup.theme.schools`` to the list of eggs to install, e.g.::
 
