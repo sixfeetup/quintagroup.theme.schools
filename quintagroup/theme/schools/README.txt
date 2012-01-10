@@ -60,6 +60,8 @@ Besides, special styles were added to the theme for correct theme display with t
 
 * quintagroup.dropdownmenu 1.2.5
 * Products.LinguaPlone 4.1.1
+* Products.PloneFormGen 1.7.0
+* Products.ContentWellPortlets 4.1.0
 
 Home Directory
 ==============

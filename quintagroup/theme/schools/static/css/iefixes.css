@@ -19,6 +19,13 @@ input {
   overflow-x:hidden;
   }
 
+.collapsible .collapser.collapsed {
+  z-index: expression(runtimeStyle.zIndex = 1, insertAdjacentHTML('afterEnd', '&#9658;'));
+  }
+.collapsible .collapser.expanded {
+  z-index: expression(runtimeStyle.zIndex = 1, insertAdjacentHTML('beforeEnd', '&#9660;'));
+  }
+
 /* Schools Theme Custom Fixes */
 #portal-top {
   z-index:1;
@@ -32,9 +39,10 @@ input {
 #portal-searchbox {
   height:2em;
   }
-.searchButton {
+input.searchButton {
   overflow:hidden;
   padding-top:25px;
+  vertical-align:middle;
   }
 #livesearchLegend {
   margin-top:-1.9em;

@@ -1,6 +1,10 @@
 ChangeLog
 ---------
 =======
+6.0.5 - January 10, 2012
+
+- Products.PloneFormGen compatibility added
+
 6.0.4 - December 30, 2011
 
 - plone.app.themingplugins dependency removed

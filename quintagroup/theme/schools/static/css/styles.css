@@ -120,6 +120,11 @@ body {
   }
 input {
   font-family:Verdana,Geneva,sans-serif;
+  vertical-align:middle;
+  }
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right:3px;
   }
 a {
   color:#73a20f;
@@ -223,8 +228,12 @@ pre {
 #content .visualHighlight {
   background-color: #FFFFBB;
   }
+.label {
+  font-weight:bold;
+  }
 label {
   font-weight:bold;
+  vertical-align:middle;
   }
 .hiddenStructure {
   display:none;
@@ -500,6 +509,12 @@ body#content.mceContentBody {
   }
 
 /*---------- PORTAL SEARCH BOX ----------*/
+.collapsible .collapser.collapsed:after {
+  content:" ▶"
+  }
+.collapsible .collapser.expanded:after {
+  content:" ▼"
+  }
 div#portal-searchbox {
   border:1px solid #ccc;
   position:absolute;
@@ -1006,9 +1021,9 @@ a.carousel-pager-item-active {
   padding:4px 4px 4px 27px !important; /* !important added for when the option show icons */
   color:#56616b;
   }
-/*.portletItem .navTreeItem .state-published {
-  color:#56616b !important;
-  }*/
+.portletItem .navTreeItem a img {
+  display:none;
+  }
 .navTreeItem a:hover, 
 .portletItem .navTreeItem a:hover {
   color:#56616b;
@@ -1032,6 +1047,9 @@ a.carousel-pager-item-active {
   border-style:solid;
   border-color:#ccc;
   }
+.portletSearch .portletItem {
+  padding-right:49px
+  } 
 .portletSearch form {
   white-space:nowrap;
   }
@@ -1040,7 +1058,7 @@ a.carousel-pager-item-active {
   border-style:solid;
   border-color:#c2c2c2;
   padding:2px 7px;
-  width:165px;
+  width:100%;
   }
 .portletSearch input.searchButton {
   background-position:0 -1084px;
@@ -1052,6 +1070,9 @@ a.carousel-pager-item-active {
 .portletSearch .LSBox {
   position:relative;
   }  
+.portletSearch .LSResult {
+  right:auto;
+  } 
 .portletSearch .livesearchContainer {
   border-top:0;
   width:207px;
@@ -1377,6 +1398,19 @@ body.template-new-user #content input {
   top:-0.75em;
   }
 
+/*----- Events -----*/
+.eventDetails {
+  clear:right;
+  float:right;
+  margin:0 0 0.5em 1em;
+  }
+
+/*----- Search Results -----*/
+.highlightedSearchTerm {
+  background-color:#ff9;
+  padding:0 2px;
+  }
+
 /*----- Editing -----*/
 .fieldRequired {
   color:#fff;
@@ -1389,9 +1423,6 @@ body.template-new-user #content input {
   color:#555; 
   margin:0 0 0.2em 0; 
   } 
-/*.formPanel {
-  padding:1em 2px;
-  }*/
 .formPanel textarea {
   width:100%;
   }
@@ -1399,9 +1430,6 @@ body.template-new-user #content input {
   font-size:2em;
   width:100%;
   }
-/*.documentByLine {
-  margin:0 7px 1em;
-  }*/
 .suppressVisualEditor {
   margin:0 !important;
   }
