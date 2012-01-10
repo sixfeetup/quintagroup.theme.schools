@@ -28,7 +28,6 @@ setup(name='quintagroup.theme.schools',
       install_requires=['setuptools',
                         'Products.Carousel',
                         'plone.app.theming >= 1.0b9',
-                        'plone.app.themingplugins',
                         # -*- Extra requirements: -*-
                         ],
       entry_points="""
