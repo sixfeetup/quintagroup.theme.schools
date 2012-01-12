@@ -8,7 +8,7 @@ setup(name='quintagroup.theme.schools',
       description="Free Diazo theme for Plone 4.1",
       long_description=open(os.path.join("quintagroup", "theme", "schools", "README.txt")).read() + "\n\n" +
                        open(os.path.join("docs", "INSTALL.txt")).read() + "\n\n"+
-                       open(os.path.join("docs", "HISTORY.txt")).read(),                           
+                       open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
         'Framework :: Plone',
@@ -26,8 +26,7 @@ setup(name='quintagroup.theme.schools',
       include_package_data=True,
       zip_safe=False,
       install_requires=['setuptools',
-                        'Products.Carousel',
-                        'plone.app.theming >= 1.0b9',
+                        'plone.app.theming',
                         # -*- Extra requirements: -*-
                         ],
       entry_points="""

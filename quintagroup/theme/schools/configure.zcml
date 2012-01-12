@@ -1,11 +1,11 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
     xmlns:plone="http://namespaces.plone.org/plone"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="quintagroup.theme.schools">
 
-   <include package="Products.CMFCore" />              
-   <include package="Products.Carousel" />              
+   <five:registerPackage package="." initialize=".initialize" />
 
    <genericsetup:registerProfile
      name="default"
