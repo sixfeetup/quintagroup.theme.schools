@@ -55,13 +55,13 @@ SuinRain diazo theme was tested with:
 * Plone 4.1
 * plone.app.theming 1.0b9 
 * Products.Carousel 2.1
+* Products.PloneFormGen 1.7.0
+* Products.ContentWellPortlets 4.1.0
 
 Besides, special styles were added to the theme for correct theme display with the following products activated:
 
 * quintagroup.dropdownmenu 1.2.5
 * Products.LinguaPlone 4.1.1
-* Products.PloneFormGen 1.7.0
-* Products.ContentWellPortlets 4.1.0
 
 Home Directory
 ==============
