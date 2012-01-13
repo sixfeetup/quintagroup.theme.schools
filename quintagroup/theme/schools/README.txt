@@ -76,4 +76,4 @@ Authors
 * Serhiy Valchuk  
 * Taras Peretiatko 
 
-Quintagroup: http://quintagroup.com, 2006-2011
+Quintagroup: http://quintagroup.com, 2006-2012
