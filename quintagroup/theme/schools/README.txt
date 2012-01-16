@@ -19,8 +19,7 @@ Features
   - column width: update values for ``columnonewidth`` and ``columntwowidth`` (numbers only)
   - links colors: update values for ``links_color``, ``hover_links_color``, and ``visited_links_color`` (be carefull to insert valid css colors instead of default ones) 
   - slogan: update text for ``site_description``, replace default slogan 'Free Theme for Plone' with a new one.
-
- In case Schools theme gets broken after your modifying the above parameters - try reinstalling the theme to revert to default parameters.
+  - In case Schools theme gets broken after your modifying the above parameters - reinstall the theme to revert to default parameters.
 
 * Carousel Banner
 
