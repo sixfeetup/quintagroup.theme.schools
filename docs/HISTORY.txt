@@ -1,11 +1,15 @@
 ChangeLog
 ---------
 =======
+
+6.0.6 - January 18, 2012
+
+- bug fixed
+
 6.0.5 - January 17, 2012
 
 - Products.PloneFormGen compatibility added
 - Products.Carousel dependency removed
-
 
 6.0.4 - December 30, 2011
 
