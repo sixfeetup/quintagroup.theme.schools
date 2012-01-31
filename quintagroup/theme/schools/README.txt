@@ -5,7 +5,7 @@ Features
 
 **Customizable logo**
 
- Chameleon diazo theme comes with default Plone logo.  You can replace it with your own as you would do it in default Plone: in ZMI customize  portal_skins -> sunburst_images -> logo.png.
+ Schools diazo theme comes with default Plone logo.  You can replace it with your own as you would do it in default Plone: in ZMI customize  portal_skins -> sunburst_images -> logo.png.
 
 **Configurable left/right column width** 
 
