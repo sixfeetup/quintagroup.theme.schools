@@ -49,16 +49,19 @@ Features
   Additional features can be activated:
 
 * ``Products.Carousel``
-   Adds adjusted styling to Carousel
+   Adds rotating Carousel banner feature. Adjusted styling to Carousel
+
+* ``Products.ContentWellPortlets``
+   Allows adding portlets in the header, footer and content area.
+
+* ``Products.PloneFormGen``
+   Adds TTW Form Generator feature.
 
 * ``quintagroup.dropdownmenu``
    Adds adjusted styling dropdown menu
 
 * ``Products.LinguaPlone``
    Adds multilingual functionality. Adjusted styling for language selectors.
-
-* ``Products.PloneFormGen``
-   Adds TTW Form Generator feature.
 
 Dependencies
 ============
