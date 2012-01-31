@@ -50,7 +50,12 @@
         <replace css:content="#portal-breadcrumbs" css:theme="#portal-breadcrumbs" method="raw" />
         <drop css:content="#portal-breadcrumbs" />
         <after css:content="#portal-languageselector" css:theme="#portal-personaltools-wrapper" />
-        <drop css:theme="#portal-slogan" /> 
+        <replace css:theme="#portal-slogan" if="$slogan != ''"> 
+          <div id="portal-slogan">
+            <span class="heightImmitator"><!-- --></span><span><xsl:value-of select="$slogan" /></span>
+          </div>
+        </replace>
+        <drop css:theme="#portal-slogan" if="$slogan = ''" />
         <after css:theme="#portal-top" css:content="#portlets-in-header" />
         <after css:theme="#portal-top" css:content=".manageInHeaderPortletsLink" />
 

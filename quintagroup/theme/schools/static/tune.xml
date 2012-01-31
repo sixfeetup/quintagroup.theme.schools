@@ -41,10 +41,4 @@
       #portal-header { background-image:url(<xsl:value-of select="$top_image" />); }
       #portal-logo { background:transparent; }
     </after>
-    <before css:theme="#portal-logo" if="$site_description != 'Free Theme for Plone'"> 
-      <div id="portal-slogan">
-        <span class="heightImmitator"><!-- --></span><span><xsl:value-of select="$site_description" /></span>
-      </div>
-    </before>
-
 </rules>
