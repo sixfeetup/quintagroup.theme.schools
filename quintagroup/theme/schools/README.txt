@@ -13,13 +13,13 @@ Features
 
 **Improved thumbnail display view**
 
- Switch to Thumbnail view
+ To see the changes go to Display dropdown menu and click on Thumbnail view. 
 
 **Top image**
 
- Replaceable header image for the whole site or site sections. To have new top image, add image with ``topimage`` shortname into desirable location on site. Default image size is 993*107px. 
+ The theme allows you to replace header image for the whole site or site sections. To have new top image, add image with ``topimage`` shortname into desirable location on site. Default image size is 993*107px. 
 
- In case you upload higher image - it will not be completely displayed unlesss you configure ``logo_min_height`` value in 'Diazo theme' panel -> 'Parameter expressions' tab. Replace default value 107 with a new header height.
+ In case you upload higher image, it will not be completely displayed. To change it go to 'Site Setup' -> 'Diazo theme' panel -> and in 'Parameter expressions' textarea set the ``logo_min_height`` parameter value from 107  with a new header height.
 
 **Top portlet**
 
@@ -27,13 +27,13 @@ Features
 
 **Theme Colors**
 
- У темі можна змінити такі links colors: ``links_color``, ``hover_links_color``, and ``visited_links_color``. Щоб це зробити, потрібно перейти до Site Setup -> Diazo Theme -> Advanced Settings. In 'Parameter expressions' textarea change the 'links_color' or/and 'hover_links_color' or/and 'visited_links_color' parameters values respectively
+ You can change links colors: ``links_color``, ``hover_links_color``, and ``visited_links_color``. For this, go to Site Setup -> Diazo Theme -> Advanced Settings. In 'Parameter expressions' textarea change the 'links_color' or/and 'hover_links_color' or/and 'visited_links_color' parameters values respectively.
   
 **Carousel Banner**
 
- Rotating banners can be added in case you install Products.Carousel add-on. Custom Carousel display style applies automatically to carousel banner.
+ Rotating banners can be added in case you install ``Products.Carousel`` add-on. Custom Carousel display style applies automatically to carousel banner.
  
- To create a banner on the front page - go to the 'Carousel' tab in the task bar. Set carousel options and select 'Carousel Banner' from 'Add new...' drop-down menu. Upload image that will be used as one rotating banner, type its title and text (will be displayed under the image), and provide web address image title will be linked to. Add as many carousel banners as you need. 
+ To create a banner on the front page, go to the 'Carousel' tab in the task bar. Set carousel options and select 'Carousel Banner' from 'Add new...' dropdown menu. Upload image that will be used as one rotating banner, type its title and text (will be displayed under the image), and provide web address, image title will be linked to. Add as many carousel banners as you need. 
   
  Optimum image dimensions are  397*288px. There are 4 demo images that might be used as demo banners - see 'src' folder within theme package (quintagroup -> theme -> schools).
 
@@ -46,10 +46,11 @@ Features
   Customize: portal_view_customizations -> plone.footer
 
 **Supported Add-Ons**
+
   Additional features can be activated:
 
 * ``Products.Carousel``
-   Adds rotating Carousel banner feature. Adjusted styling to Carousel
+   Adds rotating Carousel banner feature. Adjusted stylings to Carousel
 
 * ``Products.ContentWellPortlets``
    Allows adding portlets in the header, footer and content area.
@@ -58,10 +59,10 @@ Features
    Adds TTW Form Generator feature.
 
 * ``quintagroup.dropdownmenu``
-   Adds adjusted styling dropdown menu
+   Adds adjusted stylings to dropdown menu.
 
 * ``Products.LinguaPlone``
-   Adds multilingual functionality. Adjusted styling for language selectors.
+   Adds multilingual functionality. Adjusted stylings for language selectors.
 
 Dependencies
 ============
