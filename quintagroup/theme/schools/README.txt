@@ -37,9 +37,9 @@ Features
   
  Optimum image dimensions are  397*288px. There are 4 demo images that might be used as demo banners - see 'src' folder within theme package (quintagroup -> theme -> schools).
 
-**Portal Slogan**
+**Editable Slogan**
 
- To change the theme slogan 'Free Theme for Plone' - go to Site Setup -> Diazo Theme -> Advanced Settings. In 'Parameter expressions' textarea change 'slogan' parameter value. If the parameter has no value, than the slogan will not be displayed on the website.
+ To change the theme slogan 'Free Theme for Plone' - go to Site Setup -> 'Zope Management Interface' settings, open 'Properties' tab. In 'slogan' field type in your new slogan. If the parameter has no value, than the slogan will not be displayed on the website.
 
 **Editable footer** 
 

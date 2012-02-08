@@ -1,19 +1,22 @@
 ChangeLog
 ---------
 =======
+6.0.7 - February 08, 2012
+
+- fixed change slogan [naivok]
 
 6.0.6 - January 20, 2012
 
-- bug fixed
+- bug fixed [naivok]
 
 6.0.5 - January 17, 2012
 
-- Products.PloneFormGen compatibility added
-- Products.Carousel dependency removed
+- Products.PloneFormGen compatibility added [naivok]
+- Products.Carousel dependency removed [naivok]
 
 6.0.4 - December 30, 2011
 
-- plone.app.themingplugins dependency removed
+- plone.app.themingplugins dependency removed [naivok]
 
 6.0.3 - December 19, 2011
 
