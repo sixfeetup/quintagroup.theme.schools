@@ -28,18 +28,30 @@ Features
 **Theme Colors**
 
  You can change links colors: ``links_color``, ``hover_links_color``, and ``visited_links_color``. For this, go to Site Setup -> Diazo Theme -> Advanced Settings. In 'Parameter expressions' textarea change the 'links_color' or/and 'hover_links_color' or/and 'visited_links_color' parameters values respectively.
-  
+
 **Carousel Banner**
 
  Rotating banners can be added in case you install ``Products.Carousel`` add-on. Custom Carousel display style applies automatically to carousel banner.
  
  To create a banner on the front page, go to the 'Carousel' tab in the task bar. Set carousel options and select 'Carousel Banner' from 'Add new...' dropdown menu. Upload image that will be used as one rotating banner, type its title and text (will be displayed under the image), and provide web address, image title will be linked to. Add as many carousel banners as you need. 
   
- Optimum image dimensions are  397*288px. There are 4 demo images that might be used as demo banners - see 'src' folder within theme package (quintagroup -> theme -> schools).
+ Recommended image dimensions are  397*288px. There are 4 demo images that might be used as demo banners - see 'src' folder within theme package (quintagroup -> theme -> schools).
 
 **Editable Slogan**
 
- To change the theme slogan 'Free Theme for Plone' - go to Site Setup -> 'Zope Management Interface' settings, open 'Properties' tab. In 'slogan' field type in your new slogan. If the parameter has no value, than the slogan will not be displayed on the website.
+ Schools Theme uses customizable slogan. To change it, go to 'Site Setup' -> 'Diazo theme' settings, open 'Advanced settings' tab.
+
+ In 'Parameter expressions' field change 'Free Theme for Plone' slogan in ``slogan = string:Free Theme for Plone`` line.
+
+ If you need your slogan to be displayed in non-ASCII characters, go to 'Site Setup' -> 'Diazo theme' settings, open 'Advanced settings' tab.  In 'Parameter expressions' change the following field  
+ 
+ ``slogan = string:Free Theme for Plone`` 
+
+ to 
+
+ ``slogan = python:path('context/slogan|string:').decode('utf-8', 'ignore')``
+ 
+ and in 'Site Setup' -> 'Zope Management Interface' settings -> 'Properties' tab add a new property 'slogan', type 'string', value 'your slogan' and save.
 
 **Editable footer** 
 

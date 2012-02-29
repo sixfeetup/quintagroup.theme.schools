@@ -1,9 +1,10 @@
 ChangeLog
 ---------
 =======
-6.0.7 - February 08, 2012
+6.0.7 - February 29, 2012
 
 - fixed change slogan [naivok]
+- changed the order of inserting ploneCustom.css [naivok]
 
 6.0.6 - January 20, 2012
 
