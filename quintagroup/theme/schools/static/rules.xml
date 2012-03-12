@@ -133,7 +133,7 @@
         </replace>
 
         <!-- Footer -->
-        <replace content-children="//div[@id = 'portal-columns']/following-sibling::*[@class='row'][position() = 1]" css:theme=".footer" />
+        <replace content-children="//div[@id = 'portal-columns']/following-sibling::*[@class='row'][position() = 1]" css:theme="#portal-footer" />
 
     </rules>
 

@@ -5,7 +5,7 @@ ChangeLog
 
 - fixed change slogan [naivok]
 - changed the order of inserting ploneCustom.css [naivok]
-- updated method to insert footer [naivok]
+- updated the way the footer is inserted [naivok]
 
 6.0.6 - January 20, 2012
 
