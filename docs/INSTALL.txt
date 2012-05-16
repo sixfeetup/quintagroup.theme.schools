@@ -64,5 +64,3 @@ If you want to customize Schools theme please use the following installation ins
 
 Now you can customize Schools Theme by modifying ``quintagroup.theme.schools`` package in ``src`` directory 
 of your buildout.
-
-
