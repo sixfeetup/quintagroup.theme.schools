@@ -27,7 +27,8 @@ input {
   }
 
 /* Schools Theme Custom Fixes */
-#portal-top {
+#portal-top,
+#portal-globalnav {
   z-index:1;
   }
 .portletHeader,  

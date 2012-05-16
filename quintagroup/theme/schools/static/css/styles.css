@@ -182,6 +182,12 @@ ol {
 img {
   vertical-align:text-bottom;
   }
+#content img,
+.portletStaticText img {
+  height:auto;
+  max-width:100%;
+  width:auto; /*fix to IE8*/
+  }
 #content li ul,
 #content li ol {
   margin-top:0;
@@ -193,10 +199,6 @@ dl {
 dt {
   font-weight:bold;
   }
-  /*
-dd {
-  margin:0 0 0.5em 27px;
-  }*/
 strong {
   font-weight:bold;
   }
@@ -510,12 +512,6 @@ body#content.mceContentBody {
   }
 
 /*---------- PORTAL SEARCH BOX ----------*/
-.collapsible .collapser.collapsed:after {
-  content:" ▶"
-  }
-.collapsible .collapser.expanded:after {
-  content:" ▼"
-  }
 div#portal-searchbox {
   border:1px solid #ccc;
   position:absolute;
@@ -527,6 +523,7 @@ div#portal-searchbox {
 #portal-searchbox form {
   white-space:nowrap;
   }
+#portal-searchbox #nolivesearchGadget,
 #portal-searchbox #searchGadget {
   border:0;
   padding:3px 6px;
@@ -766,23 +763,50 @@ div.carousel {
   position: relative;
   }
 .carousel-banners {
-  overflow: visible !important;
-  text-align: center;
-  position: static !important;
-  width: 100% !important; 
+  height:333px !important;
   }
 .carousel-banner {
+  height:333px !important;
+  margin-left:296px;
+  overflow:visible !important;
+  width:397px !important;
+  }
+.carousel-slider .carousel-banner,
+.carousel-slider .carousel-image img {
+/*  height:auto !important;*/
+  width:397px !important;
+  }
+.carousel-slider .carousel-banner {
+  margin-left:0;
+  }
+.carousel-image img {
+  height:auto !important;
+  width:397px !important;
+  }
+.carousel-slider {
+  height:333px !important;
+/*   margin-left:183px !important; */
+  margin-left:296px;
+  }
+.carousel-banners {
+/*   overflow: visible !important; */
+/*   text-align: center; */
+/*  position: static !important;*/
+  width:100% !important; 
+  }
+/*.carousel-banner {
   margin-top: 7px;
   overflow: visible !important;
   position: static !important;
   width: 100% !important;
-  }      
+  }      */
 .carousel-over {
-  background: url(../images/photo-frame.png) no-repeat scroll 50% 0 transparent;
-  height: 334px;
-  position: absolute;
-  top: 0;
-  width: 100%;
+  background:url(../images/photo-frame.png) no-repeat scroll 50% 0 transparent;
+  height:334px;
+  position:absolute;
+  top:0;
+  width:100%;
+  z-index:0;
   }
 div.carousel-text {
   background-color: transparent;
@@ -793,10 +817,10 @@ div.carousel-text {
   margin-bottom:0.75em;
   padding: 0 1em;
   position: absolute;
-  right: 0;
-  text-align: right;
+  right:-296px;
+  text-align:right;
   width: auto;
-  z-index:1;
+  z-index:10;
   }
 .carousel-text p {
   margin:0;
@@ -1855,6 +1879,83 @@ body.smallText {
   width:100%;
   }
 
+/*----- Collapsible -----*/
+dl.collapsible {
+  border: 0.1em solid #8cacbb;
+  margin: 1em 0;
+  padding: 0;
+  }
+dl.collapsible dt.collapsibleHeader {
+  display: block;
+  float: left;
+  background: White;
+  line-height: 1.2em;
+  vertical-align: middle;
+  font-size: 90%;
+  position: relative;
+  top: -0.6em;
+  width: auto;
+  margin: 0 0 -0.6em 1em;
+  padding: 0 0.5em;
+  }
+dl.collapsible dd.collapsibleContent {
+  margin: 0;
+  padding: 0 1em 0.4em;
+  clear: left;
+  }
+
+/* for IE the following isn't needed, that's why the css2 selector is used */
+dl.collapsible dd.collapsibleContent > dl {
+  margin: 0;
+  padding: 0;
+  }
+dl.expandedInlineCollapsible dt.collapsibleHeader,
+dl.expandedBlockCollapsible dt.collapsibleHeader {
+  background: url(../images/treeExpanded.png) no-repeat 0.5em 50% #fff;
+  cursor: pointer;
+  padding: 0 0.5em 0 2em;
+  }
+dl.collapsedBlockCollapsible {
+  border: none;
+  height: 1em;
+  width: auto;
+  }
+dl.collapsedInlineCollapsible dt.collapsibleHeader,
+dl.collapsedBlockCollapsible dt.collapsibleHeader {
+  float: none;
+  position: relative;
+  margin: 0 0 0 1em;
+  padding: 0 0.5em 0 2em;
+  line-height: 1.2em;
+  cursor: pointer;
+  background: White url(../images/treeCollapsed.png) no-repeat 0.5em 50%;
+  }
+dl.collapsedInlineCollapsible dd.collapsibleContent,
+dl.collapsedBlockCollapsible dd.collapsibleContent {
+  display: none;
+  }
+dl.collapsedInlineCollapsible {
+  border: 0;
+  height: 1em;
+  width: auto;
+  display: inline;
+  }
+dl.collapsedInlineCollapsible dt.collapsibleHeader {
+  position: static;
+  float: none;
+  margin: 0;
+  padding: 0 0 0 2em;
+  line-height: 1em;
+  cursor: pointer;
+  display: inline;
+  }
+.collapsible .collapser.collapsed:after {
+  content:" ▶"
+  }
+.collapsible .collapser.expanded:after {
+  content:" ▼"
+  }
+
 /*---------- CONTENT TYPE ICONS ----------*/
 .icons-on .contenttype-folder {
   background:url(../images/icons-sprite.png) no-repeat 0 -1598px;
@@ -1960,6 +2061,181 @@ body.smallText {
 
 }
 
+@media screen and (max-width:5in) {
+body {
+  min-width:320px;
+  }
+div.row {
+  float:none;
+  }
+div.cell {
+  float:none;
+  left:auto;
+  margin-left:0 !important;
+  width:auto !important;
+  }
+#portal-top {
+  padding:0;
+  text-align:center;
+  }
+.topPortlets {
+  float:none;
+  width:auto !important;
+  }
+.topPortlets .visualPadding {
+  min-height:0;
+  }
+#portal-logo {
+  min-height:0;
+  padding:0.75em 0;
+  text-align:center;
+  }
+#portal-slogan {
+  height:auto;
+  padding:0.2em 0;
+  position:static;
+  width:auto;
+  }
+#portal-logo .heightImmitator,
+#portal-slogan .heightImmitator {
+  height:auto;
+  }
+#portal-slogan span {
+  padding:0;
+  }
+#portal-siteactions {
+  border-width:1px 0;
+  height:auto;
+  position:static;
+  width:100% !important;
+  }
+#portal-siteactions li {
+  border-left:0;
+  border-right:1px solid #ccc;
+  display:inline-block;
+  float:none !important;
+  margin-right:-4px;
+  }
+#portal-siteactions li:first-child {
+  border-left:1px solid #ccc;
+  }
+#portal-siteactions li a {
+  padding:4px 5px;
+  }
+#portal-personaltools {
+  left:0;
+  margin:0;
+  top:0;
+  }
+#portal-languageselector {
+  margin:0;
+  position:static;
+  }
+#portal-globalnav li {
+  margin:0.3em 0 0.3em 1%;
+  width:48%;
+  }
+#portal-globalnav li ul {
+  display:none !important;
+  }
+#portal-breadcrumbs {
+  padding:5px 12px;
+  text-align:left;
+  }
+div#portal-searchbox {
+  border-width:1px 0;
+  margin:1px 0;
+  position:static;
+  width:100% !important;
+  }
+#portal-searchbox .LSBox {
+  position:relative;
+  }
+#portal-searchbox #nolivesearchGadget,
+#portal-searchbox #searchGadget {
+  border-left:1px solid #ccc;
+  border-right:1px solid #ccc;
+  margin-right:1px;
+  padding:2px 6px 3px;
+  width:271px !important;
+  }
+.portletSearch .livesearchContainer {
+  width:207px !important;
+  }
+#LSResult {
+  left:0;
+  text-align:left;
+  top:37px;
+  }
+#portal-searchbox .LSRow,
+#portal-searchbox #LSNothingFound {
+  width:290px !important;
+  }
+#portal-column-one .portletSearch .portlet-search-gadget,
+#portal-column-two .portletSearch .portlet-search-gadget,
+.topPortlets .portletSearch .portlet-search-gadget {
+  width:254px !important;
+  }
+
+#visual-portal-wrapper,
+#portal-column-content.cell,
+#portal-column-content .cell,
+#portal-column-one,
+#portal-column-two {
+  width:auto !important;
+  }
+#portal-column-one .visualPadding,
+#portal-column-two .visualPadding {
+  margin:0;
+  }
+#portal-colophon {
+  padding:10px 7px 5px;
+  }
+div.carousel {
+  height:auto;
+  }
+.carousel-over {
+  background:transparent;
+  }
+.carousel-slider,
+.carousel-banner {
+  margin-left:0 !important;
+  }
+div.carousel-text {
+  margin:0 0 25px 0;
+  right:15px !important;
+  }
+.carousel-banners,
+.carousel-slider,
+.carousel-banner {
+  max-width:100% !important;
+  }
+.carousel-image img {
+  height:auto;
+  width:auto;
+  }
+.portletStaticText img {
+  width:100%;
+  }
+
+}
+
+@media screen and (max-width:480px) {
+.carousel-banners,
+.carousel-slider,
+.carousel-banner {
+  height:270px !important;
+  }
+}
+
+@media screen and (max-width:320px) {
+.carousel-banners,
+.carousel-slider,
+.carousel-banner {
+  height:195px !important;
+  }
+}
+
 
 @media print {
 
@@ -2030,8 +2306,14 @@ body.smallText {
   #portal-personaltools,
   #portal-breadcrumbs,
   #edit-bar,
+  .carousel,
   #portal-column-one,
   #portal-column-two,
+  #portlets-in-header,
+  #portlets-above,
+  #portlets-below,
+  #portlets-footer,
+  #portlets-in-header,
   #portal-languageselector,
   .contentViews,
   .contentActions,

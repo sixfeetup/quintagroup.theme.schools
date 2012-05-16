@@ -41,4 +41,88 @@
       #portal-header { background-image:url(<xsl:value-of select="$top_image" />); }
       #portal-logo { background:transparent; }
     </after>
+    
+    <after theme-children="/html/head/style" css:if-content="#portal-column-one">
+      .carousel-slider,
+      .carousel-banner {
+        margin-left:<xsl:value-of select="(993-number($columnonewidth)-397) div 2" />px;
+        }
+      div.carousel-text {
+        right:-<xsl:value-of select="(993-number($columnonewidth)-397) div 2" />px;
+        }
+    </after>
+    <rules css:if-content='#portal-column-two div.managePortletsLink'>
+      <after theme-children="/html/head/style" if-content='//*[@id="portal-column-two"]/div[3]'>
+          .carousel-slider,
+          .carousel-banner {
+            margin-left:<xsl:value-of select="(993-number($columntwowidth)-397) div 2" />px;
+            }
+          div.carousel-text {
+            right:-<xsl:value-of select="(993-number($columntwowidth)-397) div 2" />px;
+            }
+        </after>
+    </rules>
+    <rules css:if-not-content='#portal-column-two div.managePortletsLink'>
+      <after theme-children="/html/head/style" if-content='//*[@id="portal-column-two"]/div[2]'>
+          .carousel-slider,
+          .carousel-banner {
+            margin-left:<xsl:value-of select="(993-number($columntwowidth)-397) div 2" />px;
+            }
+          div.carousel-text {
+            right:-<xsl:value-of select="(993-number($columntwowidth)-397) div 2" />px;
+            }
+        </after>
+    </rules>
+    <rules css:if-content='#portal-column-one'>
+      <rules css:if-content='#portal-column-two div.managePortletsLink'>
+        <after theme-children="/html/head/style" if-content='//*[@id="portal-column-two"]/div[3]'>
+            .carousel-slider,
+            .carousel-banner {
+              margin-left:<xsl:value-of select="(993-number($columnonewidth)-number($columntwowidth)-397) div 2" />px;
+              }
+            div.carousel-text {
+              right:-<xsl:value-of select="(993-number($columnonewidth)-number($columntwowidth)-397) div 2" />px;
+              }
+          </after>
+      </rules>
+    </rules>
+    <rules css:if-content='#portal-column-one'>
+      <rules css:if-not-content='#portal-column-two div.managePortletsLink'>
+        <after theme-children="/html/head/style" if-content='//*[@id="portal-column-two"]/div[2]'>
+            .carousel-slider,
+            .carousel-banner {
+              margin-left:<xsl:value-of select="(993-number($columnonewidth)-number($columntwowidth)-397) div 2" />px;
+              }
+            div.carousel-text {
+              right:-<xsl:value-of select="(993-number($columnonewidth)-number($columntwowidth)-397) div 2" />px;
+              }
+          </after>
+      </rules>
+    </rules>
+
+    <rules if="contains($path,'@@manage-portlets')">
+      <after theme-children="/html/head/style" >
+            .carousel-slider,
+            .carousel-banner {
+              margin-left:<xsl:value-of select="(993-number($columnonewidth)-number($columntwowidth)-397) div 2" />px;
+              }
+            div.carousel-text {
+              right:-<xsl:value-of select="(993-number($columnonewidth)-number($columntwowidth)-397) div 2" />px;
+              }
+          </after>
+    </rules>
+<!--    <rules css:if-content="#portal-column-one">
+      <after theme-children="/html/head" css:if-content="#portal-column-two">
+       <style type="text/css">
+        .carousel-slider,
+        .carousel-banner {
+          margin-left:<xsl:value-of select="991-number($columnonewidth)-number($columntwowidth)" />px;
+          }
+        div.carousel-text {
+          right:<xsl:value-of select="993-number($columnonewidth)-number($columntwowidth)" />px;
+          }
+       </style>
+      </after>
+    </rules>-->
+
 </rules>
