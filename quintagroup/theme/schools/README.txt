@@ -5,7 +5,7 @@ Features
 
 **Responsive Web Design**
 
-  Among the most interesting features integrated into Schools Theme you can find responsive web design that allows for easy viewing on mobile devices and tablets. If the device screen size is smaller than 5 inches the website will start to automatically resize and reposition the content to accommodate for the changes. 
+ Among the most interesting features integrated into Schools Theme you can find responsive web design that allows for easy viewing on mobile devices and tablets. If the device screen size is smaller than 5 inches the website will start to automatically resize and reposition the content to accommodate for the changes. 
 
 **Customizable logo**
 
