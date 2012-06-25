@@ -1,12 +1,9 @@
 ChangeLog
 ---------
-6.0.9 - June 25, 2012
-
-- removed unnecessary id attribute for the body [naivok]
-
-6.0.8 - May 16, 2012
+6.0.8 - June 25, 2012
 
 - fixed style to portal-personaltools for Responsive Web Design [naivok]
+- removed unnecessary id attribute for the body [naivok]
 
 6.0.7 - May 16, 2012
 
