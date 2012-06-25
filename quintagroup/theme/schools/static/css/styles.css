@@ -2074,6 +2074,10 @@ div.cell {
   margin-left:0 !important;
   width:auto !important;
   }
+#portal-header {
+  background-position:0 25px;
+  padding-top:25px;
+  }
 #portal-top {
   padding:0;
   text-align:center;
@@ -2125,6 +2129,7 @@ div.cell {
 #portal-personaltools {
   left:0;
   margin:0;
+  right:0;
   top:0;
   }
 #portal-languageselector {

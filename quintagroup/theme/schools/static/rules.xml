@@ -46,7 +46,7 @@
         <after css:content="head link[href*='ploneCustom']" theme-children="/html/head" />
 
         <!-- Body-->
-       <merge attributes="id dir class" css:content="body" css:theme="body" />
+       <merge attributes="dir class" css:content="body" css:theme="body" />
 
         <!-- Top -->
         <replace css:content="#portal-searchbox" css:theme="#portal-searchbox" />
