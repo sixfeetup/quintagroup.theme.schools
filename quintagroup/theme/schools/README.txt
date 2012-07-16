@@ -1,4 +1,4 @@
-Schools is a free diazo theme for Plone 4.1
+Schools is a free diazo theme for Plone 4.2
 
 Features
 --------
@@ -91,12 +91,12 @@ Recommended
 Theme was tested with:
 
 * Plone 4.1
-* plone.app.theming 1.0b9
+* plone.app.theming 1.0
 * Products.Carousel 2.1
 * Products.ContentWellPortlets 4.1.0
-* Products.PloneFormGen 1.7.0
-* quintagroup.dropdownmenu 1.2.5
-* Products.LinguaPlone 4.1.1
+* Products.PloneFormGen 1.7.1
+* quintagroup.dropdownmenu 1.2.10
+* Products.LinguaPlone 4.1.2
 
 Home Directory
 ==============

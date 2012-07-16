@@ -5,7 +5,7 @@ version = '6.0.8'
 
 setup(name='quintagroup.theme.schools',
       version=version,
-      description="Free Diazo theme for Plone 4.1",
+      description="Free Diazo theme for Plone 4.2",
       long_description=open(os.path.join("quintagroup", "theme", "schools", "README.txt")).read() + "\n\n" +
                        open(os.path.join("docs", "INSTALL.txt")).read() + "\n\n"+
                        open(os.path.join("docs", "HISTORY.txt")).read(),
