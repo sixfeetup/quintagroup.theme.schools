@@ -90,7 +90,7 @@ Recommended
 
 Theme was tested with:
 
-* Plone 4.1
+* Plone 4.2
 * plone.app.theming 1.0
 * Products.Carousel 2.1
 * Products.ContentWellPortlets 4.1.0
