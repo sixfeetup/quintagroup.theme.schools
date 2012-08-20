@@ -79,6 +79,7 @@
 
         <!-- Content -->
         <replace css:content="#portal-globalnav" css:theme="#portal-globalnav" />
+	<after css:theme="#portal-globalnav" css:content="#portal-globalnav-mobile" />
         <replace css:content="#viewlet-above-content" css:theme="#viewlet-above-content" />
         <replace css:theme-children=".documentContent" content-children='//*[@id="portal-column-content"]/div[2]' if-content='//*[@id="portal-column-content"]/div[2]'/>
         <replace css:theme-children=".documentContent" content-children='//*[@id="portal-column-content"]/div[1]' if-not-content='//*[@id="portal-column-content"]/div[2]'/>

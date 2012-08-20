@@ -1,5 +1,11 @@
 ChangeLog
 ---------
+
+6.0.9 August 20, 2012
+
+- Updated .required styles [naivok]
+- quintagroup.dropdownmenu 1.2.11 compatibility added [naivok]
+
 6.0.8 - July 17, 2012
 
 - fixed style to portal-personaltools for Responsive Web Design [naivok]
