@@ -1,9 +1,11 @@
 ChangeLog
 ---------
 
-6.0.10 September 05, 2012
+6.0.10 September 21, 2012
 
 - Fixed style to history [naivok]
+- Fixed style to carousel [naivok]
+- Fixed style to eventDetails [naivok]
 
 6.0.9 August 20, 2012
 
