@@ -101,7 +101,7 @@ Theme was tested with:
 Home Directory
 ==============
 
-http://skins.quintagroup.com/schools
+http://themes.quintagroup.com/product/schools
 
 Authors
 =======
