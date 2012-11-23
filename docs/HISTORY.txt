@@ -1,6 +1,11 @@
 ChangeLog
 ---------
 
+6.1 November 23, 2012
+
+- Added preview image to diazo panel [naivok]
+- Added ajax_load [naivok]
+
 6.0.10 September 21, 2012
 
 - Fixed style to history [naivok]
