@@ -109,4 +109,4 @@ Authors
 * Volodymyr Rudnytskyy
 * Serhiy Valchuk  
 
-Quintagroup: http://quintagroup.com, 2006-2012
+Quintagroup: http://quintagroup.com, 2013

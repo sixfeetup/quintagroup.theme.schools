@@ -1,6 +1,11 @@
 ChangeLog
 ---------
 
+6.1.1 January 03, 2013
+
+- Fixed footer link [naivok]
+- Fixed search-results-bar link color [naivok]
+
 6.1 November 28, 2012
 
 - Added preview image to diazo panel [naivok]
