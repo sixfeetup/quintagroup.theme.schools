@@ -1,6 +1,10 @@
 ChangeLog
 ---------
 
+6.1.2 January 15, 2013
+
+- Fixed accesskey [naivok]
+
 6.1.1 January 03, 2013
 
 - Fixed footer link [naivok]
