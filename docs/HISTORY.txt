@@ -1,9 +1,10 @@
 ChangeLog
 ---------
 
-6.1.2 January 15, 2013
+6.1.2 March 12, 2013
 
 - Fixed accesskey [naivok]
+- Plone4.3 compatibility added [naivok]
 
 6.1.1 January 03, 2013
 
