@@ -1,4 +1,4 @@
-Schools is a free responsive diazo theme for Plone 4.2.2.
+Schools is a free responsive diazo theme for Plone 4.3rc1.
 
 Features
 --------
@@ -88,13 +88,13 @@ Recommended
 
 Theme was tested with:
 
-* Plone 4.2.2
-* plone.app.theming 1.1b1
-* Products.Carousel 2.2
-* Products.ContentWellPortlets 4.1.0
+* Plone 4.3rc1
+* plone.app.theming 1.1b2
+* Products.Carousel 2.2.1
+* Products.ContentWellPortlets 4.2.1
 * Products.PloneFormGen 1.7.6
 * quintagroup.dropdownmenu 1.2.11
-* Products.LinguaPlone 4.1.2
+* Products.LinguaPlone 4.1.3
 
 Home Directory
 ==============
