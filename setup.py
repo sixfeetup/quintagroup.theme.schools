@@ -27,6 +27,7 @@ setup(name='quintagroup.theme.schools',
       zip_safe=False,
       install_requires=['setuptools',
                         'plone.app.theming',
+                        'Plone<4.3dev',
                         # -*- Extra requirements: -*-
                         ],
       entry_points="""
