@@ -116,7 +116,7 @@ div.width-full { width: 100% }
 body {
   background-color:#fff;
   color:#000;
-  font:69% Verdana, Geneva, sans-serif;
+  font: 75% Verdana, Geneva, sans-serif;
   }
 input {
   font-family:Verdana,Geneva,sans-serif;
@@ -126,18 +126,16 @@ input[type="checkbox"],
 input[type="radio"] {
   margin-right:3px;
   }
-a {
+a,
+a:visited {
   color:#73a20f;
   text-decoration:none;
-  }
-a:visited {
-  color:#a4b089;
   }
 h1, h2, h3, h4, h5, h6 {
   color:#000;
   font-weight:bold;
   line-height:1.25em;
-  margin:0.75em 0 0.25em;
+  margin: 1em 0 0.25em;
   }
 h1, h2 {
   border-bottom:1px solid #ccc;
@@ -323,6 +321,9 @@ div.field.error {
   position:relative;
   width:993px;
   }
+.tileOverlay #visual-portal-wrapper {
+  width: auto;
+}
 #visual-portal-wrapper:after {
   clear:both;
   content:"";
@@ -387,7 +388,7 @@ div.field.error {
   padding:2px 2px 0;
   }
 .topPortlets .portletItem {
-  padding:5px 5px 0;
+  padding:5px 5px 10px;
   }  
 
 /*---------- CONTENT STYLES ----------*/
@@ -964,12 +965,13 @@ a.carousel-pager-item-active {
   }
 .portlet a:link,
 .portlet a:visited {
-  color:#565656;
+    color:#73A20F;
+    font-weight: bold;
   }
 .portletHeader {
   background:#dadada url(../images/sprite.png) repeat-x 0 0;
-  font-weight:normal;
-  padding:2px 1em;
+  font-weight: bold;
+  padding: 2px 1em 2px 5px;
   border-width:0 0 1px;
   border-style:solid;
   border-color:#ccc;
@@ -1001,9 +1003,16 @@ a.carousel-pager-item-active {
   }
 .portletItemDetails {
   color:#565656;
-  display:block;
-  font-weight:bold;
+  display: block;
+  font-weight: normal;
   }
+  dd.portletItemDetails {
+    padding-left: 5px;
+}
+.documentAuthor,
+.documentModified {
+    font-style: italic;
+}
 
 /*----- Manage Portlets -----*/
 .managePortletsLink {
