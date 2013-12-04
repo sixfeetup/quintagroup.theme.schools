@@ -71,13 +71,13 @@
         <after css:theme="#portal-top" css:content="#portlets-in-header" />
         <after css:theme="#portal-top" css:content=".manageInHeaderPortletsLink" />
 
-        <!-- Top portlet -->
+        <!-- Top portlet
         <drop theme='//*[@class="topPortlets"]' if-content='//*[@class="portlets-manager"]' />  
         <rules if-not-content='//*[@class="portlets-manager"]'>
                 <drop theme='//*[@class="topPortlets"]' if-content="not(//*[@id='portal-column-two']/div[1])" />  
                 <replace theme='//*[@class="topPortlets"]/div/div' content='//*[@id="portal-column-two"]/div[1]' method="raw" />
                 <drop content='//*[@id="portal-column-two"]/div[1]' />
-        </rules>
+        </rules> -->
 
         <!-- Content -->
         <replace css:content="#portal-globalnav" css:theme="#portal-globalnav" method="raw"/>
