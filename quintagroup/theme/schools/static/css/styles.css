@@ -337,7 +337,7 @@ div.field.error {
     display: none;
 }
 #portal-header {
-  background-image:url(../images/bg-header.jpg);
+  background-image:url(../images/med-banner.jpg);
   background-position:0 0;
   background-repeat:no-repeat;
   position:relative;
@@ -657,9 +657,8 @@ input.searchButton.searchPage {
 
 /*---------- PORTAL LOGO ----------*/
 #portal-logo {
-  background:url(../images/bg-logo.png) no-repeat 100% 0;
   display:block;
-  min-height:107px;
+  height:152px;
   overflow:hidden;
   padding:0 15px 0 0;
   position:relative;
@@ -671,8 +670,7 @@ input.searchButton.searchPage {
   vertical-align:middle;
   }
 #portal-logo img {
-  display:inline-block;
-  vertical-align:middle;
+  display: none;
   }
   
 /*---------- PORTAL BREAD CRUMBS ----------*/	
