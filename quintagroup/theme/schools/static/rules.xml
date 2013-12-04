@@ -10,13 +10,6 @@
     <notheme if-path="@@manage-viewlets" />
     <notheme if="$ajax_load" />
 
-    <xsl:template css:match="#portal-colophon">
-        <div id="portal-colophon">
-            <p class="credits"><a href="http://themes.quintagroup.com">Schools Plone Theme</a> by <a href="http://quintagroup.com">Quintagroup</a> © 2013.</p>
-            <xsl:apply-templates />
-        </div>
-    </xsl:template>
-
     <!-- Rules applying to a standard Plone web page -->
     <rules css:if-content="#visual-portal-wrapper">
 
@@ -71,13 +64,13 @@
         <after css:theme="#portal-top" css:content="#portlets-in-header" />
         <after css:theme="#portal-top" css:content=".manageInHeaderPortletsLink" />
 
-        <!-- Top portlet
+        <!-- Top portlet -->
         <drop theme='//*[@class="topPortlets"]' if-content='//*[@class="portlets-manager"]' />  
         <rules if-not-content='//*[@class="portlets-manager"]'>
                 <drop theme='//*[@class="topPortlets"]' if-content="not(//*[@id='portal-column-two']/div[1])" />  
                 <replace theme='//*[@class="topPortlets"]/div/div' content='//*[@id="portal-column-two"]/div[1]' method="raw" />
                 <drop content='//*[@id="portal-column-two"]/div[1]' />
-        </rules> -->
+        </rules>
 
         <!-- Content -->
         <replace css:content="#portal-globalnav" css:theme="#portal-globalnav" method="raw"/>
@@ -134,9 +127,6 @@
         <replace css:content-children="div.carousel-banners">
             <xsl:copy-of select="node()"/><div class="carousel-over"></div>
         </replace>
-
-        <!-- Footer -->
-        <replace content="//div[@id = 'portal-columns']/following-sibling::*[@class='row'][position() = 1]" css:theme="#portal-footer" />
 
     </rules>
 

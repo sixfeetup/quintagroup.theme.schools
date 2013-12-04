@@ -689,6 +689,7 @@ input.searchButton.searchPage {
   background:transparent;
   font-size:1em;
   margin:0;
+  clear: both;
   }
 #portal-globalnav li {
   background:url(../images/sprite.png) repeat-x 0 0;
@@ -914,13 +915,13 @@ a.carousel-pager-item-active {
 
 /*---------- PORTAL FOOTER ----------*/
 #portal-footer {
-  background:#8da7bf url(../images/sprite.png) repeat-x 0 -484px;
+  background: #ffffff;
   margin:2px 0 0;
   padding:10px 7px 5px;
   border-width:0 1px 1px;
   border-style:solid;
   border-color:#ccc;
-  color:#dbe6f0;
+  color:#64798b;
  clear:both;
  text-align: center;
  line-height: 2em;
