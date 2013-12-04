@@ -329,10 +329,13 @@ div.field.error {
   content:"";
   display:block;
   }
-  #portal-top {
+#portal-top {
   margin-bottom:2px;
   padding:2.55em 0 0;
   }
+.tileOverlay #portal-top {
+    display: none;
+}
 #portal-header {
   background-image:url(../images/bg-header.jpg);
   background-position:0 0;
