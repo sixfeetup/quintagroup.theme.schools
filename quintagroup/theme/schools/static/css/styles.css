@@ -657,6 +657,7 @@ input.searchButton.searchPage {
 
 /*---------- PORTAL LOGO ----------*/
 #portal-logo {
+  background: url('../images/plone-white.png') no-repeat 809px 5px;
   display:block;
   height:152px;
   overflow:hidden;
