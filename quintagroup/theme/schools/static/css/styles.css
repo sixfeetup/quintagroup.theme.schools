@@ -418,6 +418,13 @@ div.field.error {
   background-repeat:no-repeat;
   padding-left:14px;
   }
+#content .ui-sortable > li {
+  background: url("++resource++ucla.pool/images/ui-bg_glass_100_f6f6f6_1x400.png") repeat-x scroll 50% top #FFE45C;
+  padding-left: 0;
+}
+#content .ui-sortable > li.selected {
+  background: url("++resource++ucla.pool/images/ui-bg_highlight-soft_75_ffe45c_1x100.png") repeat-x scroll 50% top #FFE45C;
+}
 #content .discreet,
 #sidebar .discreet {
   color: #666;
