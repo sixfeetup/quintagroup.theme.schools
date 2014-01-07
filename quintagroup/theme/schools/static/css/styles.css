@@ -547,7 +547,7 @@ div#portal-searchbox {
 input.inputLabelActive {
   color:#76797C;
   }  
-input.searchButton {
+#portal-searchbox  input.searchButton {
   background:url(../images/sprite.png) no-repeat 0 -1105px;
   border:0;
   cursor:pointer;
