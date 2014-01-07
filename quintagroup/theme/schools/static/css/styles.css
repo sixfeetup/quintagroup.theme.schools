@@ -12,7 +12,7 @@ table {
 fieldset,img { 
   border:0;
   }
-address,caption,cite,code,dfn,em,strong,th,var {
+address,caption,cite,code,dfn,th,var {
   font-style:normal;
   font-weight:normal;
   }
@@ -413,7 +413,8 @@ div.field.error {
   list-style-type:none;
   margin-left:22px;
   }
-#content ul li {
+#content ul li,
+.portlet ul li {
   background-image:url(../images/sprite.png);
   background-position:0 -1345px;
   background-repeat:no-repeat;
